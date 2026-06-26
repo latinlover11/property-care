@@ -81,7 +81,7 @@
       <h1>Honest work.<br><em>Lasting</em> results.</h1>
       <p class="hero-sub">Professional property maintenance — from crisp lawn edges to durable outdoor repairs. Every detail, done right.</p>
       <div class="hero-actions">
-        <a href="tel:5551234567" class="btn-primary">Get a Free Estimate</a>
+        <a href="#contact" class="btn-primary">Get a Free Estimate</a>
         <a href="#services" class="btn-ghost">See Our Services</a>
       </div>
     </div>
@@ -219,7 +219,9 @@
             <strong>Email</strong> <a href="mailto:info@propertycare.com">info@propertycare.com</a>
           </div>
         </div>
-        <form class="contact-form" action="#" method="post">
+        <!-- Netlify form integration -->
+        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>

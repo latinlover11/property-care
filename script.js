@@ -121,14 +121,26 @@ faqTriggers.forEach(trigger => {
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+    // Keep your validation logic
     const name = contactForm.querySelector('#name').value;
     const email = contactForm.querySelector('#email').value;
-    if (!name || !email) { alert('Please fill in all required fields'); return; }
+    
+    if (!name || !email) { 
+      e.preventDefault(); // Only prevent submission if validation fails
+      alert('Please fill in all required fields'); 
+      return; 
+    }
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) { alert('Please enter a valid email'); return; }
-    alert('Thank you! We\'ll respond within 24 hours.');
-    contactForm.reset();
+    if (!emailRegex.test(email)) { 
+      e.preventDefault(); // Only prevent submission if validation fails
+      alert('Please enter a valid email'); 
+      return; 
+    }
+    
+    // REMOVE these two lines so Netlify can process the form naturally:
+    // alert('Thank you! We\'ll respond within 24 hours.');
+    // contactForm.reset();
   });
 }
 
