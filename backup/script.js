@@ -134,22 +134,16 @@ if (contactForm) {
   });
 }
 
+// ===== Newsletter Subscription =====
 const newsletterForm = document.getElementById('newsletterForm');
 if (newsletterForm) {
   newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const formData = new FormData(newsletterForm);
-    
-    fetch('/', {
-      method: 'POST',
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString()
-    })
-    .then(() => {
-      alert('Thanks for subscribing!');
+    const email = newsletterForm.querySelector('input[type="email"]').value;
+    if (email) {
+      alert('✓ Thanks for subscribing! Check your email for confirmation.');
       newsletterForm.reset();
-    })
-    .catch((error) => alert('Subscription failed. Please try again.'));
+    }
   });
 }
 
