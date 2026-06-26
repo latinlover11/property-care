@@ -1,90 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Maintenance Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Care — Longmont & Boulder</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233D2B1F'/><path d='M50 80C50 80 27 69 27 41C27 24 37 14 50 14C63 14 73 24 73 41C73 69 50 80 50 80Z' fill='none' stroke='%23C4977A' stroke-width='6'/><path d='M50 80V32' stroke='%23C4977A' stroke-width='6'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="main-navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Property Care</a>
-            <nav class="nav-links">
-                <a href="#">Home</a>
-                
-                <div class="dropdown">
-                    <a href="#services" class="dropdown-trigger">Services <span class="arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <a href="#mowing">Lawn Mowing</a>
-                        <a href="#fences">Fence Installation</a>
-                        <a href="#cleanups">Fall Cleanups</a>
-                        <a href="#handyman">Handyman Repairs</a>
-                    </div>
-                </div>
+  <!-- ICON SPRITE — custom line icons, replaces emoji throughout -->
+  <svg aria-hidden="true" style="position:absolute; width:0; height:0; overflow:hidden;">
+    <defs>
+      <symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M12 21C12 21 4 18 4 10C4 5 8 3 12 3C16 3 20 5 20 10C20 18 12 21 12 21Z"/><path d="M12 21V7"/></symbol>
+      <symbol id="icon-fence" viewBox="0 0 24 24"><path d="M5 21V9L7 5L9 9V21"/><path d="M10.5 21V9L12 6L13.5 9V21"/><path d="M16 21V9L18 5L20 9V21"/><line x1="3" y1="12.5" x2="22" y2="12.5"/><line x1="3" y1="17.5" x2="22" y2="17.5"/></symbol>
+      <symbol id="icon-broom" viewBox="0 0 24 24"><path d="M20 4L10 14"/><path d="M10 14L3.5 21M10 14L5.5 17.5M10 14L7.5 20.5"/><path d="M2.5 21.5H9"/></symbol>
+      <symbol id="icon-bricks" viewBox="0 0 24 24"><rect x="2" y="4" width="7" height="5"/><rect x="9.5" y="4" width="7" height="5"/><rect x="17" y="4" width="5" height="5"/><rect x="-1" y="10" width="5.5" height="5"/><rect x="5" y="10" width="7" height="5"/><rect x="12.5" y="10" width="7" height="5"/><rect x="20" y="10" width="5" height="5"/><line x1="0" y1="19.5" x2="24" y2="19.5"/></symbol>
+      <symbol id="icon-window" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="14" height="14" rx="1"/><line x1="10.5" y1="4.5" x2="10.5" y2="18.5"/><line x1="3.5" y1="11.5" x2="17.5" y2="11.5"/><path d="M19.5 3L21.5 1M21.5 4.5L23.5 3.5M19 6.5L21 7.5"/></symbol>
+      <symbol id="icon-square" viewBox="0 0 24 24"><path d="M4 4H8V16H20V20H4V4Z"/></symbol>
+      <symbol id="icon-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.4"/><circle cx="12" cy="12" r="7.5"/><line x1="12" y1="2.3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.7"/><line x1="2.3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.7" y2="12"/><line x1="5.4" y1="5.4" x2="7.3" y2="7.3"/><line x1="16.7" y1="16.7" x2="18.6" y2="18.6"/><line x1="18.6" y1="5.4" x2="16.7" y2="7.3"/><line x1="7.3" y1="16.7" x2="5.4" y2="18.6"/></symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24"><path d="M4 11L12 4L20 11V20H4V11Z"/><path d="M9 20V14H15V20"/></symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3L19 6V11C19 16 16 19.5 12 21C8 19.5 5 16 5 11V6L12 3Z"/><path d="M9 12L11 14L15 9"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 2.5L14.6 8.7L21.3 9.3L16.2 13.7L17.8 20.3L12 16.8L6.2 20.3L7.8 13.7L2.7 9.3L9.4 8.7Z"/></symbol>
+      <symbol id="icon-people" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3"/><path d="M2.5 19c0-3.3 2.7-5 6-5s6 1.7 6 5"/><circle cx="17" cy="9" r="2.3"/><path d="M14.5 19c.2-2.7 2-4.3 5-4.3"/></symbol>
+      <symbol id="icon-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14H11L10 22L20 9H13L13 2Z"/></symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.4 15.9 2 12 2C8.1 2 5 5.4 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></symbol>
+      <symbol id="icon-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="1.5"/><rect x="9" y="2.3" width="6" height="3" rx="1"/><path d="M8.5 11H15.5M8.5 14.5H15.5M8.5 18H12.5"/></symbol>
+      <symbol id="icon-wrench" viewBox="0 0 24 24"><path d="M14.5 9.5a3.5 3.5 0 1 1-5-5 3.5 3.5 0 0 1 4 .7L11 7.7l1.3 1.3 2.5-2.5c.6 1 .5 2.3-.3 3Z"/><path d="M9.5 11.5L4 17l1.5 1.5L11 13"/></symbol>
+      <symbol id="icon-facebook" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.3"/><path d="M14 8.3H12.6C11.8 8.3 11.1 9 11.1 9.8V12H14L13.6 14.5H11.1V21"/></symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17" cy="7" r="0.9" style="fill:currentColor;stroke:none;"/></symbol>
+      <symbol id="icon-review" viewBox="0 0 24 24"><path d="M4 5H20V16H9L5 19.5V16H4V5Z"/><path d="M12 8L13 10.1L15.3 10.4L13.6 12L14 14.2L12 13.1L10 14.2L10.4 12L8.7 10.4L11 10.1Z" style="fill:currentColor;stroke:none;"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="M4 12.5L9.5 18L20 6"/></symbol>
+    </defs>
+  </svg>
 
-                <a href="#about">About</a>
-                <a href="#contact" class="nav-cta">Get Estimate</a>
-            </nav>
+  <!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Property<span>Care</span></a>
+    
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navMenu">
+      <ul class="nav-links-group">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li class="dropdown">
+          <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Services <span class="arrow">▼</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#lawn">Lawn &amp; Garden</a></li>
+            <li><a href="index.html#hardscaping">Hardscaping</a></li>
+            <li><a href="index.html#exterior">Exterior Care</a></li>
+            <li><a href="index.html#carpentry">Carpentry</a></li>
+            <li><a href="index.html#handyman">Interior Handyman</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Get Estimate</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-rule"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Longmont · Boulder · Niwot · Berthoud</p>
+      <h1>Honest work.<br><em>Lasting</em> results.</h1>
+      <p class="hero-sub">Professional property maintenance — from crisp lawn edges to durable outdoor repairs. Every detail, done right.</p>
+      <div class="hero-actions">
+        <a href="tel:5551234567" class="btn-primary">Get a Free Estimate</a>
+        <a href="#services" class="btn-ghost">See Our Services</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Cities Served</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip">
+    <div class="strip-track">
+      <span>Lawn Mowing</span><span>Fence Installation</span><span>Property Cleanups</span>
+      <span>Hardscaping</span><span>Exterior Care</span><span>Custom Carpentry</span>
+      <span>Interior Handyman</span><span>Gutter Maintenance</span>
+      <span>Lawn Mowing</span><span>Fence Installation</span><span>Property Cleanups</span>
+      <span>Hardscaping</span><span>Exterior Care</span><span>Custom Carpentry</span>
+      <span>Interior Handyman</span><span>Gutter Maintenance</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" style="background:var(--straw);">
+    <div class="section">
+      <div class="services-intro">
+        <div class="services-intro-left">
+          <p class="section-label">What We Do</p>
+          <h2 class="section-title">Every corner of your property, <em>cared for</em></h2>
         </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Professional Property Maintenance</h1>
-            <p>Reliable, honest landscaping and yard care for your home.</p>
-            <a href="tel:5551234567" class="cta-button">Get a Free Estimate</a>
+        <div class="services-intro-right">
+          Over a decade of hands-on experience across landscaping, outdoor structures, and residential maintenance — all under one reliable crew.
         </div>
-    </section>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="card-num">01</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-leaf"/></svg></div>
+          <h3>Lawn Mowing &amp; Care</h3>
+          <p>Regular mowing, edging, and sharp trimming to keep your turf healthy, clean, and perfectly manicured all season long.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-num">02</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-fence"/></svg></div>
+          <h3>Fence Installation</h3>
+          <p>Sturdy, reliable boundary and privacy fencing built to withstand the elements and secure your perimeter.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-num">03</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-broom"/></svg></div>
+          <h3>Property Cleanups</h3>
+          <p>Complete spring and fall yard cleanups, leaf blowing, debris removal, and preparing your beds for the changing weather.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-num">04</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-bricks"/></svg></div>
+          <h3>Hardscaping</h3>
+          <p>Paver patio repairs, retaining wall maintenance, and precision walkway edging to define your outdoor space.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-num">05</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-window"/></svg></div>
+          <h3>Exterior Care</h3>
+          <p>Professional window cleaning, power washing, gutter maintenance, and wood rot repair for siding and trim.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-num">06</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-square"/></svg></div>
+          <h3>Custom Carpentry</h3>
+          <p>Minor deck repairs, custom planter box construction, mailbox installation, and shelving built to last.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-num">07</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-gear"/></svg></div>
+          <h3>Handyman Repairs</h3>
+          <p>Honest, dependable home fixes, small installations, and general maintenance to keep your property running smoothly.</p>
+        </div>
+        <div class="service-card">
+          <div class="card-num">08</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-home"/></svg></div>
+          <h3>Interior Handyman</h3>
+          <p>Drywall repair, painting, TV &amp; mirror mounting, baby proofing, and general interior home maintenance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section id="services" class="services-container">
-            <h2 class="section-title">Our Services</h2>
-            
-            <div class="services-grid">
-                <div class="service-card" id="mowing">
-                    <div class="card-icon">🌱</div>
-                    <h3>Lawn Mowing & Care</h3>
-                    <p>Regular mowing, edging, and sharp trimming to keep your turf healthy, clean, and perfectly manicured all season long.</p>
-                </div>
 
-                <div class="service-card" id="fences">
-                    <div class="card-icon">🚧</div>
-                    <h3>Fence Installation</h3>
-                    <p>Sturdy, reliable boundary and privacy fencing built to withstand the elements and secure your perimeter.</p>
-                </div>
+  <!-- ABOUT -->
+  <section id="about" style="background:var(--straw);">
+    <div class="section">
+      <div class="about-layout">
+        <div class="about-visual">
+          <img class="about-img"
+            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=800&auto=format&fit=crop"
+            alt="Garden maintenance work">
+          <div class="about-badge">
+            <div class="badge-num">10+</div>
+            <div class="badge-text">Years of Care</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-label">Who We Are</p>
+          <h2 class="section-title">Reliable &amp; <em>Honest</em> Property Care</h2>
+          <p>With over a decade of hands-on building, landscaping, and residential maintenance experience, we treat every property like our own. From crisp lawn edges to durable outdoor repairs, we focus on sharp attention to detail, reliable communication, and honest work.</p>
+          <p>We're not a franchise — we're your neighbors. Our reputation is built one yard at a time across the communities we call home.</p>
+          <div class="areas-list">
+            <span class="area-chip"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Longmont</span>
+            <span class="area-chip"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Boulder</span>
+            <span class="area-chip"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Niwot</span>
+            <span class="area-chip"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Berthoud</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="service-card" id="cleanups">
-                    <div class="card-icon">🍂</div>
-                    <h3>Property Cleanups</h3>
-                    <p>Complete spring and fall yard cleanups, leaf blowing, debris removal, and preparing your beds for the changing weather.</p>
-                </div>
-
-                <div class="service-card" id="handyman">
-                    <div class="card-icon">🛠️</div>
-                    <h3>Handyman Repairs</h3>
-                    <p>Honest, dependable home fixes, small installations, and general maintenance to keep your residential space running smoothly.</p>
-                </div>
+  <!-- CONTACT -->
+  <section id="contact" style="background:var(--bark);">
+    <div class="section">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title" style="color:var(--straw);">Request a Free <em style="color:var(--clay);">Estimate</em></h2>
+      <div class="contact-layout">
+        <div class="contact-intro">
+          <p>Need a quote for your next home or property maintenance project? Send a quick message and we'll respond promptly with availability and pricing.</p>
+          <div class="contact-detail">
+            <strong>Call</strong> <a href="tel:5551234567">(555) 123-4567</a>
+          </div>
+          <div class="contact-detail">
+            <strong>Email</strong> <a href="mailto:info@propertycare.com">info@propertycare.com</a>
+          </div>
+        </div>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
             </div>
-        </section>
-        
-        <section id="about" class="about-local">
-            <div class="about-text">
-                <h2>Reliable & Honest Property Care</h2>
-                <p>With over a decade of hands-on building, landscaping, and residential maintenance experience, we treat every property like our own. From crisp lawn edges to durable outdoor repairs, we focus on sharp eye for detail, reliable communication, and honest work.</p>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
             </div>
-            <div class="service-areas">
-                <h3>Areas We Serve</h3>
-                <ul>
-                    <li>📍 Longmont</li>
-                    <li>📍 Boulder</li>
-                    <li>📍 Niwot</li>
-                    <li>📍 Berthoud</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project — scope, timing, any photos to share?"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Request →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" style="background:var(--straw);">
+    <div class="section">
+      <p class="section-label">Client Stories</p>
+      <h2 class="section-title">Backed by <em>local homeowners</em></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg></div>
+          <div class="testimonial-quote">"</div>
+          <p>Property Care transformed our backyard with a new patio and retaining wall. Fast, friendly, and remarkably tidy.</p>
+          <div class="testimonial-author">Sara M. — Boulder</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg></div>
+          <div class="testimonial-quote">"</div>
+          <p>They handled our roof cleanup, gutter work, and fence repair in one visit. Great value and excellent workmanship.</p>
+          <div class="testimonial-author">James R. — Longmont</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg></div>
+          <div class="testimonial-quote">"</div>
+          <p>We asked for drywall repair and mirror hanging, and everything was finished neatly. Honest crew and easy scheduling.</p>
+          <div class="testimonial-author">Maria K. — Niwot</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" style="background:var(--cream);">
+    <div class="section">
+      <p class="section-label">Our Crew</p>
+      <h2 class="section-title">Meet the <em>hands</em> behind the work</h2>
+      <div class="team-grid" data-aos="fade-up">
+        <div class="team-card">
+          <div class="team-avatar" style="--avatar-a:var(--clay); --avatar-b:var(--bark);">
+            <span>MJ</span>
+            <span class="team-avatar-badge"><svg class="icon icon-sm"><use href="#icon-wrench"/></svg></span>
+          </div>
+          <h3>Mike Johnson</h3>
+          <p class="team-title">Owner & Lead Technician</p>
+          <p>15+ years of hands-on property maintenance. Specializes in hardscaping and outdoor repairs.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="--avatar-a:var(--moss); --avatar-b:var(--bark);">
+            <span>DL</span>
+            <span class="team-avatar-badge"><svg class="icon icon-sm"><use href="#icon-clipboard"/></svg></span>
+          </div>
+          <h3>David Lee</h3>
+          <p class="team-title">Project Manager</p>
+          <p>Manages scheduling and ensures every project runs smoothly with clear communication.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="--avatar-a:var(--sage); --avatar-b:var(--moss);">
+            <span>CM</span>
+            <span class="team-avatar-badge"><svg class="icon icon-sm"><use href="#icon-leaf"/></svg></span>
+          </div>
+          <h3>Carlos Martinez</h3>
+          <p class="team-title">Landscaping Specialist</p>
+          <p>Expert in lawn care, mulching, and landscape design. Detail-oriented perfectionist.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:var(--straw);">
+    <div class="section">
+      <p class="section-label">Questions?</p>
+      <h2 class="section-title">Frequently asked <em>questions</em></h2>
+      <div class="faq-container" data-aos="fade-up">
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">Do you provide estimates?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We offer free, no-obligation estimates for all services. Contact us or fill out the form above to request one.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">Are you licensed and insured?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. We're fully licensed, insured, and bonded to protect you and your property.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">What areas do you serve?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We serve Longmont, Boulder, Niwot, and Berthoud. Contact us to see if your area is covered.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">Can you work on weekends?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We work Saturday mornings by request. Sunday is our rest day. Contact us to arrange weekend scheduling.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">How do I schedule a service?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Call us at (555) 123-4567, email info@propertycare.com, or use the contact form above. We respond within 24 hours.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">What payment methods do you accept?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We accept cash, check, Venmo, and all major credit cards. Invoice billing available for regular clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter" style="background:var(--bark);">
+    <div class="section" style="text-align:center; padding:4rem 2.5rem;">
+      <p class="section-label">Stay Updated</p>
+      <h2 class="section-title" style="color:var(--straw);">Get tips &amp; <em style="color:var(--clay);">updates</em></h2>
+      <p style="color:rgba(245,240,232,0.7); font-size:1rem; max-width:500px; margin:1.5rem auto;">Join our mailing list for seasonal tips, discounts, and updates on new services.</p>
+      <form class="newsletter-form" id="newsletterForm" data-aos="fade-up">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit" class="btn-primary">Subscribe →</button>
+      </form>
+      <p style="color:rgba(245,240,232,0.4); font-size:0.8rem; margin-top:1rem; display:flex; align-items:center; justify-content:center; gap:0.4rem;"><svg class="icon icon-sm"><use href="#icon-check"/></svg>No spam, unsubscribe anytime</p>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES -->
+  <section id="trust" style="background:var(--cream); border-top:1px solid #E8E0D0;">
+    <div class="section" style="padding:3rem 2.5rem;">
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-shield"/></svg></div>
+          <p><strong>Licensed & Insured</strong><br><small>Full coverage protection</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
+          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
+          <p><strong>Local & Reliable</strong><br><small>Serving since 2014</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>
+          <p><strong>Quick Response</strong><br><small>24-hour reply guarantee</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Property Care</h4>
+        <p>Professional property maintenance serving Longmont, Boulder, Niwot, and Berthoud with honest work and lasting results.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><svg class="icon icon-sm"><use href="#icon-facebook"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg class="icon icon-sm"><use href="#icon-instagram"/></svg></a>
+          <a href="#" aria-label="Google Reviews"><svg class="icon icon-sm"><use href="#icon-review"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Longmont</li>
+          <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Boulder</li>
+          <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Niwot</li>
+          <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Berthoud</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Business Hours</h4>
+        <ul class="hours-list">
+          <li>Monday – Friday: 7:00 AM – 6:00 PM</li>
+          <li>Saturday: 8:00 AM – 5:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+        <div class="footer-contact" style="margin-top: 1.5rem;">
+          <p><strong>Phone:</strong> <a href="tel:5551234567">(555) 123-4567</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@propertycare.com">info@propertycare.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Property Care — Longmont, CO &nbsp;·&nbsp; All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
