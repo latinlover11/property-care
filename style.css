@@ -820,3 +820,54 @@ body {
   .hero-actions { flex-direction: column; }
   .btn-primary, .btn-ghost { text-align: center; }
 }
+
+.expand-btn {
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+}
+
+#lightbox .portfolio-comparison {
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#lightbox .comparison-img-before,
+#lightbox .comparison-img-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Ensure the handle is visible and functional */
+#lightbox .comparison-slider-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px; /* The width of your slider divider */
+  background: white; /* Make sure it's not transparent */
+  cursor: ew-resize; /* Shows the user it can be dragged */
+  z-index: 10;
+  pointer-events: auto; /* Ensures it can be clicked */
+  transform: translateX(-50%); /* Centers the handle on the line */
+}
+
+/* Optional: Add a knob or icon inside the handle for better UX */
+#lightbox .comparison-slider-handle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
