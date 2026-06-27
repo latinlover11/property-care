@@ -900,3 +900,11 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
+.portfolio-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border: 1px solid var(--clay);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
