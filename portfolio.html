@@ -12,15 +12,32 @@
   <header class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Property<span>Care</span></a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav-links" id="navMenu">
         <ul class="nav-links-group">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="portfolio.html" class="nav-link" style="color:var(--clay);">Portfolio</a></li>
-          <li><a href="index.html#contact" class="nav-cta">Get Your Estimate</a></li>
+          <li class="dropdown">
+            <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Services <span class="arrow">▼</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="services/lawn-mowing-care.html">Lawn Mowing & Care</a></li>
+              <li><a href="services/fence-installation.html">Fence Installation</a></li>
+              <li><a href="services/property-cleanups.html">Property Cleanups</a></li>
+              <li><a href="services/hardscaping.html">Hardscaping</a></li>
+              <li><a href="services/exterior-care.html">Exterior Care</a></li>
+              <li><a href="services/custom-carpentry.html">Custom Carpentry</a></li>
+              <li><a href="services/handyman-repairs.html">Handyman Repairs</a></li>
+              <li><a href="services/interior-handyman.html">Interior Handyman</a></li>
+              <li><a href="services.html" style="color:var(--clay); border-top:1px solid rgba(245,240,232,0.1); margin-top:0.25rem; padding-top:0.75rem;">View All Services →</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
         </ul>
+        <a href="index.html#contact" class="nav-cta">Get Estimate</a>
       </nav>
     </div>
   </header>
@@ -34,7 +51,7 @@
       
       <div class="portfolio-grid">
         <!-- Stone Walkway -->
-        <div class="portfolio-item" style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border: 1px solid var(--clay); border-radius: 4px; margin-bottom: 2rem;">
+        <div class="portfolio-item" data-aos="fade-up">
           <div class="portfolio-img-wrap">
             <div class="portfolio-comparison">
               <div class="comparison-slider">
@@ -45,16 +62,17 @@
             </div>
             <button class="expand-btn" data-before="images/walkwaybefore.png" data-after="images/walkwayafter.png">⤢</button>
           </div>
-          <h3 style="color: var(--bark); margin-top: 1rem;">Stone Walkway</h3>
-          <p style="font-size: 0.9rem; color: var(--warm-mid); margin-bottom: 1rem;"><strong>Challenge/Solution:</strong> Built to resolve drainage issues on a sloped property using natural flagstone and high-drainage gravel base.</p>
-          <div class="project-meta" style="border-top: 1px solid var(--clay); padding-top: 1rem; display: flex; justify-content: space-between; color: var(--clay);">
+          <h3>Stone Walkway</h3>
+          <p class="portfolio-item-desc"><strong>Challenge/Solution:</strong> Built to resolve drainage issues on a sloped property using natural flagstone and high-drainage gravel base.</p>
+          <div class="project-meta">
             <span><strong>Service:</strong> Hardscaping</span>
             <span><strong>Location:</strong> Longmont, CO</span>
+            <a href="services/hardscaping.html" class="project-meta-link">View Service →</a>
           </div>
         </div>
 
         <!-- Retaining Wall -->
-        <div class="portfolio-item" style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border: 1px solid var(--clay); border-radius: 4px; margin-bottom: 2rem;">
+        <div class="portfolio-item" data-aos="fade-up">
           <div class="portfolio-img-wrap">
             <div class="portfolio-comparison">
               <div class="comparison-slider">
@@ -65,16 +83,17 @@
             </div>
             <button class="expand-btn" data-before="images/wallbefore.jpg" data-after="images/wallafter.jpg">⤢</button>
           </div>
-          <h3 style="color: var(--bark); margin-top: 1rem;">Retaining Wall</h3>
-          <p style="font-size: 0.9rem; color: var(--warm-mid); margin-bottom: 1rem;"><strong>Challenge/Solution:</strong> Constructed to provide structural integrity to a steep backyard garden area using stacked stone.</p>
-          <div class="project-meta" style="border-top: 1px solid var(--clay); padding-top: 1rem; display: flex; justify-content: space-between; color: var(--clay);">
+          <h3>Retaining Wall</h3>
+          <p class="portfolio-item-desc"><strong>Challenge/Solution:</strong> Constructed to provide structural integrity to a steep backyard garden area using stacked stone.</p>
+          <div class="project-meta">
             <span><strong>Service:</strong> Landscaping</span>
             <span><strong>Location:</strong> Boulder, CO</span>
+            <a href="services/hardscaping.html" class="project-meta-link">View Service →</a>
           </div>
         </div>
 
         <!-- Custom Staircase -->
-        <div class="portfolio-item" style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border: 1px solid var(--clay); border-radius: 4px; margin-bottom: 2rem;">
+        <div class="portfolio-item" data-aos="fade-up">
           <div class="portfolio-img-wrap">
             <div class="portfolio-comparison">
               <div class="comparison-slider">
@@ -85,20 +104,23 @@
             </div>
             <button class="expand-btn" data-before="images/stairsbefore.jpg" data-after="images/stairsafter.jpg">⤢</button>
           </div>
-          <h3 style="color: var(--bark); margin-top: 1rem;">Custom Staircase</h3>
-          <p style="font-size: 0.9rem; color: var(--warm-mid); margin-bottom: 1rem;"><strong>Challenge/Solution:</strong> Replaced aging deck stairs with custom-built carpentry work for better safety and aesthetic appeal.</p>
-          <div class="project-meta" style="border-top: 1px solid var(--clay); padding-top: 1rem; display: flex; justify-content: space-between; color: var(--clay);">
+          <h3>Custom Staircase</h3>
+          <p class="portfolio-item-desc"><strong>Challenge/Solution:</strong> Replaced aging deck stairs with custom-built carpentry work for better safety and aesthetic appeal.</p>
+          <div class="project-meta">
             <span><strong>Service:</strong> Carpentry</span>
             <span><strong>Location:</strong> Niwot, CO</span>
+            <a href="services/custom-carpentry.html" class="project-meta-link">View Service →</a>
           </div>
         </div>
       </div>
 
       <div class="portfolio-cta">
-        <h2>Ready to transform your property?</h2>
-        <p style="margin-bottom: 1.5rem;">I'm available for a free, no-obligation estimate for your next project.</p>
-        <a href="tel:+13035550123" class="btn-primary" style="margin-right: 1rem;">Call (303) 555-0123</a>
-        <a href="index.html#contact" class="btn-ghost">Send a Message</a>
+        <div class="portfolio-cta-inner">
+          <h2>Ready to transform your property?</h2>
+          <p style="margin-bottom: 1.5rem;">I'm available for a free, no-obligation estimate for your next project.</p>
+          <a href="tel:+13035550123" class="btn-primary" style="margin-right: 1rem;">Call (303) 555-0123</a>
+          <a href="index.html#contact" class="btn-ghost">Send a Message</a>
+        </div>
       </div>
     </div>
   </section>
