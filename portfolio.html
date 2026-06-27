@@ -12,128 +12,109 @@
   <header class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Property<span>Care</span></a>
-      
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav-links" id="navMenu">
         <ul class="nav-links-group">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="portfolio.html" class="nav-link" style="color:var(--clay);">Portfolio</a></li>
-          <li class="dropdown">
-            <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-              Services <span class="arrow">▼</span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="index.html#lawn">Lawn &amp; Garden</a></li>
-              <li><a href="index.html#hardscaping">Hardscaping</a></li>
-              <li><a href="index.html#exterior">Exterior Care</a></li>
-              <li><a href="index.html#carpentry">Carpentry</a></li>
-              <li><a href="index.html#handyman">Interior Handyman</a></li>
-            </ul>
-          </li>
-          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#contact" class="nav-cta">Get Your Estimate</a></li>
         </ul>
-        <a href="index.html#contact" class="nav-cta" ...>Get Your Estimate</a>
       </nav>
     </div>
   </header>
 
   <section id="portfolio" style="background:var(--straw); padding: 5rem 2.5rem;">
     <div class="section" style="max-width: 1160px; margin: 0 auto;">
-      <p class="section-label">Recent Work</p>
+      <p class="section-label">Reliable Property Care</p>
       <h2 class="section-title">Projects that speak for <em>themselves</em></h2>
+      <p style="margin-bottom: 1rem; color: var(--bark); font-weight: 500;">Proudly serving Boulder, Longmont, and surrounding communities.</p>
+      <p style="margin-bottom: 3rem; color: var(--warm-mid);">Reliable, honest property care serving the area for over a decade.</p>
       
-<div class="portfolio-grid">
-  <div class="portfolio-item">
-    <div class="portfolio-img-wrap">
-      <div class="portfolio-comparison">
-        <div class="comparison-slider">
-          <div class="comparison-img comparison-img-before"><img src="images/walkwaybefore.png" alt="Before walkway"></div>
-          <div class="comparison-img comparison-img-after"><img src="images/walkwayafter.png" alt="After walkway"></div>
-          <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
-        </div>
-      </div>
-      <button class="expand-btn" aria-label="View full image" data-before="images/walkwaybefore.png" data-after="images/walkwayafter.png">⤢</button>
-    </div>
-    <h3>Stone Walkway</h3>
-    <div class="project-meta">
-      <span><strong>Service:</strong> Hardscaping</span>
-      <span><strong>Location:</strong> Longmont, CO</span>
-    </div>
-  </div>
-
-  <div class="portfolio-item">
-    <div class="portfolio-img-wrap">
-      <div class="portfolio-comparison">
-        <div class="comparison-slider">
-          <div class="comparison-img comparison-img-before"><img src="images/wallbefore.jpg" alt="Before wall"></div>
-          <div class="comparison-img comparison-img-after"><img src="images/wallafter.jpg" alt="After wall"></div>
-          <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
-        </div>
-      </div>
-      <button class="expand-btn" aria-label="View full image" data-before="images/wallbefore.jpg" data-after="images/wallafter.jpg">⤢</button>
-    </div>
-    <h3>Retaining Wall</h3>
-    <div class="project-meta">
-      <span><strong>Service:</strong> Landscaping</span>
-      <span><strong>Location:</strong> Boulder, CO</span>
-    </div>
-  </div>
-
-  <div class="portfolio-item">
-    <div class="portfolio-img-wrap">
-      <div class="portfolio-comparison">
-        <div class="comparison-slider">
-          <div class="comparison-img comparison-img-before">
-            <img src="images/stairsbefore.jpg" alt="Before stairs">
+      <div class="portfolio-grid">
+        <!-- Stone Walkway -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap">
+            <div class="portfolio-comparison">
+              <div class="comparison-slider">
+                <div class="comparison-img comparison-img-before"><img src="images/walkwaybefore.png" alt="Before: Sloped lawn area prior to stone walkway installation in Longmont, CO" loading="lazy"></div>
+                <div class="comparison-img comparison-img-after"><img src="images/walkwayafter.png" alt="After: New custom flagstone walkway with high-drainage gravel base" loading="lazy"></div>
+                <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
+              </div>
+            </div>
+            <button class="expand-btn" data-before="images/walkwaybefore.png" data-after="images/walkwayafter.png">⤢</button>
           </div>
-          <div class="comparison-img comparison-img-after">
-            <img src="images/stairsafter.jpg" alt="After stairs">
-          </div>
-          <div class="comparison-slider-handle">
-            <div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div>
+          <h3>Stone Walkway</h3>
+          <p style="font-size: 0.9rem; color: var(--warm-mid);"><strong>Challenge/Solution:</strong> Built to resolve drainage issues on a sloped property using natural flagstone and high-drainage gravel base.</p>
+          <div class="project-meta">
+            <span><strong>Service:</strong> Hardscaping</span>
+            <span><strong>Location:</strong> Longmont, CO</span>
           </div>
         </div>
-      </div>
-      <button class="expand-btn" aria-label="View full image" data-before="images/stairsbefore.jpg" data-after="images/stairsafter.jpg">⤢</button>
-    </div>
-    <h3>Custom Staircase</h3>
-    <div class="project-meta">
-      <span><strong>Service:</strong> Carpentry</span>
-      <span><strong>Location:</strong> Niwot, CO</span>
-    </div>
-  </div>
-</div>
 
-<div class="portfolio-cta">
-  <h2>Ready to transform your property?</h2>
-  <p>Let's discuss your vision and get you an estimate for your Longmont project.</p>
-  <a href="index.html#contact" class="nav-cta" style="display:inline-block; margin-top: 1rem;">Get Your Estimate</a>
-</div>
+        <!-- Retaining Wall -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap">
+            <div class="portfolio-comparison">
+              <div class="comparison-slider">
+                <div class="comparison-img comparison-img-before"><img src="images/wallbefore.jpg" alt="Before: Unfinished hillside slope in Boulder"></div>
+                <div class="comparison-img comparison-img-after"><img src="images/wallafter.jpg" alt="After: Completed structural retaining wall"></div>
+                <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
+              </div>
+            </div>
+            <button class="expand-btn" data-before="images/wallbefore.jpg" data-after="images/wallafter.jpg">⤢</button>
+          </div>
+          <h3>Retaining Wall</h3>
+          <p style="font-size: 0.9rem; color: var(--warm-mid);"><strong>Challenge/Solution:</strong> Constructed to provide structural integrity to a steep backyard garden area using stacked stone.</p>
+          <div class="project-meta">
+            <span><strong>Service:</strong> Landscaping</span>
+            <span><strong>Location:</strong> Boulder, CO</span>
+          </div>
+        </div>
+
+        <!-- Custom Staircase -->
+        <div class="portfolio-item">
+          <div class="portfolio-img-wrap">
+            <div class="portfolio-comparison">
+              <div class="comparison-slider">
+                <div class="comparison-img comparison-img-before"><img src="images/stairsbefore.jpg" alt="Before: Worn out wooden staircase"></div>
+                <div class="comparison-img comparison-img-after"><img src="images/stairsafter.jpg" alt="After: Custom finished staircase"></div>
+                <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
+              </div>
+            </div>
+            <button class="expand-btn" data-before="images/stairsbefore.jpg" data-after="images/stairsafter.jpg">⤢</button>
+          </div>
+          <h3>Custom Staircase</h3>
+          <p style="font-size: 0.9rem; color: var(--warm-mid);"><strong>Challenge/Solution:</strong> Replaced aging deck stairs with custom-built carpentry work for better safety and aesthetic appeal.</p>
+          <div class="project-meta">
+            <span><strong>Service:</strong> Carpentry</span>
+            <span><strong>Location:</strong> Niwot, CO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-cta">
+        <h2>Ready to transform your property?</h2>
+        <p style="margin-bottom: 1.5rem;">I'm available for a free, no-obligation estimate for your next project.</p>
+        <a href="tel:+13035550123" class="btn-primary" style="margin-right: 1rem;">Call (303) 555-0123</a>
+        <a href="index.html#contact" class="btn-ghost">Send a Message</a>
+      </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-bottom"><p>&copy; 2026 Property Care — Longmont, CO</p></div>
-  </footer>
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <div class="portfolio-comparison" style="width: 80vw; height: 70vh;">
+      <div class="comparison-slider">
+        <div class="comparison-img comparison-img-before"><img src="" alt="Before"></div>
+        <div class="comparison-img comparison-img-after"><img src="" alt="After"></div>
+        <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="script.js"></script>
-
-  <div id="lightbox" class="lightbox">
-    <span class="close-lightbox">&times;</span>
-    <div class="portfolio-comparison">
-        <div class="comparison-slider">
-            <img class="comparison-img-before" src="" alt="Before">
-            <img class="comparison-img-after" src="" alt="After">
-            <div class="comparison-slider-handle">
-                <div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div>
-            </div>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>

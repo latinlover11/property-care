@@ -39,28 +39,33 @@ document.querySelectorAll('.portfolio-comparison').forEach(initSlider);
 
 // ===== Global Click Handler (Consolidated) =====
 document.addEventListener('click', (e) => {
-    // 1. Expand Button
+   // 1. Expand Button
 const btn = e.target.closest('.expand-btn');
 if (btn) {
     e.stopPropagation();
     e.preventDefault();
     
     const lightbox = document.getElementById('lightbox');
-    const beforeImg = lightbox.querySelector('.comparison-img-before');
-    const afterImg = lightbox.querySelector('.comparison-img-after');
+    
+    // CORRECTED: Select the IMG element inside the container
+    const beforeImg = lightbox.querySelector('.comparison-img-before img');
+    const afterImg = lightbox.querySelector('.comparison-img-after img');
     const comparisonWrap = lightbox.querySelector('.portfolio-comparison');
 
+    // Now set the src
     beforeImg.src = btn.dataset.before;
     afterImg.src = btn.dataset.after;
 
     lightbox.style.display = 'flex';
     
-    // Initialize the slider for the lightbox only if it hasn't been yet
-    if (!comparisonWrap.dataset.initialized) {
+    // Initialize the slider logic
+    // Note: If initSlider relies on container width, make sure 
+    // the lightbox is visible before calling it (which it is here)
+    if (typeof initSlider === 'function') {
         initSlider(comparisonWrap);
-        comparisonWrap.dataset.initialized = "true";
     }
     return;
+
 }
 
     // 2. Close Lightbox

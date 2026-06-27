@@ -871,3 +871,32 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
+
+/* Refine Visual Hierarchy */
+.portfolio-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-item p {
+    font-size: 0.85rem !important; /* Slightly smaller text */
+    color: var(--warm-mid) !important;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.portfolio-grid {
+    gap: 3rem; /* More room between cards */
+}
+
+/* Trust-Building Micro-Interactions */
+.portfolio-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}

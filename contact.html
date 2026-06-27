@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Property Care</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Property<span>Care</span></a>
+      <nav class="nav-links">
+        <ul class="nav-links-group">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="contact.html" class="nav-link" style="color:var(--straw);">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section">
+      <div class="contact-layout">
+        <!-- Intro Column -->
+        <div class="contact-intro">
+          <p class="section-label">Get a Free Estimate</p>
+          <h2 class="section-title">Let's start your project</h2>
+          <p>Whether it's a small repair or a major landscape renovation, I'm here to help. Reach out and I'll get back to you within 24 hours to discuss your property needs.</p>
+          
+          <div class="contact-detail"><strong>Phone:</strong> <a href="tel:+13035550123">(303) 555-0123</a></div>
+          <div class="contact-detail"><strong>Email:</strong> info@propertycare.com</div>
+          <div class="contact-detail"><strong>Serving:</strong> Boulder, Longmont, Niwot & Lyons</div>
+        </div>
+
+        <!-- Form Column -->
+        <div style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 4px; border: 1px solid rgba(196,151,122,0.2);">
+          <form action="#" method="POST" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(303) 555-0123">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(245,240,232,0.15); color: var(--straw); padding: 0.75rem; border-radius: 2px;">
+                <option value="hardscaping">Hardscaping</option>
+                <option value="fencing">Fencing</option>
+                <option value="lawn">Landscaping & Lawn Care</option>
+                <option value="carpentry">Carpentry</option>
+                <option value="handyman">General Handyman</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Details</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" style="padding: 5rem 2.5rem; background: var(--cream);">
+  <div class="section" style="max-width: 1160px; margin: 0 auto;">
+    <p class="section-label">Reliable Process</p>
+    <h2 class="section-title">How I get the job <em>done</em></h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+      <div style="padding: 2rem; border-left: 2px solid var(--clay);">
+        <h3 style="margin-bottom: 0.5rem; color: var(--bark);">1. Consultation</h3>
+        <p style="color: var(--warm-mid); font-size: 0.95rem;">We discuss your vision and specific property needs to ensure we are on the same page.</p>
+      </div>
+      <div style="padding: 2rem; border-left: 2px solid var(--clay);">
+        <h3 style="margin-bottom: 0.5rem; color: var(--bark);">2. Transparent Estimate</h3>
+        <p style="color: var(--warm-mid); font-size: 0.95rem;">You receive an honest, clear breakdown of the work and materials required.</p>
+      </div>
+      <div style="padding: 2rem; border-left: 2px solid var(--clay);">
+        <h3 style="margin-bottom: 0.5rem; color: var(--bark);">3. Professional Execution</h3>
+        <p style="color: var(--warm-mid); font-size: 0.95rem;">I perform the work with precision, maintaining a clean and respectful job site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="service-area" style="padding: 5rem 2.5rem; background: var(--bark); color: var(--straw);">
+  <div class="section" style="max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+    <div>
+      <h2 class="section-title" style="color: var(--straw);">Serving the Boulder County Community</h2>
+      <p style="line-height: 1.7; color: rgba(245,240,232,0.75);">I am deeply familiar with the unique landscaping and property maintenance needs of the Boulder and Longmont area. Whether you need hardscaping in the foothills or routine property care in town, I provide reliable, honest service locally.</p>
+    </div>
+    <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 4px;">
+      <h4 style="margin-bottom: 1rem; color: var(--clay);">Communities Served</h4>
+      <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+        <li>✓ Boulder</li>
+        <li>✓ Longmont</li>
+        <li>✓ Niwot</li>
+        <li>✓ Lyons</li>
+        <li>✓ Erie</li>
+        <li>✓ Louisville</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- TRUST BADGES -->
+  <section id="trust" style="background:var(--cream); border-top:1px solid #E8E0D0;">
+    <div class="section" style="padding:3rem 2.5rem;">
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-shield"/></svg></div>
+          <p><strong>Licensed & Insured</strong><br><small>Full coverage protection</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
+          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
+          <p><strong>Local & Reliable</strong><br><small>Serving since 2014</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>
+          <p><strong>Quick Response</strong><br><small>24-hour reply guarantee</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Property Care — Longmont, CO</p>
+    </div>
+  </footer>
+
+</body>
+</html>
