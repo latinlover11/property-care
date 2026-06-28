@@ -10,8 +10,8 @@
 
     <nav class="nav-links" id="navMenu">
       <ul class="nav-links-group">
-        <li><a href="{{ root }}index.html" class="nav-link{% if active == 'home' %} active{% endif %}">Home</a></li>
-        <li><a href="{{ root }}portfolio.html" class="nav-link{% if active == 'portfolio' %} active{% endif %}">Portfolio</a></li>
+        <li><a href="{{ root }}index.html" class="nav-link{% if active == 'home' %} active{% endif %}"{% if active == 'home' %} aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="{{ root }}portfolio.html" class="nav-link{% if active == 'portfolio' %} active{% endif %}"{% if active == 'portfolio' %} aria-current="page"{% endif %}>Portfolio</a></li>
         <li class="dropdown">
           <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
             Services <span class="arrow">▼</span>
@@ -28,7 +28,7 @@
             <li><a href="{{ root }}services.html" style="color:var(--clay); border-top:1px solid rgba(245,240,232,0.1); margin-top:0.25rem; padding-top:0.75rem;">View All Services →</a></li>
           </ul>
         </li>
-        <li><a href="{{ root }}about.html" class="nav-link{% if active == 'about' %} active{% endif %}">About</a></li>
+        <li><a href="{{ root }}about.html" class="nav-link{% if active == 'about' %} active{% endif %}"{% if active == 'about' %} aria-current="page"{% endif %}>About</a></li>
       </ul>
       <a href="{{ root }}contact.html" class="nav-cta">Get Estimate</a>
     </nav>
