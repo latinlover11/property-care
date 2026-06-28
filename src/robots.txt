@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://propertycareco.com/sitemap.xml
+Sitemap: https://1propertycare.netlify.app/sitemap.xml

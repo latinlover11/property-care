@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://propertycareco.com/</loc>
+    <loc>https://1propertycare.netlify.app/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/services.html</loc>
+    <loc>https://1propertycare.netlify.app/services.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/portfolio.html</loc>
+    <loc>https://1propertycare.netlify.app/portfolio.html</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/about.html</loc>
+    <loc>https://1propertycare.netlify.app/about.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/contact.html</loc>
+    <loc>https://1propertycare.netlify.app/contact.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/services/lawn-mowing-care.html</loc>
+    <loc>https://1propertycare.netlify.app/services/lawn-mowing-care.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/services/fence-installation.html</loc>
+    <loc>https://1propertycare.netlify.app/services/fence-installation.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/services/hardscaping.html</loc>
+    <loc>https://1propertycare.netlify.app/services/hardscaping.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/services/property-cleanups.html</loc>
+    <loc>https://1propertycare.netlify.app/services/property-cleanups.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/services/exterior-care.html</loc>
+    <loc>https://1propertycare.netlify.app/services/exterior-care.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/services/custom-carpentry.html</loc>
+    <loc>https://1propertycare.netlify.app/services/custom-carpentry.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/services/handyman-repairs.html</loc>
+    <loc>https://1propertycare.netlify.app/services/handyman-repairs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/services/interior-handyman.html</loc>
+    <loc>https://1propertycare.netlify.app/services/interior-handyman.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://propertycareco.com/404.html</loc>
+    <loc>https://1propertycare.netlify.app/404.html</loc>
     <priority>0.3</priority>
   </url>
 </urlset>
