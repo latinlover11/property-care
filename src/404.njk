@@ -1,0 +1,32 @@
+---
+title: Page Not Found
+description: The page you are looking for does not exist. Return to Property Care's home page.
+ogUrl: 404.html
+root: ""
+active: "404"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.njk" %}
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  {% include "icons.njk" %}
+  {% include "nav.njk" %}
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem;">
+    <div style="max-width: 600px;">
+      <h2 class="section-title">Page Not Found</h2>
+      <p style="margin-bottom: 2rem; color: var(--warm-mid);">The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn-primary">Return Home</a>
+        <a href="contact.html" class="btn-ghost">Contact Us</a>
+      </div>
+    </div>
+  </main>
+
+  {% include "footer.njk" %}
+
+</body>
+</html>

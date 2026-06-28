@@ -1,0 +1,29 @@
+---
+title: Thank You
+description: Your message has been received. We'll get back to you within 24 hours.
+ogUrl: success.html
+root: ""
+active: "success"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.njk" %}
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  {% include "icons.njk" %}
+  {% include "nav.njk" %}
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem;">
+    <div style="max-width: 600px;">
+      <h2 class="section-title">Message Received</h2>
+      <p style="margin-bottom: 2rem; color: var(--warm-mid);">Thank you for reaching out! I have received your request and will get back to you within 24 hours to discuss your project.</p>
+      <a href="index.html" class="btn-primary">Return Home</a>
+    </div>
+  </main>
+
+  {% include "footer.njk" %}
+
+</body>
+</html>

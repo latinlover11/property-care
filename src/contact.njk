@@ -1,0 +1,180 @@
+---
+title: Contact
+description: Request a free estimate for property maintenance services in Longmont, Boulder, Niwot, and Berthoud. Lawn care, fencing, hardscaping, and more.
+ogUrl: contact.html
+root: ""
+active: "contact"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+
+  {% include "icons.njk" %}
+  {% include "nav.njk" %}
+
+  <section class="page-hero" style="position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(61,43,31,0.45) 0%, transparent 100%); pointer-events:none;"></div>
+    <div style="position:absolute; inset:0; opacity:0.04; background-image:url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); background-size:256px; pointer-events:none;"></div>
+    <div class="section" style="padding-top:0; padding-bottom:0; position:relative; z-index:1;">
+      <div class="breadcrumb">
+        <a href="{{ root }}index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Contact</span>
+      </div>
+      <p class="section-label" style="font-size:0.82rem; letter-spacing:0.1em;">Get in Touch</p>
+      <h1 class="section-title" style="font-size:clamp(2.2rem,5vw,3.2rem); max-width:700px;">Let's talk about your <em>project</em></h1>
+      <div style="width:40px; height:3px; background:var(--clay); border-radius:2px; margin-top:1.5rem;"></div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section id="service-area" style="background:var(--cream);">
+    <div class="section">
+      <div class="area-layout">
+        <div>
+          <p class="section-label">Where We Serve</p>
+          <h2 class="section-title">Proudly serving Boulder County <em>&amp; beyond</em></h2>
+          <p style="line-height:1.7; color:rgba(61,43,31,0.6); max-width:480px;">From the foothills of Lyons to the Carbon Valley — we bring the same reliability to every job across the region.</p>
+        </div>
+        <div class="area-communities">
+          <h4 style="color:var(--bark); font-family:'Playfair Display',serif; font-size:1.05rem; margin-bottom:1rem;">Communities Served</h4>
+          <ul class="area-list">
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Niwot</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Firestone</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Frederick</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Lyons</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Berthoud</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Boulder</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Lafayette</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Louisville</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Loveland</li>
+          </ul>
+        </div>
+        <div class="area-map">
+          <div class="area-map-clip">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1NrMocUaK2CZlEY-hOWLi1HzMpTU0o2A" width="100%" height="460" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section">
+      <p class="section-label" style="color:var(--clay);">Get a Free Estimate</p>
+      <h2 class="section-title" style="color:var(--straw);">Tell us about <em>your project</em></h2>
+      <div class="contact-layout">
+        <div class="contact-intro" data-aos="fade-right">
+          <p style="font-size:1.05rem; margin-bottom:2rem;">Whether it's a one-time job or regular maintenance, fill out the form and we'll respond with availability and a clear estimate.</p>
+          <div class="contact-detail">
+            <svg class="icon" style="width:1rem;height:1rem;flex-shrink:0;"><use href="#icon-people"/></svg>
+            <div><strong>Call</strong> <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a></div>
+          </div>
+          <div class="contact-detail">
+            <svg class="icon" style="width:1rem;height:1rem;flex-shrink:0;"><use href="#icon-clipboard"/></svg>
+            <div><strong>Email</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+          </div>
+          <div class="contact-detail">
+            <svg class="icon" style="width:1rem;height:1rem;flex-shrink:0;"><use href="#icon-pin"/></svg>
+            <div><strong>Service Area</strong> Longmont, Boulder, Niwot, Berthoud &amp; surrounding</div>
+          </div>
+          <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(245,240,232,0.06);">
+            <p style="font-size:0.85rem; color:rgba(245,240,232,0.45); margin:0;">We typically respond within 24 hours.</p>
+          </div>
+        </div>
+
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" data-aos="fade-left">
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="{{ site.phoneDisplay }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project — scope, timing, any photos to share?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" style="background:var(--straw);">
+    <div class="section">
+      <p class="section-label" style="color:var(--clay);">Simple Process</p>
+      <h2 class="section-title" style="color:var(--bark);">What happens <em>next</em></h2>
+      <div class="steps-grid" data-aos="fade-up" style="max-width:none;">
+        <div class="step-card" style="background:var(--cream);">
+          <span class="step-num">1</span>
+          <h3 style="font-size:1.15rem;">Tell us what you need</h3>
+          <p style="font-size:0.95rem; color:rgba(61,43,31,0.6); line-height:1.7;">Share the details through our form, email, or a quick call.</p>
+        </div>
+        <div class="step-card" style="background:var(--cream);">
+          <span class="step-num">2</span>
+          <h3 style="font-size:1.15rem;">Get a clear estimate</h3>
+          <p style="font-size:0.95rem; color:rgba(61,43,31,0.6); line-height:1.7;">We review your scope and respond with an honest, itemized breakdown.</p>
+        </div>
+        <div class="step-card" style="background:var(--cream);">
+          <span class="step-num">3</span>
+          <h3 style="font-size:1.15rem;">We handle the rest</h3>
+          <p style="font-size:0.95rem; color:rgba(61,43,31,0.6); line-height:1.7;">Once you're happy, we schedule and execute with precision and complete clean-up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES -->
+  <section id="trust" style="background:var(--cream);">
+    <div class="section" style="padding:3rem 2.5rem;">
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-shield"/></svg></div>
+          <p><strong>Licensed &amp; Insured</strong><br><small>Full liability coverage</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
+          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
+          <p><strong>Local &amp; Reliable</strong><br><small>Serving since 2014</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>
+          <p><strong>Quick Response</strong><br><small>24-hour reply guarantee</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" style="background:var(--bark); position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; opacity:0.04; background-image:url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); background-size:256px; pointer-events:none;"></div>
+    <div class="section" style="text-align:center; position:relative; z-index:1;">
+      <h2 class="section-title" style="color:var(--cream);">Ready to get started?</h2>
+      <p style="color:var(--straw); max-width:500px; margin:0 auto 2rem;">Tell us about your project and we'll get back to you with a free estimate — usually within 24 hours.</p>
+      <a href="#contact" class="btn-primary">Fill Out the Form</a>
+    </div>
+  </section>
+
+  {% include "footer.njk" %}
+  {% include "scripts.njk" %}
+
+</body>
+</html>

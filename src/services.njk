@@ -1,0 +1,134 @@
+---
+title: Our Services — Property Care | Longmont & Boulder
+description: "Explore all property maintenance services from Property Care: lawn care, fencing, hardscaping, exterior care, carpentry, and handyman repairs across Longmont, Boulder, Niwot, and Berthoud."
+ogUrl: services.html
+root: ""
+active: "services"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+
+  {% include "icons.njk" %}
+  {% include "nav.njk" %}
+
+  <section class="page-hero">
+    <div class="section" style="padding-top:0; padding-bottom:0;">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Services</span>
+      </div>
+      <p class="section-label">What We Do</p>
+      <h1 class="section-title">Every corner of your property, <em>cared for</em></h1>
+      <p class="page-hero-sub">Over a decade of hands-on experience across landscaping, outdoor structures, and residential maintenance — all under one reliable crew. Explore each service below for details, FAQs, and related project examples.</p>
+      <div class="page-hero-actions">
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
+        <a href="portfolio.html" class="btn-ghost">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES HUB GRID -->
+  <section style="background:var(--cream);">
+    <div class="section">
+      <p class="section-label">Full Service Offerings</p>
+      <p style="color:var(--warm-mid); max-width:600px; margin-bottom:2.5rem; line-height:1.7;">From weekly lawn upkeep to custom carpentry, each service is backed by real experience and a commitment to quality. Browse what I offer below.</p>
+      <div class="hub-grid">
+        <a href="services/lawn-mowing-care.html" class="hub-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="card-icon"><svg class="icon"><use href="#icon-leaf"/></svg></div>
+          <h3>Lawn Mowing &amp; Care</h3>
+          <p>Regular mowing, edging, and sharp trimming to keep your turf healthy and perfectly manicured all season long.</p>
+          <span class="hub-link">Learn more →</span>
+        </a>
+        <a href="services/fence-installation.html" class="hub-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon"><svg class="icon"><use href="#icon-fence"/></svg></div>
+          <h3>Fence Installation</h3>
+          <p>Sturdy, reliable boundary and privacy fencing built to withstand the elements and secure your perimeter.</p>
+          <span class="hub-link">Learn more →</span>
+        </a>
+        <a href="services/property-cleanups.html" class="hub-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon"><svg class="icon"><use href="#icon-broom"/></svg></div>
+          <h3>Property Cleanups</h3>
+          <p>Complete spring and fall yard cleanups, leaf blowing, debris removal, and bed prep for the changing weather.</p>
+          <span class="hub-link">Learn more →</span>
+        </a>
+        <a href="services/hardscaping.html" class="hub-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon"><svg class="icon"><use href="#icon-bricks"/></svg></div>
+          <h3>Hardscaping</h3>
+          <p>Paver patio repairs, retaining wall maintenance, and precision walkway construction to define your outdoor space.</p>
+          <span class="hub-link">Learn more →</span>
+        </a>
+        <a href="services/exterior-care.html" class="hub-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-icon"><svg class="icon"><use href="#icon-window"/></svg></div>
+          <h3>Exterior Care</h3>
+          <p>Professional window cleaning, power washing, gutter maintenance, and wood rot repair for siding and trim.</p>
+          <span class="hub-link">Learn more →</span>
+        </a>
+        <a href="services/custom-carpentry.html" class="hub-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="card-icon"><svg class="icon"><use href="#icon-square"/></svg></div>
+          <h3>Custom Carpentry</h3>
+          <p>Minor deck repairs, custom planter box construction, mailbox installation, and shelving built to last.</p>
+          <span class="hub-link">Learn more →</span>
+        </a>
+        <a href="services/handyman-repairs.html" class="hub-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="card-icon"><svg class="icon"><use href="#icon-gear"/></svg></div>
+          <h3>Handyman Repairs</h3>
+          <p>Honest, dependable home fixes, small installations, and general maintenance to keep your property running smoothly.</p>
+          <span class="hub-link">Learn more →</span>
+        </a>
+        <a href="services/interior-handyman.html" class="hub-card" data-aos="fade-up" data-aos-delay="700">
+          <div class="card-icon"><svg class="icon"><use href="#icon-home"/></svg></div>
+          <h3>Interior Handyman</h3>
+          <p>Drywall repair, painting, TV &amp; mirror mounting, baby proofing, and general interior home maintenance.</p>
+          <span class="hub-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--straw); padding: 4rem 2.5rem;">
+    <div class="section">
+      <div class="portfolio-cta" style="margin-top:0;">
+        <div class="portfolio-cta-inner">
+          <h2>Not sure which service you need?</h2>
+          <p style="margin-bottom: 1.5rem;">I'll help you figure it out — no pressure, just honest advice. Free estimates, always.</p>
+          <a href="tel:{{ site.phone }}" class="btn-primary" style="margin-right: 1rem;">Call {{ site.phoneDisplay }}</a>
+          <a href="contact.html" class="btn-ghost">Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES -->
+  <section id="trust" style="background:var(--straw);">
+    <div class="section" style="padding:3rem 2.5rem;">
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-shield"/></svg></div>
+          <p><strong>Licensed &amp; Insured</strong><br><small>Full coverage protection</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
+          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
+          <p><strong>Local &amp; Reliable</strong><br><small>Serving since 2014</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>
+          <p><strong>Quick Response</strong><br><small>24-hour reply guarantee</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "footer.njk" %}
+  {% include "scripts.njk" %}
+
+</body>
+</html>
