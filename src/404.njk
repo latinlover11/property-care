@@ -1,19 +1,16 @@
 ---
-title: Page Not Found
-description: The page you are looking for does not exist. Return to Property Care's home page.
-ogUrl: 404.html
+title: "Page Not Found — Property Care"
+description: "The page you are looking for does not exist. Return to Property Care's home page."
+ogUrl: "404.html"
 root: ""
 active: "404"
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include "head.njk" %}
+{% include "head.njk" %}
 </head>
 <body style="display: flex; flex-direction: column; min-height: 100vh;">
 
-  {% include "icons.njk" %}
-  {% include "nav.njk" %}
+{% include "icons.njk" %}
+{% include "nav.njk" %}
 
   <main style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem;">
     <div style="max-width: 600px;">
@@ -26,7 +23,7 @@ active: "404"
     </div>
   </main>
 
-  {% include "footer.njk" %}
+{% include "footer.njk" %}
 
 </body>
 </html>

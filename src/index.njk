@@ -1,31 +1,29 @@
 ---
-title: Home
-description: Property Care provides professional lawn mowing, fence installation, hardscaping, exterior care, and handyman services in Longmont, Boulder, Niwot, and Berthoud, CO.
-ogUrl: ""
+title: "Property Care — Longmont & Boulder"
+description: "Property Care provides professional lawn mowing, fence installation, hardscaping, exterior care, and handyman services in Longmont, Boulder, Niwot, and Berthoud, CO."
+ogUrl: "index.html"
 root: ""
 active: "home"
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include "head.njk" %}
+{% include "head.njk" %}
 </head>
 <body>
 
-  {% include "icons.njk" %}
-  {% include "nav.njk" %}
+{% include "icons.njk" %}
+{% include "nav.njk" %}
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-overlay"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-rule"></div>
     <div class="hero-content">
-      <p class="hero-badge">Trusted Property Maintenance</p>
-      <h1>Care for your <em>property</em><br>like it's our <em>own</em></h1>
-      <p class="hero-sub">Lawn mowing · Fence installation · Hardscaping · Exterior care ·<br>Custom carpentry · Handyman repairs — Longmont &amp; Boulder</p>
+      <p class="hero-eyebrow">Longmont · Boulder · Niwot · Berthoud</p>
+      <h1>Honest work.<br><em>Lasting</em> results.</h1>
+      <p class="hero-sub">Professional property maintenance — from crisp lawn edges to durable outdoor repairs. Every detail, done right.</p>
+      <a href="tel:{{ site.phone }}" class="hero-phone">Call {{ site.phoneDisplay }}</a>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary" style="font-size:0.8rem; border-radius:4px;">Get a Free Quote</a>
-        <a href="tel:+17207075411" class="hero-phone">Call (720) 707-5411</a>
+        <a href="#contact" class="btn-primary">Get a Free Estimate</a>
+        <a href="#services" class="btn-ghost">See Our Services</a>
       </div>
     </div>
   </section>
@@ -42,184 +40,18 @@ active: "home"
     </div>
   </div>
 
-  <!-- ABOUT STRIP -->
-  <section id="about" style="background:var(--bark);" data-aos="fade-up">
-    <div class="section">
-      <div class="about-split">
-        <div style="max-width:440px;">
-          <p class="section-label" style="color:var(--clay);">About Us</p>
-          <h2 class="section-title" style="color:var(--straw);">Built on <em>trust</em>, backed by <em>experience</em></h2>
-          <p style="color:rgba(245,240,232,0.6); line-height:1.7; margin-bottom:1rem;">Since 2014, we've been delivering reliable property maintenance across Boulder County — from routine lawn care to custom builds.</p>
-          <p style="color:rgba(245,240,232,0.6); line-height:1.7; margin-bottom:2rem;">We believe in showing up on time, communicating clearly, and leaving every property better than we found it.</p>
-          <a href="{{ root }}about.html" class="btn-primary">Learn More About Us</a>
-        </div>
-        <div class="about-stats-grid">
-          <div class="about-stat-card">
-            <div class="stat-number">10+</div>
-            <div class="stat-label">Years Serving Boulder County</div>
-          </div>
-          <div class="about-stat-card">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Happy Homeowners</div>
-          </div>
-          <div class="about-stat-card">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Satisfaction Guarantee</div>
-          </div>
-          <div class="about-stat-card">
-            <div class="stat-number">4</div>
-            <div class="stat-label">Cities &amp; Growing</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" style="background:var(--cream);" data-aos="fade-up">
-    <div class="section" style="text-align:center;">
-      <p class="section-label">What We Do</p>
-      <h2 class="section-title" style="color:var(--bark);">Full-service property <em>care</em></h2>
-      <div class="hub-grid">
-        <a href="{{ root }}services/lawn-mowing-care.html" class="hub-card">
-          <div class="hub-icon"><svg class="icon"><use href="#icon-leaf"/></svg></div>
-          <h3>Lawn Mowing &amp; Care</h3>
-          <p>Regular mowing, trimming, edging, and seasonal clean-up to keep your yard pristine.</p>
-          <span class="hub-link">Learn More →</span>
-        </a>
-        <a href="{{ root }}services/fence-installation.html" class="hub-card">
-          <div class="hub-icon"><svg class="icon"><use href="#icon-fence"/></svg></div>
-          <h3>Fence Installation</h3>
-          <p>Custom wood, vinyl, and metal fencing for privacy, security, and curb appeal.</p>
-          <span class="hub-link">Learn More →</span>
-        </a>
-        <a href="{{ root }}services/property-cleanups.html" class="hub-card">
-          <div class="hub-icon"><svg class="icon"><use href="#icon-broom"/></svg></div>
-          <h3>Property Cleanups</h3>
-          <p>Full property clean-ups, debris removal, and overgrowth clearing for homes and lots.</p>
-          <span class="hub-link">Learn More →</span>
-        </a>
-        <a href="{{ root }}services/hardscaping.html" class="hub-card">
-          <div class="hub-icon"><svg class="icon"><use href="#icon-bricks"/></svg></div>
-          <h3>Hardscaping</h3>
-          <p>Patios, walkways, retaining walls, and stonework that transform your outdoor space.</p>
-          <span class="hub-link">Learn More →</span>
-        </a>
-        <a href="{{ root }}services/exterior-care.html" class="hub-card">
-          <div class="hub-icon"><svg class="icon"><use href="#icon-window"/></svg></div>
-          <h3>Exterior Care</h3>
-          <p>Gutter cleaning, window washing, roof moss removal, and power washing.</p>
-          <span class="hub-link">Learn More →</span>
-        </a>
-        <a href="{{ root }}services/custom-carpentry.html" class="hub-card">
-          <div class="hub-icon"><svg class="icon"><use href="#icon-square"/></svg></div>
-          <h3>Custom Carpentry</h3>
-          <p>Decks, pergolas, trim work, sheds, and custom outdoor structures built to last.</p>
-          <span class="hub-link">Learn More →</span>
-        </a>
-        <a href="{{ root }}services/handyman-repairs.html" class="hub-card">
-          <div class="hub-icon"><svg class="icon"><use href="#icon-wrench"/></svg></div>
-          <h3>Handyman Repairs</h3>
-          <p>Drywall repair, door fixes, plumbing basics, and general home maintenance.</p>
-          <span class="hub-link">Learn More →</span>
-        </a>
-        <a href="{{ root }}services/interior-handyman.html" class="hub-card">
-          <div class="hub-icon"><svg class="icon"><use href="#icon-home"/></svg></div>
-          <h3>Interior Handyman</h3>
-          <p>Painting, shelving, furniture assembly, and interior repairs and improvements.</p>
-          <span class="hub-link">Learn More →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" style="background:var(--straw);" data-aos="fade-up">
-    <div class="section" style="text-align:center;">
-      <p class="section-label" style="color:var(--clay);">What Clients Say</p>
-      <h2 class="section-title" style="color:var(--bark);">Trusted by homeowners across <em>Boulder County</em></h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"They transformed our overgrown backyard into a space we actually use. The team was punctual, professional, and left everything spotless."</p>
-          <div class="testimonial-author">— Sarah M., Longmont</div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"We needed a custom fence on a tight timeline. They delivered ahead of schedule and the craftsmanship is excellent. Highly recommend."</p>
-          <div class="testimonial-author">— Tom R., Boulder</div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Our regular lawn service provider let us down, and Property Care stepped in immediately. Now we're on a weekly plan — couldn't be happier."</p>
-          <div class="testimonial-author">— Lisa K., Niwot</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS (3-step) -->
-  <section id="steps" style="background:var(--bark);" data-aos="fade-up">
-    <div class="section">
-      <p class="section-label" style="color:var(--clay);">Simple Steps</p>
-      <h2 class="section-title" style="color:var(--straw);">How it <em>works</em></h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <span class="step-num">1</span>
-          <h3>Tell us what you need</h3>
-          <p>Share the details of your project — big or small — and we'll listen carefully.</p>
-        </div>
-        <div class="step-card">
-          <span class="step-num">2</span>
-          <h3>Get a clear estimate</h3>
-          <p>We provide an honest, itemized quote with no hidden fees or surprises.</p>
-        </div>
-        <div class="step-card">
-          <span class="step-num">3</span>
-          <h3>We handle the rest</h3>
-          <p>Sit back while we complete the work with precision, care, and a thorough clean-up.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" style="background:var(--cream);" data-aos="fade-up">
-    <div class="section" style="max-width:800px; margin:0 auto;">
-      <div style="text-align:center; margin-bottom:3rem;">
-        <p class="section-label">FAQ</p>
-        <h2 class="section-title" style="color:var(--bark);">Common <em>questions</em></h2>
-      </div>
-      <details class="faq-item">
-        <summary>Do you offer free estimates? <span class="faq-icon">+</span></summary>
-        <p>Yes! We offer free, no-obligation estimates for all services. Contact us or fill out the form above to request one.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How quickly can you start a project? <span class="faq-icon">+</span></summary>
-        <p>Most projects start within a week of approval. Smaller jobs like mowing or repairs can often be scheduled within 48 hours.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Are you licensed and insured? <span class="faq-icon">+</span></summary>
-        <p>Absolutely. We carry full liability insurance and all work meets local code requirements. We're happy to provide proof upon request.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What areas do you serve? <span class="faq-icon">+</span></summary>
-        <p>We serve Longmont, Boulder, Niwot, and Berthoud. Contact us to see if your area is covered.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Do you offer weekend appointments? <span class="faq-icon">+</span></summary>
-        <p>We work Saturday mornings by request. Sunday is our rest day. Contact us to arrange weekend scheduling.</p>
-      </details>
-    </div>
-  </section>
-
   <!-- TRUST BADGES -->
-  <section id="trust" style="background:var(--straw);" data-aos="fade-up">
+  <section id="trust" style="background:var(--bark);">
+    <style>
+      #trust .trust-badge p { color: var(--straw); }
+      #trust .trust-badge strong { color: var(--cream); }
+      #trust .trust-badge small { color: rgba(245,240,232,0.6); }
+    </style>
     <div class="section" style="padding:3rem 2.5rem;">
       <div class="trust-badges">
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-shield"/></svg></div>
-          <p><strong>Licensed &amp; Insured</strong><br><small>Full liability coverage</small></p>
+          <p><strong>Licensed & Insured</strong><br><small>Full coverage protection</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
@@ -227,18 +59,316 @@ active: "home"
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
-          <p><strong>Local Team</strong><br><small>Serving since 2014</small></p>
+          <p><strong>Local & Reliable</strong><br><small>Serving since 2014</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>
-          <p><strong>Quick Turnaround</strong><br><small>Most projects in 48 hours</small></p>
+          <p><strong>Quick Response</strong><br><small>24-hour reply guarantee</small></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" style="background:var(--bark);" data-aos="fade-up">
+  <!-- HOW IT WORKS -->
+  <section style="background:var(--cream);">
+    <div class="section">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title">From quote to <em>finished</em></h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Free Estimate</h3>
+          <p>Call or fill out the form. We'll discuss your project, answer questions, and provide a no-obligation quote.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>We Schedule</h3>
+          <p>Pick a time that works for you. We'll arrive on schedule and get straight to work.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>We Deliver</h3>
+          <p>We complete the work with attention to detail, clean up thoroughly, and make sure you're happy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="background:var(--straw);">
+    <div class="section">
+      <div class="services-intro">
+        <div class="services-intro-left">
+          <p class="section-label">What We Do</p>
+          <h2 class="section-title">Every corner of your property, <em>cared for</em></h2>
+        </div>
+        <div class="services-intro-right">
+          Over a decade of hands-on experience across landscaping, outdoor structures, and residential maintenance — all under one reliable crew.
+        </div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="card-num">01</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-leaf"/></svg></div>
+          <h3>Lawn Mowing &amp; Care</h3>
+          <p>Regular mowing, edging, and sharp trimming to keep your turf healthy, clean, and perfectly manicured all season long.</p>
+          <a href="services/lawn-mowing-care.html" class="service-card-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="card-num">02</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-fence"/></svg></div>
+          <h3>Fence Installation</h3>
+          <p>Sturdy, reliable boundary and privacy fencing built to withstand the elements and secure your perimeter.</p>
+          <a href="services/fence-installation.html" class="service-card-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="card-num">03</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-broom"/></svg></div>
+          <h3>Property Cleanups</h3>
+          <p>Complete spring and fall yard cleanups, leaf blowing, debris removal, and preparing your beds for the changing weather.</p>
+          <a href="services/property-cleanups.html" class="service-card-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="card-num">04</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-bricks"/></svg></div>
+          <h3>Hardscaping</h3>
+          <p>Paver patio repairs, retaining wall maintenance, and precision walkway edging to define your outdoor space.</p>
+          <a href="services/hardscaping.html" class="service-card-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="card-num">05</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-window"/></svg></div>
+          <h3>Exterior Care</h3>
+          <p>Professional window cleaning, power washing, gutter maintenance, and wood rot repair for siding and trim.</p>
+          <a href="services/exterior-care.html" class="service-card-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="card-num">06</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-square"/></svg></div>
+          <h3>Custom Carpentry</h3>
+          <p>Minor deck repairs, custom planter box construction, mailbox installation, and shelving built to last.</p>
+          <a href="services/custom-carpentry.html" class="service-card-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="card-num">07</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-gear"/></svg></div>
+          <h3>Handyman Repairs</h3>
+          <p>Honest, dependable home fixes, small installations, and general maintenance to keep your property running smoothly.</p>
+          <a href="services/handyman-repairs.html" class="service-card-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="card-num">08</div>
+          <div class="card-icon"><svg class="icon"><use href="#icon-home"/></svg></div>
+          <h3>Interior Handyman</h3>
+          <p>Drywall repair, painting, TV &amp; mirror mounting, baby proofing, and general interior home maintenance.</p>
+          <a href="services/interior-handyman.html" class="service-card-link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+  <!-- PORTFOLIO SLIDESHOW -->
+  <section style="background:var(--bark);">
+    <div class="section">
+      <p class="section-label" style="color:var(--clay);">Our Work</p>
+      <h2 class="section-title" style="color:var(--straw);">Projects that speak for <em style="color:var(--clay);">themselves</em></h2>
+      <div class="portfolio-slideshow">
+        <div class="slideshow-container">
+          <div class="slide active">
+            <img src="images/walkwayafter.webp" alt="Stone Walkway">
+            <div class="slide-caption">
+              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/wallafter.webp" alt="Retaining Wall">
+            <div class="slide-caption">
+              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/stairsafter.webp" alt="Custom Staircase">
+            <div class="slide-caption">
+              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/after/green-house-after.webp" alt="Green House">
+            <div class="slide-caption">
+              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/after/lawn-after.webp" alt="Lawn">
+            <div class="slide-caption">
+              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/after/yellow-house-after.webp" alt="Yellow House">
+            <div class="slide-caption">
+              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+            </div>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SUMMARY -->
+  <section style="background:var(--cream);">
+    <div class="section">
+      <div class="about-layout">
+        <div class="about-text">
+          <p class="section-label">Who We Are</p>
+          <h2 class="section-title">Reliable &amp; <em>Honest</em> Property Care</h2>
+          <p>With over a decade of hands-on building, landscaping, and residential maintenance experience, we treat every property like our own. From crisp lawn edges to durable outdoor repairs, we focus on sharp attention to detail, reliable communication, and honest work.</p>
+          <a href="about.html" class="btn-primary">Learn More About Us</a>
+        </div>
+        <div class="about-visual">
+          <img class="about-img"
+            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=800&auto=format&fit=crop"
+            alt="Garden maintenance work">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" style="background:var(--straw);">
+    <div class="section">
+      <p class="section-label">Client Stories</p>
+      <h2 class="section-title">Backed by <em>local homeowners</em></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg></div>
+          <p>Property Care transformed our backyard with a new patio and retaining wall. Fast, friendly, and remarkably tidy.</p>
+          <div class="testimonial-author">Sara M. — Boulder</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg></div>
+          <p>They handled our roof cleanup, gutter work, and fence repair in one visit. Great value and excellent workmanship.</p>
+          <div class="testimonial-author">James R. — Longmont</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg><svg class="icon"><use href="#icon-star"/></svg></div>
+          <p>We asked for drywall repair and mirror hanging, and everything was finished neatly. Honest crew and easy scheduling.</p>
+          <div class="testimonial-author">Maria K. — Niwot</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section style="background:var(--bark);">
+    <div class="section" style="text-align:center;">
+      <p class="section-label" style="color:var(--clay);">Service Area</p>
+      <h2 class="section-title" style="color:var(--straw);">Proudly serving the <em style="color:var(--clay);">Front Range</em></h2>
+      <div class="area-grid">
+        <div class="area-card">
+          <svg class="icon" style="width:1.5rem;height:1.5rem;color:var(--clay);"><use href="#icon-pin"/></svg>
+          <h3>Longmont</h3>
+          <p>Our home base — weekly lawn care, hardscaping, and property maintenance throughout the city.</p>
+        </div>
+        <div class="area-card">
+          <svg class="icon" style="width:1.5rem;height:1.5rem;color:var(--clay);"><use href="#icon-pin"/></svg>
+          <h3>Boulder</h3>
+          <p>Full-service exterior care, fence installation, and handyman work for Boulder homeowners.</p>
+        </div>
+        <div class="area-card">
+          <svg class="icon" style="width:1.5rem;height:1.5rem;color:var(--clay);"><use href="#icon-pin"/></svg>
+          <h3>Niwot</h3>
+          <p>Custom carpentry, property cleanups, and reliable seasonal maintenance you can count on.</p>
+        </div>
+        <div class="area-card">
+          <svg class="icon" style="width:1.5rem;height:1.5rem;color:var(--clay);"><use href="#icon-pin"/></svg>
+          <h3>Berthoud</h3>
+          <p>Interior handyman, gutter care, and general property upkeep for Berthoud residents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:var(--cream);">
+    <div class="section">
+      <p class="section-label">Questions?</p>
+      <h2 class="section-title">Frequently asked <em>questions</em></h2>
+      <div class="faq-container" data-aos="fade-up">
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">Do you provide estimates?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We offer free, no-obligation estimates for all services. Contact us or fill out the form above to request one.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">Are you licensed and insured?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. We're fully licensed, insured, and bonded to protect you and your property.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">What areas do you serve?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We serve Longmont, Boulder, Niwot, and Berthoud. Contact us to see if your area is covered.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">Can you work on weekends?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We work Saturday mornings by request. Sunday is our rest day. Contact us to arrange weekend scheduling.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">How do I schedule a service?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Call us at {{ site.phoneDisplay }}, email {{ site.email }}, or use the contact form above. We respond within 24 hours.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span class="faq-question">What payment methods do you accept?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We accept cash, check, Venmo, and all major credit cards. Invoice billing available for regular clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section style="background:var(--straw); text-align:center;">
+    <div class="section">
+      <div style="max-width:640px; margin:0 auto;">
+        <svg class="icon" style="width:3rem;height:3rem;color:var(--bark);margin-bottom:1rem;"><use href="#icon-shield"/></svg>
+        <h2 class="section-title" style="margin-bottom:0.75rem;">100% Satisfaction <em>Guaranteed</em></h2>
+        <p style="color:var(--warm-mid); font-size:1rem; line-height:1.7;">If you're not happy with the work, we'll make it right — no questions asked. Every job is backed by our promise of honest, reliable service.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- CONTACT -->
+  <section id="contact" style="background:var(--bark);">
     <style>
       #contact .contact-intro p { color: rgba(245,240,232,0.75); }
       #contact .contact-detail strong,
@@ -264,6 +394,7 @@ active: "home"
             <strong>Email</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a>
           </div>
         </div>
+        <!-- Netlify form integration -->
         <form class="contact-form" name="contact" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="contact" />
           <div class="form-row">
@@ -289,7 +420,6 @@ active: "home"
       </div>
     </div>
   </section>
-
   <!-- NEWSLETTER -->
   <section id="newsletter" style="background:var(--cream);">
     <style>
@@ -300,17 +430,15 @@ active: "home"
       <p class="section-label">Stay Updated</p>
       <h2 class="section-title" style="color:var(--bark);">Get tips &amp; <em style="color:var(--clay);">updates</em></h2>
       <p style="color:var(--bark); font-size:1rem; max-width:500px; margin:1.5rem auto; opacity:0.7;">Join our mailing list for seasonal tips, discounts, and updates on new services.</p>
-      <form class="newsletter-form" id="newsletterForm" name="newsletter" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="newsletter" />
-        <input type="email" name="email" placeholder="your@email.com" required>
-        <button type="submit" class="btn-primary">Subscribe</button>
-      </form>
-    </div>
+      <form class="newsletter-form" id="newsletterForm" name="newsletter" method="POST" data-netlify="true" data-aos="fade-up">
+  <input type="hidden" name="form-name" value="newsletter" />
+  <input type="email" name="email" placeholder="your@email.com" required>
+  <button type="submit" class="btn-primary">Subscribe</button>
+</form>
   </section>
 
-  {% include "footer.njk" %}
-
-  {% include "scripts.njk" %}
+{% include "footer.njk" %}
+{% include "scripts.njk" %}
 
 </body>
 </html>
