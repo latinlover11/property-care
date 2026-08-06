@@ -5,6 +5,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/sitemap.xml");
   eleventyConfig.addPassthroughCopy("src/_headers");
+  eleventyConfig.addPassthroughCopy("src/vendor");
 
   eleventyConfig.addGlobalData("permalink", () => {
     return (data) => `${data.page.filePathStem}.html`;
