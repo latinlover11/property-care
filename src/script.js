@@ -83,14 +83,16 @@ if (hamburger && navMenu) {
   const navLinks = navMenu.querySelectorAll('.nav-link, .dropdown-menu a');
 
   hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    const isOpen = navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
   });
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
       navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -101,11 +103,14 @@ if (hamburger && navMenu) {
       trigger.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        dropdown.classList.toggle('active');
-        
+        const isOpen = dropdown.classList.toggle('active');
+        trigger.setAttribute('aria-expanded', String(isOpen));
+
         // Close other dropdowns
         dropdowns.forEach(other => {
           if (other !== dropdown) other.classList.remove('active');
+          const otherTrigger = other.querySelector('.dropdown-trigger');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
         });
       });
     }
@@ -116,12 +121,15 @@ if (hamburger && navMenu) {
     if (!e.target.closest('.dropdown')) {
       dropdowns.forEach(dropdown => {
         dropdown.classList.remove('active');
+        const trigger = dropdown.querySelector('.dropdown-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
       });
     }
     // Close mobile menu when clicking outside
     if (!e.target.closest('.nav') && navMenu.classList.contains('active')) {
       hamburger.classList.remove('active');
       navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
     }
   });
 }
