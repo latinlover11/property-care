@@ -267,6 +267,18 @@ body {
   padding-left: 1rem;
   display: flex; gap: 2rem;
 }
+.stat-item {}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem; font-weight: 700;
+  color: var(--clay); line-height: 1;
+}
+.stat-label {
+  font-size: 0.8rem; color: rgba(245,240,232,0.55);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
 /* ── STRIP ── */
 .strip {
   background: var(--clay);
@@ -455,7 +467,8 @@ body {
 .area-chip {
   background: var(--straw); color: var(--bark);
   padding: 0.35rem 0.85rem; border-radius: 6px;
-  font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.85rem; font-weight: 500;
+  display: inline-flex; align-items: center; gap: 0.4rem;
   border: 1px solid rgba(61,43,31,0.04);
 }
 .area-chip .icon { color: var(--clay); }
@@ -1530,7 +1543,7 @@ body {
 
 .slide-caption {
   text-align: center;
-  padding: 0;
+  padding: 1rem;
   position: relative;
   z-index: 1;
 }

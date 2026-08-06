@@ -359,7 +359,8 @@ filterBtns.forEach(btn => {
 updateFilterCount('all');
 
 // ===== Stats Count-Up =====
-const statNumbers = document.querySelectorAll('.stat-num');
+const statsSection = document.querySelector('.stats-strip');
+const statNumbers = statsSection ? statsSection.querySelectorAll('.stat-num') : [];
 if (statNumbers.length > 0) {
   let counted = false;
 
