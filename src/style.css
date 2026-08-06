@@ -1038,6 +1038,11 @@ body {
 .portfolio-comparison {
   user-select: none;
 }
+.portfolio-comparison:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
 .comparison-img img {
   transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

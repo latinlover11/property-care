@@ -27,11 +27,36 @@ if (portfolioComparisons.length > 0) {
       afterImg.style.clipPath = `inset(0 0 0 ${percentage}%)`;
       handle.style.left = percentage + '%';
       if (hint) hint.style.opacity = '0';
+      comparison.setAttribute('aria-valuenow', String(Math.round(percentage)));
     }
 
     // Set initial state
     afterImg.style.clipPath = 'inset(0 0 0 50%)';
     handle.style.left = '50%';
+
+    // Keyboard support (accessibility)
+    comparison.setAttribute('tabindex', '0');
+    comparison.setAttribute('role', 'slider');
+    comparison.setAttribute('aria-label', 'Compare before and after — use arrow keys to adjust');
+    comparison.setAttribute('aria-valuemin', '0');
+    comparison.setAttribute('aria-valuemax', '100');
+    comparison.setAttribute('aria-valuenow', '50');
+
+    comparison.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight' && e.key !== 'Home' && e.key !== 'End') return;
+      e.preventDefault();
+      const current = parseFloat(handle.style.left) || 50;
+      let next;
+      if (e.key === 'ArrowLeft') next = current - 5;
+      else if (e.key === 'ArrowRight') next = current + 5;
+      else if (e.key === 'Home') next = 0;
+      else next = 100;
+      next = Math.max(0, Math.min(100, next));
+      afterImg.style.clipPath = `inset(0 0 0 ${next}%)`;
+      handle.style.left = next + '%';
+      if (hint) hint.style.opacity = '0';
+      comparison.setAttribute('aria-valuenow', String(Math.round(next)));
+    });
 
     // Use pointer events for unified mouse/touch handling
     comparison.addEventListener('pointerdown', (e) => {
