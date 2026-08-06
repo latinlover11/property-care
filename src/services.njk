@@ -11,9 +11,11 @@ active: "services"
   {% include "head.njk" %}
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 {% include "icons.njk" %}
 {% include "nav.njk" %}
+<main id="main">
 
   <section class="page-hero">
     <div class="section" style="padding-top:0; padding-bottom:0;">
@@ -127,6 +129,7 @@ active: "services"
     </div>
   </section>
 
+</main>
 {% include "footer.njk" %}
 {% include "scripts.njk" %}
 

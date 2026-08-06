@@ -11,9 +11,11 @@ active: "about"
   {% include "head.njk" %}
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 {% include "icons.njk" %}
 {% include "nav.njk" %}
+<main id="main">
 
   <section class="page-hero" style="position:relative; overflow:hidden;">
     <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(61,43,31,0.45) 0%, transparent 100%); pointer-events:none;"></div>
@@ -192,6 +194,7 @@ active: "about"
     </div>
   </section>
 
+</main>
 {% include "footer.njk" %}
 {% include "scripts.njk" %}
 

@@ -11,6 +11,23 @@
 
 html { scroll-behavior: smooth; }
 
+/* ── SKIP LINK ── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: var(--bark);
+  color: var(--cream);
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 6px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
 /* ── ICONS ── */
 .icon {
   width: 1.5em; height: 1.5em;
