@@ -18,13 +18,18 @@ active: "success"
 
   <main id="main" style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem;">
     <div style="max-width: 600px;">
-      <h2 class="section-title">Message Received</h2>
-      <p style="margin-bottom: 2rem; color: var(--warm-mid);">Thank you for reaching out! I have received your request and will get back to you within 24 hours to discuss your project.</p>
-      <a href="index.html" class="btn-primary">Return Home</a>
+      <h2 class="section-title">Thanks — we'll call you within 24 hours</h2>
+      <p style="margin-bottom: 2rem; color: var(--warm-mid);">Your message is in. We'll follow up shortly with availability and a clear estimate. Need us sooner? Call <a href="tel:{{ site.phone }}" style="color: var(--clay); font-weight: 600;">{{ site.phoneDisplay }}</a>.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn-primary">Return Home</a>
+        <a href="services.html" class="btn-ghost">Browse Services</a>
+        <a href="portfolio.html" class="btn-ghost">See Our Work</a>
+      </div>
     </div>
   </main>
 
 {% include "footer.njk" %}
+{% include "scripts.njk" %}
 
 </body>
 </html>
