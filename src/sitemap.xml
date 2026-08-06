@@ -21,6 +21,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://1propertycare.netlify.app/privacy.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://1propertycare.netlify.app/services/lawn-mowing-care.html</loc>
     <priority>0.7</priority>
   </url>
@@ -51,9 +55,5 @@
   <url>
     <loc>https://1propertycare.netlify.app/services/interior-handyman.html</loc>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://1propertycare.netlify.app/404.html</loc>
-    <priority>0.3</priority>
   </url>
 </urlset>
