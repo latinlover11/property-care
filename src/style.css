@@ -136,6 +136,18 @@ body {
 }
 .nav-cta:hover { background: #b5866a; }
 
+.nav-call {
+  margin: 0.5rem 1.5rem 0.75rem; display: inline-flex; align-items: center; gap: 0.45rem;
+  color: var(--straw); text-decoration: none;
+  border: 1px solid rgba(196,151,122,0.55);
+  padding: 0.5rem 1.1rem; border-radius: 2px;
+  font-weight: 500; letter-spacing: 0.04em; font-size: 0.875rem;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.nav-call svg { color: var(--clay); }
+.nav-call:hover { background: rgba(196,151,122,0.12); border-color: var(--clay); color: var(--clay); }
+
 .dropdown { position: relative; }
 .dropdown-trigger {
   background: none; border: none; cursor: pointer;
@@ -1463,6 +1475,7 @@ body {
     display: inline-flex; padding: 0; width: auto;
   }
   .nav-cta { margin: 0; }
+  .nav-call { margin: 0; }
 
   .dropdown-menu {
     max-height: none; overflow: visible;
