@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "lawn-mowing-care",
+    "title": "Lawn Mowing & Care",
+    "icon": "icon-leaf",
+    "short": "Regular mowing, edging, and sharp trimming to keep your turf healthy, clean, and perfectly manicured all season long."
+  },
+  {
+    "slug": "fence-installation",
+    "title": "Fence Installation",
+    "icon": "icon-fence",
+    "short": "Sturdy, reliable boundary and privacy fencing built to withstand the elements and secure your perimeter."
+  },
+  {
+    "slug": "property-cleanups",
+    "title": "Property Cleanups",
+    "icon": "icon-broom",
+    "short": "Complete spring and fall yard cleanups, leaf blowing, debris removal, and preparing your beds for the changing weather."
+  },
+  {
+    "slug": "hardscaping",
+    "title": "Hardscaping",
+    "icon": "icon-bricks",
+    "short": "Paver patio repairs, retaining wall maintenance, and precision walkway edging to define your outdoor space."
+  },
+  {
+    "slug": "exterior-care",
+    "title": "Exterior Care",
+    "icon": "icon-window",
+    "short": "Professional window cleaning, power washing, gutter maintenance, and wood rot repair for siding and trim."
+  },
+  {
+    "slug": "custom-carpentry",
+    "title": "Custom Carpentry",
+    "icon": "icon-square",
+    "short": "Minor deck repairs, custom planter box construction, mailbox installation, and shelving built to last."
+  },
+  {
+    "slug": "handyman-repairs",
+    "title": "Handyman Repairs",
+    "icon": "icon-gear",
+    "short": "Honest, dependable home fixes, small installations, and general maintenance to keep your property running smoothly."
+  },
+  {
+    "slug": "interior-handyman",
+    "title": "Interior Handyman",
+    "icon": "icon-home",
+    "short": "Drywall repair, painting, TV & mirror mounting, baby proofing, and general interior home maintenance."
+  }
+]

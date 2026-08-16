@@ -1,0 +1,20 @@
+---
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.all %}
+{%- if item.outputPath | isSitemapPage and item.url != '/404.html' and item.url != '/success.html' %}
+  <url>
+    <loc>{{ site.domain }}{{ item.url }}</loc>
+    <priority>{{ item.url | sitemapPriority }}</priority>
+  </url>
+{%- endif %}
+{%- endfor %}
+{%- for area in areas %}
+  <url>
+    <loc>{{ site.domain }}/service-areas/{{ area.slug }}.html</loc>
+    <priority>0.8</priority>
+  </url>
+{%- endfor %}
+</urlset>

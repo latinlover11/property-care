@@ -2,7 +2,7 @@
 title: "Page Not Found"
 description: "The page you are looking for does not exist. Return to Property Care's home page."
 ogUrl: "404.html"
-root: ""
+root: "/"
 active: "404"
 ---
 <!DOCTYPE html>
@@ -21,8 +21,8 @@ active: "404"
       <h2 class="section-title">Page Not Found</h2>
       <p style="margin-bottom: 2rem; color: var(--warm-mid);">The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="index.html" class="btn-primary">Return Home</a>
-        <a href="contact.html" class="btn-ghost">Contact Us</a>
+        <a href="{{ root }}index.html" class="btn-primary">Return Home</a>
+        <a href="{{ root }}contact.html" class="btn-ghost">Contact Us</a>
       </div>
     </div>
   </main>

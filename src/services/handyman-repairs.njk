@@ -81,13 +81,9 @@ active: "services"
         <aside class="service-sidebar" data-aos="fade-up">
           <h4>Other Services</h4>
           <ul class="service-sidebar-list">
-          <li><a href="lawn-mowing-care.html">Lawn Mowing & Care</a></li>
-          <li><a href="fence-installation.html">Fence Installation</a></li>
-          <li><a href="property-cleanups.html">Property Cleanups</a></li>
-          <li><a href="hardscaping.html">Hardscaping</a></li>
-          <li><a href="exterior-care.html">Exterior Care</a></li>
-          <li><a href="custom-carpentry.html">Custom Carpentry</a></li>
-          <li><a href="interior-handyman.html">Interior Handyman</a></li>
+          {% for cs in services %}{% if cs.slug != page.fileSlug %}
+          <li><a href="{{ cs.slug }}.html">{{ cs.title }}</a></li>
+          {% endif %}{% endfor %}
           </ul>
           <a href="../contact.html" class="btn-primary">Get a Free Estimate</a>
           <div class="service-sidebar-contact">

@@ -14,11 +14,14 @@
 <meta name="description" content="{{ description }}">
 <meta property="og:title" content="{{ title }} — {{ site.name }} | Longmont &amp; Boulder">
 <meta property="og:description" content="{{ description }}">
-<meta property="og:image" content="{{ site.ogImage }}">
 <meta property="og:url" content="{{ site.domain }}/{{ ogUrl }}">
+<meta property="og:image" content="{{ site.ogImage }}">
+<link rel="canonical" href="{{ site.domain }}/{{ ogUrl }}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="{{ site.domain }}/{{ ogUrl }}">
+<meta name="twitter:title" content="{{ title }} — {{ site.name }} | Longmont & Boulder">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.ogImage }}">
 
 <script type="application/ld+json">
 {

@@ -1,0 +1,158 @@
+---
+pagination:
+  data: areas
+  size: 1
+  alias: area
+permalink: service-areas/{{ area.slug }}.html
+root: "../"
+active: "services"
+eleventyComputed:
+  title: "Property Maintenance in {{ area.name }}, CO"
+  description: "{{ area.meta }}"
+  ogUrl: "service-areas/{{ area.slug }}.html"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+{% include "icons.njk" %}
+{% include "nav.njk" %}
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="section" style="padding-top:0; padding-bottom:0;">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">/</span>
+        <a href="../service-areas.html">Service Areas</a>
+        <span class="sep">/</span>
+        <span class="current">{{ area.name }}</span>
+      </div>
+      <p class="section-label">Service Area</p>
+      <h1 class="section-title">Property Maintenance in <em>{{ area.name }}, CO</em></h1>
+      <p class="page-hero-sub">{{ area.blurb }}</p>
+      <div class="page-hero-actions">
+        <a href="../contact.html" class="btn-primary">Get a Free Estimate</a>
+        <a href="../portfolio.html" class="btn-ghost">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO & NEIGHBORHOODS -->
+  <section style="background:var(--cream);">
+    <div class="section">
+      <div class="service-detail-layout">
+        <div class="service-detail-main" data-aos="fade-up">
+          <p class="section-label">About {{ area.name }}</p>
+          <h2 class="section-title">Caring for {{ area.name }} homes <em>since 2014</em></h2>
+          <div style="color:rgba(61,43,31,0.75); line-height:1.75; font-size:1rem;">
+            <p>{{ area.intro }}</p>
+            <p style="margin-top:1rem;">Every {{ area.name }} project — from a weekly mow to a complete hardscape build — gets the same care we'd put into our own property. Free no-obligation estimates, clear communication, and honest pricing, every time.</p>
+          </div>
+          <div style="margin-top:2rem;">
+            <a href="../contact.html" class="btn-primary">Request an Estimate in {{ area.name }}</a>
+            <a href="tel:{{ site.phone }}" class="btn-ghost" style="margin-left:0.75rem;">Call {{ site.phoneDisplay }}</a>
+          </div>
+        </div>
+
+        <aside class="service-sidebar" data-aos="fade-up">
+          <h4>Neighborhoods We Serve</h4>
+          <ul class="area-list" style="margin:0; padding:0; list-style:none;">
+            {% for hood in area.neighborhoods %}
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>{{ hood }}</li>
+            {% endfor %}
+          </ul>
+          <a href="../contact.html" class="btn-primary">Get a Free Estimate</a>
+          <div class="service-sidebar-contact">
+            Call <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR SERVICES -->
+  <section style="background:var(--straw);">
+    <div class="section">
+      <p class="section-label" style="color:var(--clay);">Popular in {{ area.name }}</p>
+      <h2 class="section-title" style="color:var(--bark);">Services {{ area.name }} homeowners <em>request most</em></h2>
+      <div class="hub-grid">
+        {% for s in services %}{% if s.slug in area.services %}
+        <a href="../services/{{ s.slug }}.html" class="hub-card" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+          <div class="card-icon"><svg class="icon"><use href="#{{ s.icon }}"/></svg></div>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.short }}</p>
+          <span class="hub-link">Learn more →</span>
+        </a>
+        {% endif %}{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER AREAS -->
+  <section id="service-area" style="background:var(--cream);">
+    <div class="section" style="text-align:center;">
+      <p class="section-label" style="color:var(--clay);">Also Serving</p>
+      <h2 class="section-title">The Front Range we <em>call home</em></h2>
+      <p style="color:rgba(61,43,31,0.6); max-width:560px; margin:0 auto 2rem; line-height:1.7;">Looking for care in a nearby community? We're proud to serve these cities across the Front Range.</p>
+      <div class="area-grid">
+        {% for other in areas %}
+        {% if other.slug == area.slug %}
+        <div class="area-card" style="border:1px solid var(--clay);">
+          <h3>{{ other.name }} <span style="color:var(--clay); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em;">(current)</span></h3>
+        </div>
+        {% else %}
+        <a class="area-card" href="{{ other.slug }}.html" style="text-decoration:none; display:block;">
+          <h3>{{ other.name }}</h3>
+        </a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES -->
+  <section id="trust" style="background:var(--straw);">
+    <div class="section" style="padding:3rem 2.5rem;">
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-shield"/></svg></div>
+          <p><strong>Licensed & Insured</strong><br><small>Full coverage protection</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
+          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
+          <p><strong>Local & Reliable</strong><br><small>Serving since 2014</small></p>
+        </div>
+        <div class="trust-badge">
+          <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>
+          <p><strong>Quick Response</strong><br><small>24-hour reply guarantee</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--bark);">
+    <div class="section" style="text-align:center;">
+      <h2 class="section-title" style="color:var(--cream);">Ready for property care in {{ area.name }}?</h2>
+      <p style="color:var(--straw); max-width:500px; margin:0 auto 2rem;">Tell us about your project and we'll get back to you with a free estimate — usually within 24 hours.</p>
+      <a href="../contact.html" class="btn-primary">Get a Free Estimate</a>
+      <a href="tel:{{ site.phone }}" class="btn-ghost" style="margin-left:0.75rem;">Call {{ site.phoneDisplay }}</a>
+    </div>
+  </section>
+
+</main>
+{% include "footer.njk" %}
+{% include "scripts.njk" %}
+
+</body>
+</html>

@@ -328,6 +328,13 @@ function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
+document.querySelectorAll('.prev').forEach(btn => {
+  btn.addEventListener('click', () => plusSlides(-1));
+});
+document.querySelectorAll('.next').forEach(btn => {
+  btn.addEventListener('click', () => plusSlides(1));
+});
+
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slide");

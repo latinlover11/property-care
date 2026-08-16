@@ -1,0 +1,92 @@
+---
+title: "Service Areas"
+description: "Property Care serves Longmont, Boulder, Lafayette, Louisville, Loveland, Lyons, Niwot, Berthoud, Broomfield, Brighton, and Johnstown, CO — lawn care, hardscaping, fencing, and handyman services across the Front Range."
+ogUrl: "service-areas.html"
+root: ""
+active: "services"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+{% include "icons.njk" %}
+{% include "nav.njk" %}
+<main id="main">
+
+  <section class="page-hero">
+    <div class="section" style="padding-top:0; padding-bottom:0;">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Service Areas</span>
+      </div>
+      <p class="section-label">Where We Work</p>
+      <h1 class="section-title">Proudly serving the <em>Front Range</em></h1>
+      <p class="page-hero-sub">From the foothills of Lyons to the growing communities of Carbon Valley, we bring the same reliability to every job across the region. Choose a city below to see how we help there.</p>
+      <div class="page-hero-actions">
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
+        <a href="tel:{{ site.phone }}" class="btn-ghost">Call {{ site.phoneDisplay }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bark);">
+    <div class="section">
+      <div class="area-grid" style="max-width:1000px;">
+        {% for area in areas %}
+        <a class="area-card" href="service-areas/{{ area.slug }}.html" style="text-decoration:none; display:block;">
+          <svg class="icon" style="width:1.5rem;height:1.5rem;color:var(--clay);"><use href="#icon-pin"/></svg>
+          <h3>{{ area.name }}</h3>
+          <p>{{ area.blurb }}</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="service-area" style="background:var(--cream);">
+    <div class="section">
+      <div class="area-layout">
+        <div>
+          <p class="section-label">Not sure if we reach you?</p>
+          <h2 class="section-title">Local crews, <em>expanding footprint</em></h2>
+          <p style="line-height:1.7; color:rgba(61,43,31,0.6); max-width:480px;">If your community isn't listed, call us anyway. We regularly take on work just beyond our core cities and can let you know about availability.</p>
+        </div>
+        <div class="area-communities">
+          <h4 style="color:var(--bark); font-family:'Playfair Display',serif; font-size:1.05rem; margin-bottom:1rem;">Also On Our Radar</h4>
+          <ul class="area-list">
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Gunbarrel</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Erie</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Mead</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Superior</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Firestone</li>
+            <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>Frederick</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--straw); padding: 4rem 2.5rem;">
+    <div class="section">
+      <div class="portfolio-cta" style="margin-top:0;">
+        <div class="portfolio-cta-inner">
+          <h2>Ready to transform your property?</h2>
+          <p style="margin-bottom: 1.5rem;">Free, no-obligation estimates for your next project — wherever you are in our service area.</p>
+          <a href="tel:{{ site.phone }}" class="btn-primary" style="margin-right: 1rem;">Call {{ site.phoneDisplay }}</a>
+          <a href="contact.html" class="btn-ghost">Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% include "footer.njk" %}
+{% include "scripts.njk" %}
+
+</body>
+</html>
