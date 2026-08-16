@@ -7,6 +7,7 @@
   --cream:    #FDFBF7;
   --charcoal: #1E1E1E;
   --warm-mid: #7A6652;
+  --clay-deep: #8A6240;
 }
 
 html { scroll-behavior: smooth; }
@@ -62,7 +63,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--clay);
+  color: var(--clay-deep);
   margin-bottom: 0.75rem;
 }
 
@@ -77,7 +78,7 @@ body {
 
 .section-title em {
   font-style: italic;
-  color: var(--clay);
+  color: var(--clay-deep);
 }
 
 /* ── NAV ── */
@@ -464,7 +465,7 @@ a.area-card:hover {
 .card-num {
   font-family: 'Playfair Display', serif;
   font-size: 0.8rem; font-weight: 700;
-  color: var(--clay); letter-spacing: 0.08em;
+  color: var(--clay-deep); letter-spacing: 0.08em;
   margin-bottom: 1rem;
 }
 .card-icon {
