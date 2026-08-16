@@ -342,7 +342,7 @@ body {
   margin: 0 2rem;
   font-size: 0.8rem; font-weight: 500;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--cream);
+  color: var(--bark);
 }
 .strip-track span::before {
   content: '·';
@@ -483,7 +483,7 @@ a.area-card:hover {
 .service-card p { font-size: 0.9rem; color: var(--warm-mid); line-height: 1.65; }
 .service-card-link {
   display: inline-block; margin-top: 0.85rem; font-size: 0.85rem;
-  font-weight: 500; color: var(--clay); text-decoration: none;
+  font-weight: 500; color: var(--clay-deep); text-decoration: none;
 }
 .service-card-link:hover { text-decoration: underline; }
 
