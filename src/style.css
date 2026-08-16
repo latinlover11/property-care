@@ -900,7 +900,7 @@ a.area-card:hover {
 
 /* ── NEWSLETTER ── */
 #newsletter { background: var(--bark); }
-#newsletter .section-label { color: var(--clay); }
+#newsletter .section-label { color: var(--clay-deep); }
 #newsletter .section-title { color: var(--straw); }
 
 .newsletter-form {
@@ -1330,14 +1330,14 @@ a.area-card:hover {
 .hours-list li { line-height: 1.9; }
 .footer-contact p { font-size: 0.875rem; margin-bottom: 0.25rem; }
 .footer-contact strong { color: var(--clay); }
-.footer-contact a { color: rgba(245,240,232,0.5); text-decoration: none; }
+.footer-contact a { color: rgba(245,240,232,0.85); text-decoration: none; }
 .footer-contact a:hover { color: var(--clay); }
 .footer-bottom {
   border-top: 1px solid rgba(245,240,232,0.08);
   padding: 1.25rem 2.5rem;
   text-align: center;
 }
-.footer-bottom p { font-size: 0.8rem; color: rgba(245,240,232,0.3); }
+.footer-bottom p { font-size: 0.8rem; color: rgba(245,240,232,0.8); }
 
 /* ── PAGE HERO (sub-pages: services, hub) ── */
 .page-hero {
