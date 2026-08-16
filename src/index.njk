@@ -365,6 +365,7 @@ active: "home"
         <!-- Netlify form integration -->
         <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
@@ -396,6 +397,7 @@ active: "home"
       <p style="color:var(--bark); font-size:1rem; max-width:500px; margin:1.5rem auto; opacity:0.7;">Join our mailing list for seasonal tips, discounts, and updates on new services.</p>
       <form class="newsletter-form" id="newsletterForm" name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" data-aos="fade-up">
   <input type="hidden" name="form-name" value="newsletter" />
+  <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
   <input type="email" name="email" placeholder="your@email.com" required>
   <button type="submit" class="btn-primary">Subscribe</button>
   <label class="newsletter-consent">
