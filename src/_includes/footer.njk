@@ -1,12 +1,12 @@
 <footer class="footer">
   <div class="footer-content">
     <div class="footer-section">
-      <h4>{{ site.name }}</h4>
+      <h3>{{ site.name }}</h3>
       <p>Professional property maintenance serving {% for area in site.areas %}{{ area }}{% if not loop.last %}{{ ', and ' if loop.revindex == 2 else ', ' }}{% endif %}{% endfor %} with honest work and lasting results.</p>
     </div>
 
     <div class="footer-section">
-      <h4>Quick Links</h4>
+      <h3>Quick Links</h3>
       <ul>
         <li><a href="{{ root }}index.html">Home</a></li>
         <li><a href="{{ root }}services.html">Services</a></li>
@@ -17,7 +17,7 @@
     </div>
 
     <div class="footer-section">
-      <h4>Service Areas</h4>
+      <h3>Service Areas</h3>
       <ul>
         {% for area in areas %}
         <li><a href="{{ root }}service-areas/{{ area.slug }}.html"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>{{ area.name }}</a></li>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="footer-section">
-      <h4>Business Hours</h4>
+      <h3>Business Hours</h3>
       <ul class="hours-list">
         <li>Monday – Friday: 7:00 AM – 6:00 PM</li>
         <li>Saturday: 8:00 AM – 5:00 PM</li>
