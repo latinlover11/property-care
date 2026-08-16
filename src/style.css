@@ -929,7 +929,7 @@ a.area-card:hover {
   color: var(--bark); font-size: 0.8rem; opacity: 0.75;
 }
 .newsletter-consent input { width: 15px; height: 15px; accent-color: var(--clay); cursor: pointer; flex-shrink: 0; }
-.newsletter-consent a { color: var(--clay); text-decoration: underline; }
+.newsletter-consent a { color: var(--clay-deep); text-decoration: underline; }
 
 /* ── TRUST BADGES ── */
 #trust { background: var(--cream); border-top: 1px solid #E8E0D0; }
@@ -1306,24 +1306,24 @@ a.area-card:hover {
   display: grid; grid-template-columns: 1fr;
   gap: 2rem; padding: 3rem 1.5rem 2rem;
 }
-.footer-section h4 {
+.footer-section h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1rem; color: var(--straw);
   margin-bottom: 1rem;
 }
 .footer-section p {
-  font-size: 0.875rem; color: rgba(245,240,232,0.5);
+  font-size: 0.875rem; color: rgba(245,240,232,0.85);
   line-height: 1.7; margin-bottom: 1rem;
 }
 .footer-section ul { list-style: none; }
 .footer-section ul li {
-  font-size: 0.875rem; color: rgba(245,240,232,0.5);
+  font-size: 0.875rem; color: rgba(245,240,232,0.85);
   margin-bottom: 0.5rem;
   display: flex; align-items: center; gap: 0.5rem;
 }
 .footer-section ul li .icon { color: var(--clay); }
 .footer-section ul li a {
-  color: rgba(245,240,232,0.5); text-decoration: none;
+  color: rgba(245,240,232,0.85); text-decoration: none;
   transition: color 0.2s;
 }
 .footer-section ul li a:hover { color: var(--clay); }
