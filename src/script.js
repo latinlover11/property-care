@@ -201,6 +201,13 @@ const newsletterForm = document.getElementById('newsletterForm');
 if (newsletterForm) {
   newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const consentBox = newsletterForm.querySelector('input[name="consent"]');
+    if (consentBox && !consentBox.checked) {
+      const formMessage = document.createElement('p');
+      formMessage.textContent = 'Please agree to receive updates before subscribing.';
+      newsletterForm.parentNode.insertBefore(formMessage, newsletterForm.nextSibling);
+      return;
+    }
     const formData = new FormData(newsletterForm);
     const btn = newsletterForm.querySelector('.btn-primary');
     const origText = btn ? btn.textContent : '';

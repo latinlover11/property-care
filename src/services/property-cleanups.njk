@@ -4,6 +4,13 @@ description: "Complete spring and fall yard cleanups, leaf blowing, debris remov
 ogUrl: services/property-cleanups.html
 root: "../"
 active: "services"
+faq:
+  - q: "When should I schedule a spring cleanup?"
+    a: "Late March through April is ideal for the Front Range, once the hard freezes have passed but before new growth gets too established."
+  - q: "Do you haul away the debris?"
+    a: "Yes, all yard waste and debris removal is included and hauled off-site."
+  - q: "Can I set up cleanups twice a year automatically?"
+    a: "Yes — many clients have us on a standing spring and fall schedule so it's one less thing to remember."
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -100,33 +107,17 @@ active: "services"
       <p class="section-label">Questions?</p>
       <h2 class="section-title">Property Cleanups <em>FAQs</em></h2>
       <div class="faq-container" data-aos="fade-up">
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+        {% for item in faq %}
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
           <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">When should I schedule a spring cleanup?</span>
+            <span class="faq-question">{{ item.q }}</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Late March through April is ideal for the Front Range, once the hard freezes have passed but before new growth gets too established.</p>
+            <p>{{ item.a }}</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Do you haul away the debris?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes, all yard waste and debris removal is included and hauled off-site.</p>
-          </div>
-        </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Can I set up cleanups twice a year automatically?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes — many clients have us on a standing spring and fall schedule so it's one less thing to remember.</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -141,11 +132,11 @@ active: "services"
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
-          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+          <p><strong>5-Star Rated</strong><br><small>Serving local homeowners since 2014</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
-          <p><strong>Local & Reliable</strong><br><small>Serving since 2014</small></p>
+          <p><strong>Local & Reliable</strong><br><small>Boulder County &amp; beyond</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>

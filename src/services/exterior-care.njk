@@ -4,6 +4,13 @@ description: "Professional window cleaning, power washing, gutter maintenance, a
 ogUrl: services/exterior-care.html
 root: "../"
 active: "services"
+faq:
+  - q: "How often should gutters be cleaned?"
+    a: "Twice a year is standard for most Front Range properties — once in late spring and again after fall leaf drop."
+  - q: "Can power washing damage siding or wood?"
+    a: "Used incorrectly, yes. We adjust pressure and technique by surface — siding, deck wood, and stone all need different settings, which is part of why this is best left to a pro."
+  - q: "Do you repair wood rot or just identify it?"
+    a: "Both. We can handle minor to moderate trim and siding repairs directly, and we'll flag anything that needs more extensive replacement."
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -100,33 +107,17 @@ active: "services"
       <p class="section-label">Questions?</p>
       <h2 class="section-title">Exterior Care <em>FAQs</em></h2>
       <div class="faq-container" data-aos="fade-up">
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+        {% for item in faq %}
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
           <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">How often should gutters be cleaned?</span>
+            <span class="faq-question">{{ item.q }}</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Twice a year is standard for most Front Range properties — once in late spring and again after fall leaf drop.</p>
+            <p>{{ item.a }}</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Can power washing damage siding or wood?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Used incorrectly, yes. We adjust pressure and technique by surface — siding, deck wood, and stone all need different settings, which is part of why this is best left to a pro.</p>
-          </div>
-        </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Do you repair wood rot or just identify it?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Both. We can handle minor to moderate trim and siding repairs directly, and we'll flag anything that needs more extensive replacement.</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -141,11 +132,11 @@ active: "services"
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
-          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+          <p><strong>5-Star Rated</strong><br><small>Serving local homeowners since 2014</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
-          <p><strong>Local & Reliable</strong><br><small>Serving since 2014</small></p>
+          <p><strong>Local & Reliable</strong><br><small>Boulder County &amp; beyond</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>

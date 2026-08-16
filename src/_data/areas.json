@@ -108,5 +108,25 @@
     "meta": "Lawn care, cleanups, hardscaping, and handyman services in Johnstown, CO. Flexible property maintenance for a growing town since 2014.",
     "neighborhoods": ["Highland Meadows", "Heron Lakes", "The Wheatlands", "Village at Peachwood", "Mariana Farms", "Old Town"],
     "services": ["lawn-mowing-care", "hardscaping", "handyman-repairs"]
+  },
+  {
+    "slug": "firestone",
+    "name": "Firestone",
+    "featured": false,
+    "blurb": "Property care for the Carbon Valley — lawn care, cleanups, and more for Firestone homes.",
+    "intro": "Firestone is a cornerstone of the Carbon Valley, and its growing neighborhoods have plenty of yards that deserve steady care. Property Care handles lawn maintenance, seasonal cleanups, fence installation, and dependable handyman work throughout Firestone and the nearby Dacono–Frederick corridor. Whether it's a newer build or an established home, we bring the same honest, thorough service.",
+    "meta": "Lawn care, cleanups, fencing, and handyman services in Firestone, CO. Property maintenance for the Carbon Valley — local and honest since 2014.",
+    "neighborhoods": ["Barefoot Lakes", "Stoneridge", "Firestone Park", "Coal Ridge", "The Reserve at Firestone", "Saddleback"],
+    "services": ["lawn-mowing-care", "property-cleanups", "fence-installation"]
+  },
+  {
+    "slug": "frederick",
+    "name": "Frederick",
+    "featured": false,
+    "blurb": "Reliable maintenance for Frederick homes from Old Town to the new developments.",
+    "intro": "Frederick has grown from a coal-mining town into one of the fastest-growing communities on the Front Range, and Property Care has kept pace. We provide lawn care, property cleanups, hardscaping, and dependable handyman repairs across Frederick — from the historic center to the newest subdivisions. Fair estimates, on-time service, and workmanship that lasts.",
+    "meta": "Lawn care, cleanups, hardscaping, and handyman services in Frederick, CO. Dependable property maintenance for the growing Front Range since 2014.",
+    "neighborhoods": ["Old Town Frederick", "Six Mile", "Disc Colony", "Hillsborough", "Wyndham Hill", "Prairie Ridge"],
+    "services": ["lawn-mowing-care", "hardscaping", "handyman-repairs"]
   }
 ]

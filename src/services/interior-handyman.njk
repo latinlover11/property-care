@@ -4,6 +4,13 @@ description: "Drywall repair, painting, TV & mirror mounting, baby proofing, and
 ogUrl: services/interior-handyman.html
 root: "../"
 active: "services"
+faq:
+  - q: "Can you match existing wall paint for a patch job?"
+    a: "Yes, where possible — bring us the paint can or color code if you have it, and we'll match as closely as we can."
+  - q: "Is mounting a TV on drywall safe without studs?"
+    a: "We use the appropriate wall anchors or locate studs as needed for a secure mount, regardless of wall type."
+  - q: "Do you offer baby proofing as a full walkthrough service?"
+    a: "Yes — we can do a room-by-room walkthrough and install gates, outlet covers, corner guards, and cabinet locks in one visit."
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -100,33 +107,17 @@ active: "services"
       <p class="section-label">Questions?</p>
       <h2 class="section-title">Interior Handyman <em>FAQs</em></h2>
       <div class="faq-container" data-aos="fade-up">
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+        {% for item in faq %}
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
           <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Can you match existing wall paint for a patch job?</span>
+            <span class="faq-question">{{ item.q }}</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Yes, where possible — bring us the paint can or color code if you have it, and we'll match as closely as we can.</p>
+            <p>{{ item.a }}</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Is mounting a TV on drywall safe without studs?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>We use the appropriate wall anchors or locate studs as needed for a secure mount, regardless of wall type.</p>
-          </div>
-        </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Do you offer baby proofing as a full walkthrough service?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes — we can do a room-by-room walkthrough and install gates, outlet covers, corner guards, and cabinet locks in one visit.</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -141,11 +132,11 @@ active: "services"
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
-          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+          <p><strong>5-Star Rated</strong><br><small>Serving local homeowners since 2014</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
-          <p><strong>Local & Reliable</strong><br><small>Serving since 2014</small></p>
+          <p><strong>Local & Reliable</strong><br><small>Boulder County &amp; beyond</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>

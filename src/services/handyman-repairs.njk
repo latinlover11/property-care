@@ -4,6 +4,13 @@ description: "Honest, dependable home fixes, small installations, and general ma
 ogUrl: services/handyman-repairs.html
 root: "../"
 active: "services"
+faq:
+  - q: "Is there a minimum job size?"
+    a: "No — we're happy to take on small, single-item jobs as well as longer repair lists."
+  - q: "Can you handle a list of multiple small repairs in one visit?"
+    a: "Yes, this is one of the most common ways clients use this service — bundling several small fixes into a single visit."
+  - q: "Do you provide materials or should I buy them?"
+    a: "Either works. We can supply standard materials and include them in your estimate, or install something you've already purchased."
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -100,33 +107,17 @@ active: "services"
       <p class="section-label">Questions?</p>
       <h2 class="section-title">Handyman Repairs <em>FAQs</em></h2>
       <div class="faq-container" data-aos="fade-up">
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+        {% for item in faq %}
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
           <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Is there a minimum job size?</span>
+            <span class="faq-question">{{ item.q }}</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>No — we're happy to take on small, single-item jobs as well as longer repair lists.</p>
+            <p>{{ item.a }}</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Can you handle a list of multiple small repairs in one visit?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes, this is one of the most common ways clients use this service — bundling several small fixes into a single visit.</p>
-          </div>
-        </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Do you provide materials or should I buy them?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Either works. We can supply standard materials and include them in your estimate, or install something you've already purchased.</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -141,11 +132,11 @@ active: "services"
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
-          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+          <p><strong>5-Star Rated</strong><br><small>Serving local homeowners since 2014</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
-          <p><strong>Local & Reliable</strong><br><small>Serving since 2014</small></p>
+          <p><strong>Local & Reliable</strong><br><small>Boulder County &amp; beyond</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>

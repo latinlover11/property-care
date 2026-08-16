@@ -4,6 +4,13 @@ description: "Regular mowing, edging, and sharp trimming to keep your turf healt
 ogUrl: services/lawn-mowing-care.html
 root: "../"
 active: "services"
+faq:
+  - q: "How often should my lawn be mowed?"
+    a: "Most Front Range lawns do best on a weekly schedule during peak growing season (May–September) and bi-weekly in spring and fall. We'll recommend a schedule based on your grass type and how it's growing."
+  - q: "Do you bring your own equipment?"
+    a: "Yes — our crew arrives with commercial-grade mowers, trimmers, and edgers, so there's nothing you need to provide or maintain."
+  - q: "Can you start mid-season?"
+    a: "Absolutely. We can pick up a new lawn care schedule at any point in the season — just reach out and we'll get you on the calendar."
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -100,33 +107,17 @@ active: "services"
       <p class="section-label">Questions?</p>
       <h2 class="section-title">Lawn Mowing & Care <em>FAQs</em></h2>
       <div class="faq-container" data-aos="fade-up">
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+        {% for item in faq %}
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
           <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">How often should my lawn be mowed?</span>
+            <span class="faq-question">{{ item.q }}</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Most Front Range lawns do best on a weekly schedule during peak growing season (May–September) and bi-weekly in spring and fall. We'll recommend a schedule based on your grass type and how it's growing.</p>
+            <p>{{ item.a }}</p>
           </div>
         </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Do you bring your own equipment?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Yes — our crew arrives with commercial-grade mowers, trimmers, and edgers, so there's nothing you need to provide or maintain.</p>
-          </div>
-        </div>
-        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-          <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">Can you start mid-season?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Absolutely. We can pick up a new lawn care schedule at any point in the season — just reach out and we'll get you on the calendar.</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -141,11 +132,11 @@ active: "services"
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-star"/></svg></div>
-          <p><strong>5-Star Rated</strong><br><small>Trusted by 50+ homeowners</small></p>
+          <p><strong>5-Star Rated</strong><br><small>Serving local homeowners since 2014</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-people"/></svg></div>
-          <p><strong>Local & Reliable</strong><br><small>Serving since 2014</small></p>
+          <p><strong>Local & Reliable</strong><br><small>Boulder County &amp; beyond</small></p>
         </div>
         <div class="trust-badge">
           <div class="badge-icon"><svg class="icon"><use href="#icon-bolt"/></svg></div>

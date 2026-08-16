@@ -28,7 +28,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "{{ site.name }}",
-  "description": "Professional property maintenance serving Longmont, Boulder, Lafayette, Louisville, Loveland, Lyons, Niwot, Berthoud, Broomfield, Brighton, and Johnstown.",
+  "description": "Professional property maintenance serving Longmont, Boulder, Lafayette, Louisville, Loveland, Lyons, Niwot, Berthoud, Broomfield, Brighton, Johnstown, Firestone, and Frederick.",
   "url": "{{ site.domain }}",
   "telephone": "{{ site.phone }}",
   "image": "{{ site.ogImage }}",
@@ -39,17 +39,9 @@
     "addressCountry": "US"
   },
   "areaServed": [
-    { "@type": "City", "name": "Longmont" },
-    { "@type": "City", "name": "Boulder" },
-    { "@type": "City", "name": "Lafayette" },
-    { "@type": "City", "name": "Louisville" },
-    { "@type": "City", "name": "Loveland" },
-    { "@type": "City", "name": "Lyons" },
-    { "@type": "City", "name": "Niwot" },
-    { "@type": "City", "name": "Berthoud" },
-    { "@type": "City", "name": "Broomfield" },
-    { "@type": "City", "name": "Brighton" },
-    { "@type": "City", "name": "Johnstown" }
+    {% for area in areas %}
+    { "@type": "City", "name": "{{ area.name }}" }{% if not loop.last %},{% endif %}
+    {% endfor %}
   ],
   "priceRange": "$$",
   "openingHoursSpecification": {
@@ -60,6 +52,24 @@
   }
 }
 </script>
+
+{% if faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | dump }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233D2B1F'/><path d='M50 80C50 80 27 69 27 41C27 24 37 14 50 14C63 14 73 24 73 41C73 69 50 80 50 80Z' fill='none' stroke='%23C4977A' stroke-width='6'/><path d='M50 80V32' stroke='%23C4977A' stroke-width='6'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
