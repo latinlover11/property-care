@@ -577,7 +577,8 @@ a.area-card:hover {
 }
 .form-group:focus-within label { color: var(--clay); }
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(245,240,232,0.15);
   color: var(--straw);
@@ -586,8 +587,11 @@ a.area-card:hover {
   transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
   outline: none;
 }
+.form-group select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+.form-group select option { background: #2b1f16; color: var(--straw); }
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   border-color: var(--clay);
   background: rgba(255,255,255,0.1);
   box-shadow: 0 0 0 2px rgba(196,151,122,0.12);

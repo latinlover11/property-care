@@ -4,6 +4,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy("src/vendor");
+  eleventyConfig.addPassthroughCopy("src/apple-touch-icon.png");
+
+  eleventyConfig.addFilter("cleanUrl", (url) => {
+    return typeof url === "string" && url.endsWith(".html") ? url.slice(0, -5) : url;
+  });
 
   eleventyConfig.addFilter("isSitemapPage", (path) => {
     return typeof path === "string" && path.endsWith(".html") && !path.includes("/service-areas/");

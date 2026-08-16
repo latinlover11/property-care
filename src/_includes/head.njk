@@ -14,9 +14,9 @@
 <meta name="description" content="{{ description }}">
 <meta property="og:title" content="{{ title }} — {{ site.name }} | Longmont &amp; Boulder">
 <meta property="og:description" content="{{ description }}">
-<meta property="og:url" content="{{ site.domain }}/{{ ogUrl }}">
+<meta property="og:url" content="{{ site.domain }}/{{ ogUrl | cleanUrl }}">
 <meta property="og:image" content="{{ site.ogImage }}">
-<link rel="canonical" href="{{ site.domain }}/{{ ogUrl }}">
+<link rel="canonical" href="{{ site.domain }}/{{ ogUrl | cleanUrl }}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ title }} — {{ site.name }} | Longmont & Boulder">
@@ -72,6 +72,7 @@
 {% endif %}
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233D2B1F'/><path d='M50 80C50 80 27 69 27 41C27 24 37 14 50 14C63 14 73 24 73 41C73 69 50 80 50 80Z' fill='none' stroke='%23C4977A' stroke-width='6'/><path d='M50 80V32' stroke='%23C4977A' stroke-width='6'/></svg>">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ root }}apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
