@@ -174,6 +174,7 @@ const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    contactForm.querySelectorAll('.form-status-msg').forEach(el => el.remove());
     const btn = contactForm.querySelector('.btn-primary');
     const origText = btn ? btn.textContent : '';
     if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
@@ -185,11 +186,14 @@ if (contactForm) {
       body: new URLSearchParams(formData).toString()
     })
     .then(() => {
-      window.location.href = 'success.html';
+      window.location.href = '/success';
     })
     .catch(() => {
       if (btn) { btn.disabled = false; btn.textContent = origText; }
       const formMessage = document.createElement('p');
+      formMessage.className = 'form-status-msg';
+      formMessage.style.color = '#e53e3e';
+      formMessage.style.marginTop = '0.75rem';
       formMessage.textContent = 'Form submission failed. Please try again.';
       contactForm.appendChild(formMessage);
     });
@@ -201,9 +205,15 @@ const newsletterForm = document.getElementById('newsletterForm');
 if (newsletterForm) {
   newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (newsletterForm.parentNode) {
+      newsletterForm.parentNode.querySelectorAll('.form-status-msg').forEach(el => el.remove());
+    }
     const consentBox = newsletterForm.querySelector('input[name="consent"]');
     if (consentBox && !consentBox.checked) {
       const formMessage = document.createElement('p');
+      formMessage.className = 'form-status-msg';
+      formMessage.style.color = '#e53e3e';
+      formMessage.style.marginTop = '0.75rem';
       formMessage.textContent = 'Please agree to receive updates before subscribing.';
       newsletterForm.parentNode.insertBefore(formMessage, newsletterForm.nextSibling);
       return;
@@ -221,6 +231,9 @@ if (newsletterForm) {
     .then(() => {
       if (btn) { btn.disabled = false; btn.textContent = origText; }
       const formMessage = document.createElement('p');
+      formMessage.className = 'form-status-msg';
+      formMessage.style.color = '#38a169';
+      formMessage.style.marginTop = '0.75rem';
       formMessage.textContent = '✓ Thanks for subscribing! Check your email for confirmation.';
       newsletterForm.parentNode.insertBefore(formMessage, newsletterForm.nextSibling);
       newsletterForm.reset();
@@ -228,6 +241,9 @@ if (newsletterForm) {
     .catch(() => {
       if (btn) { btn.disabled = false; btn.textContent = origText; }
       const formMessage = document.createElement('p');
+      formMessage.className = 'form-status-msg';
+      formMessage.style.color = '#e53e3e';
+      formMessage.style.marginTop = '0.75rem';
       formMessage.textContent = 'Subscription failed. Please try again.';
       newsletterForm.parentNode.insertBefore(formMessage, newsletterForm.nextSibling);
     });

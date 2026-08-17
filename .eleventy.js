@@ -24,7 +24,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("sitemapPriority", (url) => {
     if (url === "/" || url === "/index.html") return "1.0";
-    if (url === "/services.html" || url === "/portfolio.html" || url === "/contact.html" || url === "/service-areas.html") return "0.9";
+    if (url === "/services.html" || url === "/portfolio.html" || url === "/about.html" || url === "/contact.html" || url === "/service-areas.html") return "0.9";
     if (url.startsWith("/service-areas/")) return "0.8";
     if (url === "/privacy.html") return "0.3";
     return "0.7";

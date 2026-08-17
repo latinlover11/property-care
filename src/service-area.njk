@@ -10,6 +10,13 @@ eleventyComputed:
   title: "Property Maintenance in {{ area.name }}, CO"
   description: "{{ area.meta }}"
   ogUrl: "service-areas/{{ area.slug }}.html"
+  breadcrumbs:
+    - name: "Home"
+      url: "/"
+    - name: "Service Areas"
+      url: "/service-areas"
+    - name: "{{ area.name }}"
+      url: "/service-areas/{{ area.slug }}"
 ---
 <!DOCTYPE html>
 <html lang="en">

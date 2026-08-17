@@ -15,13 +15,13 @@
 <meta property="og:title" content="{{ title }} — {{ site.name }} | Longmont &amp; Boulder">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ site.domain }}/{{ ogUrl | cleanUrl }}">
-<meta property="og:image" content="{{ site.ogImage }}">
+<meta property="og:image" content="{{ ogImage or site.ogImage }}">
 <link rel="canonical" href="{{ site.domain }}/{{ ogUrl | cleanUrl }}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ title }} — {{ site.name }} | Longmont & Boulder">
 <meta name="twitter:description" content="{{ description }}">
-<meta name="twitter:image" content="{{ site.ogImage }}">
+<meta name="twitter:image" content="{{ ogImage or site.ogImage }}">
 
 <script type="application/ld+json">
 {
@@ -64,6 +64,25 @@
       "@type": "Question",
       "name": {{ item.q | dump }},
       "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% if breadcrumbs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for item in breadcrumbs %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "name": {{ item.name | dump }},
+      "item": "{{ site.domain }}{{ item.url }}"
     }{% if not loop.last %},{% endif %}
     {% endfor %}
   ]
