@@ -533,6 +533,82 @@ a.area-card:hover {
 #contact .section-label { color: var(--clay); }
 #contact .section-title { color: var(--straw); }
 
+/* Light Contact Section variant for /contact page */
+.contact-section--light {
+  background: var(--cream) !important;
+}
+.contact-section--light .section-label {
+  color: var(--clay-deep) !important;
+}
+.contact-section--light .section-title {
+  color: var(--bark) !important;
+}
+.contact-section--light .contact-intro p {
+  color: rgba(61,43,31,0.8) !important;
+}
+.contact-section--light .contact-detail {
+  background: #ffffff !important;
+  border: 1px solid rgba(61,43,31,0.08) !important;
+  box-shadow: 0 4px 12px rgba(61,43,31,0.04) !important;
+  color: rgba(61,43,31,0.7) !important;
+  transition: all 0.25s ease !important;
+  border-radius: 8px !important;
+}
+.contact-section--light .contact-detail:hover {
+  background: #ffffff !important;
+  border-color: rgba(196,151,122,0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(61,43,31,0.08) !important;
+}
+.contact-section--light .contact-detail .icon {
+  color: var(--clay-deep) !important;
+}
+.contact-section--light .contact-detail strong {
+  color: var(--bark) !important;
+}
+.contact-section--light .contact-detail a {
+  color: var(--bark) !important;
+  font-weight: 500;
+}
+.contact-section--light .contact-detail a:hover {
+  color: var(--clay-deep) !important;
+}
+
+.contact-section--light .contact-form {
+  background: #ffffff !important;
+  border: 1px solid rgba(61,43,31,0.1) !important;
+  box-shadow: 0 12px 32px rgba(61,43,31,0.06) !important;
+  border-radius: 12px !important;
+  padding: 2.25rem !important;
+}
+.contact-section--light .form-group label {
+  color: var(--bark) !important;
+  font-weight: 600 !important;
+}
+.contact-section--light .form-group input,
+.contact-section--light .form-group textarea,
+.contact-section--light .form-group select {
+  background: #F9F7F5 !important;
+  border: 1.5px solid #E2D9D0 !important;
+  color: var(--charcoal) !important;
+  border-radius: 6px !important;
+}
+.contact-section--light .form-group input::placeholder,
+.contact-section--light .form-group textarea::placeholder {
+  color: #A09387 !important;
+}
+.contact-section--light .form-group select option {
+  background: #ffffff !important;
+  color: var(--charcoal) !important;
+}
+.contact-section--light .form-group input:focus,
+.contact-section--light .form-group textarea:focus,
+.contact-section--light .form-group select:focus {
+  border-color: var(--clay) !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(196,151,122,0.18) !important;
+}
+
 .contact-layout {
   display: grid; grid-template-columns: 1fr;
   gap: 2rem; align-items: start;
