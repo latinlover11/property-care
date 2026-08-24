@@ -3,13 +3,13 @@ pagination:
   data: areas
   size: 1
   alias: area
-permalink: service-areas/{{ area.slug }}.html
+permalink: service-areas/{{ area.slug }}.html.html
 root: "../"
 active: "services"
 eleventyComputed:
   title: "Property Maintenance in {{ area.name }}, CO"
   description: "{{ area.meta }}"
-  ogUrl: "service-areas/{{ area.slug }}.html"
+  ogUrl: "service-areas/{{ area.slug }}"
   breadcrumbs:
     - name: "Home"
       url: "/"
@@ -90,7 +90,7 @@ eleventyComputed:
       <h2 class="section-title" style="color:var(--bark);">Services {{ area.name }} homeowners <em>request most</em></h2>
       <div class="hub-grid">
         {% for s in services %}{% if s.slug in area.services %}
-        <a href="../services/{{ s.slug }}.html" class="hub-card" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+        <a href="../services/{{ s.slug }}" class="hub-card" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
           <div class="card-icon"><svg class="icon"><use href="#{{ s.icon }}"/></svg></div>
           <h3>{{ s.title }}</h3>
           <p>{{ s.short }}</p>
@@ -114,7 +114,7 @@ eleventyComputed:
           <h3>{{ other.name }} <span style="color:var(--clay); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em;">(current)</span></h3>
         </div>
         {% else %}
-        <a class="area-card" href="{{ other.slug }}.html" style="text-decoration:none; display:block;">
+        <a class="area-card" href="{{ other.slug }}" style="text-decoration:none; display:block;">
           <h3>{{ other.name }}</h3>
         </a>
         {% endif %}

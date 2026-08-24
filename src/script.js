@@ -1,3 +1,86 @@
+// ===== Customer Reviews (approved, rendered from /api/reviews) =====
+(function loadApprovedReviews() {
+  const grid = document.getElementById('customer-reviews');
+  if (!grid) return;
+
+  fetch('/api/reviews')
+    .then(res => res.json())
+    .then(data => {
+      const reviews = (data && data.reviews) || [];
+      if (!reviews.length) return;
+
+      reviews.forEach(r => {
+        const card = document.createElement('article');
+        card.className = 'testimonial-card';
+        card.style.display = 'flex';
+        card.style.flexDirection = 'column';
+        card.style.alignItems = 'flex-start';
+
+        const stars = document.createElement('div');
+        stars.className = 'testimonial-stars';
+        stars.style.display = 'flex';
+        stars.style.gap = '0.2rem';
+        for (let i = 0; i < 5; i++) {
+          const star = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          star.setAttribute('viewBox', '0 0 24 24');
+          star.setAttribute('class', 'icon');
+          star.style.opacity = i < (r.rating || 0) ? '1' : '0.25';
+          star.innerHTML = '<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>';
+          stars.appendChild(star);
+        }
+        card.appendChild(stars);
+
+        const text = document.createElement('p');
+        text.textContent = r.text;
+        card.appendChild(text);
+
+        const author = document.createElement('div');
+        author.className = 'testimonial-author';
+        author.textContent = '— ' + r.name + (r.service ? `, ${r.service}` : '');
+        card.appendChild(author);
+
+        grid.appendChild(card);
+      });
+
+      const section = document.getElementById('reviews');
+      if (section) section.style.display = '';
+
+      updateReviewStructuredData(reviews);
+    })
+    .catch(() => {});
+})();
+
+function updateReviewStructuredData(reviews) {
+  if (!reviews.length) return;
+  const rated = reviews.filter(r => r.rating);
+  if (!rated.length) return;
+  const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  let localBusiness = null;
+  scripts.forEach(s => {
+    try {
+      const obj = JSON.parse(s.textContent);
+      if (obj['@type'] === 'LocalBusiness') localBusiness = obj;
+    } catch {}
+  });
+  if (!localBusiness) return;
+
+  const ratingValue = (rated.reduce((sum, r) => sum + r.rating, 0) / rated.length).toFixed(1);
+  localBusiness.aggregateRating = {
+    '@type': 'AggregateRating',
+    ratingValue: String(ratingValue),
+    reviewCount: rated.length
+  };
+
+  scripts.forEach(s => {
+    try {
+      const obj = JSON.parse(s.textContent);
+      if (obj['@type'] === 'LocalBusiness') {
+        s.textContent = JSON.stringify(localBusiness);
+      }
+    } catch {}
+  });
+}
+
 // ===== AOS Scroll Animations =====
 if (typeof AOS !== 'undefined') {
   AOS.init({
@@ -169,6 +252,45 @@ if (faqTriggers.length > 0) {
   });
 }
 
+// ===== Turnstile =====
+function resetTurnstile(form) {
+  const widget = form && form.querySelector('.cf-turnstile');
+  if (!widget || !window.turnstile) return;
+  const key = form.getAttribute('id') || form.name || widget.dataset.action;
+  const id = (window.__turnstileWidgets || {})[key];
+  if (id) window.turnstile.reset(id);
+}
+
+// ===== Estimate Form: prefill from URL / sessionStorage (like Nick's) =====
+const estimateForm = document.querySelector('[data-contact-form]');
+if (estimateForm) {
+  const params = new URLSearchParams(location.search);
+  const serviceSelect = estimateForm.querySelector('[data-service-select]');
+  if (serviceSelect) {
+    const slugMap = {
+      'lawn-mowing-care': 'Lawn Mowing & Care',
+      'fence-installation': 'Fence Installation',
+      'property-cleanups': 'Property Cleanups',
+      'hardscaping': 'Hardscaping',
+      'exterior-care': 'Exterior Care',
+      'custom-carpentry': 'Custom Carpentry',
+      'handyman-repairs': 'Handyman Repairs',
+      'interior-handyman': 'Interior Handyman'
+    };
+    const slug = params.get('service');
+    if (slug && slugMap[slug]) {
+      serviceSelect.value = slugMap[slug];
+    }
+  }
+  const estimateField = estimateForm.querySelector('[data-estimate-field]');
+  const estimateInput = estimateForm.querySelector('[data-estimate-input]');
+  const estimate = params.get('estimate') || sessionStorage.getItem('estimateChoice');
+  if (estimate && estimateField && estimateInput) {
+    estimateField.hidden = false;
+    estimateInput.value = estimate;
+  }
+}
+
 // ===== Form Validation & Submission =====
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
@@ -177,19 +299,27 @@ if (contactForm) {
     contactForm.querySelectorAll('.form-status-msg').forEach(el => el.remove());
     const btn = contactForm.querySelector('.btn-primary');
     const origText = btn ? btn.textContent : '';
-    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+    const formNote = contactForm.querySelector('[data-form-note]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending your request…'; }
+    if (formNote) formNote.textContent = 'Sending your request…';
 
     const formData = new FormData(contactForm);
-    fetch('/', {
+    fetch('submit-form', {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString()
     })
-    .then(() => {
+    .then((res) => {
+      if (!res.ok) throw new Error(res.statusText);
+      if (res.redirected) {
+        window.location.href = '/success';
+        return;
+      }
       window.location.href = '/success';
     })
     .catch(() => {
       if (btn) { btn.disabled = false; btn.textContent = origText; }
+      resetTurnstile(contactForm);
       const formMessage = document.createElement('p');
       formMessage.className = 'form-status-msg';
       formMessage.style.color = '#e53e3e';
@@ -223,12 +353,13 @@ if (newsletterForm) {
     const origText = btn ? btn.textContent : '';
     if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
 
-    fetch('/', {
+    fetch('submit-form', {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString()
     })
-    .then(() => {
+    .then((res) => {
+      if (!res.ok) throw new Error(res.statusText);
       if (btn) { btn.disabled = false; btn.textContent = origText; }
       const formMessage = document.createElement('p');
       formMessage.className = 'form-status-msg';
@@ -237,9 +368,11 @@ if (newsletterForm) {
       formMessage.textContent = '✓ Thanks for subscribing! Check your email for confirmation.';
       newsletterForm.parentNode.insertBefore(formMessage, newsletterForm.nextSibling);
       newsletterForm.reset();
+      resetTurnstile(newsletterForm);
     })
     .catch(() => {
       if (btn) { btn.disabled = false; btn.textContent = origText; }
+      resetTurnstile(newsletterForm);
       const formMessage = document.createElement('p');
       formMessage.className = 'form-status-msg';
       formMessage.style.color = '#e53e3e';
@@ -456,5 +589,47 @@ if (statNumbers.length > 0) {
 
   const statsSection = document.querySelector('.stats-strip');
   if (statsSection) observer.observe(statsSection);
+}
+
+// ===== Review Form =====
+const reviewForm = document.getElementById('reviewForm');
+if (reviewForm) {
+  reviewForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    reviewForm.querySelectorAll('.review-status-msg').forEach(el => el.remove());
+    const btn = reviewForm.querySelector('.btn-primary');
+    const origText = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+
+    const formData = new FormData(reviewForm);
+    fetch('submit-form', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then((res) => {
+      if (!res.ok) throw new Error(res.statusText);
+      if (btn) { btn.disabled = false; btn.textContent = origText; }
+      const successMsg = document.createElement('p');
+      successMsg.className = 'review-status-msg';
+      successMsg.style.color = '#2e7d32';
+      successMsg.style.marginTop = '0.9rem';
+      successMsg.style.fontWeight = '600';
+      successMsg.textContent = '✓ Thank you! Your review has been received.';
+      reviewForm.appendChild(successMsg);
+      reviewForm.reset();
+      resetTurnstile(reviewForm);
+    })
+    .catch(() => {
+      if (btn) { btn.disabled = false; btn.textContent = origText; }
+      resetTurnstile(reviewForm);
+      const errorMsg = document.createElement('p');
+      errorMsg.className = 'review-status-msg';
+      errorMsg.style.color = '#e53e3e';
+      errorMsg.style.marginTop = '0.9rem';
+      errorMsg.textContent = 'Could not submit your review. Please try again.';
+      reviewForm.appendChild(errorMsg);
+    });
+  });
 }
 

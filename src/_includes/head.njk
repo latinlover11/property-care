@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCL5716RE7"></script>
 <script>
@@ -7,7 +8,6 @@
 
   gtag('config', 'G-PCL5716RE7');
 </script>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#3D2B1F">
 <title>{{ title }} — {{ site.name }} | Longmont &amp; Boulder</title>
@@ -92,9 +92,25 @@
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%233D2B1F'/><path d='M50 80C50 80 27 69 27 41C27 24 37 14 50 14C63 14 73 24 73 41C73 69 50 80 50 80Z' fill='none' stroke='%23C4977A' stroke-width='6'/><path d='M50 80V32' stroke='%23C4977A' stroke-width='6'/></svg>">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ root }}apple-touch-icon.png">
+<script defer src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad"></script>
+<script>
+  window.onTurnstileLoad = function () {
+    if (!window.turnstile) return;
+    document.querySelectorAll('.cf-turnstile').forEach(function (el) {
+      var form = el.closest('form');
+      var id = window.turnstile.render(el, {
+        sitekey: el.dataset.sitekey,
+        action: el.dataset.action || 'form',
+        theme: el.dataset.theme || 'auto'
+      });
+      var widgets = window.__turnstileWidgets || (window.__turnstileWidgets = {});
+      widgets[form ? form.getAttribute('id') || form.name || el.dataset.action : el.dataset.action] = id;
+    });
+  };
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ root }}vendor/aos.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="{{ root }}vendor/aos.css"></noscript>
-<link rel="stylesheet" href="{{ root }}style.css">
+<link rel="stylesheet" href="{{ root }}vendor/aos.css" media="print" onload="this.media='all'" integrity="/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9">
+<noscript><link rel="stylesheet" href="{{ root }}vendor/aos.css" integrity="/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9"></noscript>
+<link rel="stylesheet" href="{{ root }}style.css" integrity="4xhk511i+MGsLGaqQpjxF9BXg8o5nNFNxTDvvV+VcmWWe1gm/3/BafRApnh6SkpW">

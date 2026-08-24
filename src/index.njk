@@ -68,6 +68,7 @@ active: "home"
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Get a Free Estimate</a>
         <a href="services.html" class="btn-ghost">See Our Services</a>
+        <a href="privacy-fence-case-study" class="btn-ghost">View Case Study</a>
       </div>
     </div>
   </section>
@@ -133,6 +134,152 @@ active: "home"
     </div>
   </section>
 
+  <!-- INSTANT ESTIMATOR -->
+  <section id="estimator" style="background:var(--bark); position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; opacity:0.04; background-image:url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); background-size:256px; pointer-events:none;"></div>
+    <div class="section" style="position:relative; z-index:1;">
+      <div style="text-align:center; max-width:620px; margin:0 auto 3rem;">
+        <p class="section-label" style="color:var(--clay);">Instant Quote</p>
+        <h2 class="section-title" style="color:var(--straw);">Build your estimate in <em style="color:var(--clay);">30 seconds</em></h2>
+        <p style="color:rgba(245,240,232,0.65); font-size:1.05rem; line-height:1.7;">Three quick steps. Pick your service, tell us about the job, and get an instant price range — no phone call required.</p>
+      </div>
+
+      <div class="quote-wizard" id="quote-wizard">
+        <ol class="wizard-steps" aria-label="Quote form progress">
+          <li class="wizard-step is-active" data-step-indicator="1">
+            <span class="wizard-dot" data-dot="1">1</span>
+            <span class="wizard-label">Service</span>
+          </li>
+          <li class="wizard-line" aria-hidden="true"></li>
+          <li class="wizard-step" data-step-indicator="2">
+            <span class="wizard-dot" data-dot="2">2</span>
+            <span class="wizard-label">Details</span>
+          </li>
+          <li class="wizard-line" aria-hidden="true"></li>
+          <li class="wizard-step" data-step-indicator="3">
+            <span class="wizard-dot" data-dot="3">3</span>
+            <span class="wizard-label">Estimate</span>
+          </li>
+        </ol>
+
+        <!-- STEP 1: SERVICE -->
+        <div class="wizard-panel" data-step="1">
+          <p class="wizard-hint">Step 1 of 3 · Choose your service</p>
+          <div class="wizard-services">
+            <button type="button" class="wizard-service" data-service="lawn-mowing-care" aria-pressed="false">
+              <span class="wizard-service-icon" aria-hidden="true">🌿</span>
+              <strong>Lawn Mowing &amp; Care</strong>
+              <small>Lawns, edging &amp; seasonal turf care</small>
+            </button>
+            <button type="button" class="wizard-service" data-service="fence-installation" aria-pressed="false">
+              <span class="wizard-service-icon" aria-hidden="true">🚧</span>
+              <strong>Fence Installation</strong>
+              <small>New fences, gates &amp; repairs</small>
+            </button>
+            <button type="button" class="wizard-service" data-service="property-cleanups" aria-pressed="false">
+              <span class="wizard-service-icon" aria-hidden="true">🧹</span>
+              <strong>Property Cleanups</strong>
+              <small>Spring &amp; fall cleanups, debris</small>
+            </button>
+            <button type="button" class="wizard-service" data-service="hardscaping" aria-pressed="false">
+              <span class="wizard-service-icon" aria-hidden="true">🧱</span>
+              <strong>Hardscaping</strong>
+              <small>Patio repairs, walls, walkways</small>
+            </button>
+            <button type="button" class="wizard-service" data-service="exterior-care" aria-pressed="false">
+              <span class="wizard-service-icon" aria-hidden="true">🪟</span>
+              <strong>Exterior Care</strong>
+              <small>Windows, washing, gutters</small>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: DETAILS -->
+        <div class="wizard-panel" data-step="2" hidden>
+          <p class="wizard-hint">Step 2 of 3 · Project details</p>
+          <div class="wizard-field">
+            <label class="wizard-label" for="wizard-size">Approximate size *</label>
+            <input id="wizard-size" type="number" min="1" max="100000" inputmode="numeric" placeholder="e.g. 2000" data-field="size">
+            <small class="wizard-unit-note" data-unit-note>square feet</small>
+          </div>
+          <fieldset class="wizard-group">
+            <legend class="wizard-label">Property type *</legend>
+            <div class="wizard-radios">
+              <label class="wizard-radio">
+                <input type="radio" name="property_type" value="front_yard">
+                <span>Front Yard</span>
+              </label>
+              <label class="wizard-radio">
+                <input type="radio" name="property_type" value="back_yard">
+                <span>Back Yard</span>
+              </label>
+              <label class="wizard-radio">
+                <input type="radio" name="property_type" value="full_property">
+                <span>Full Property</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="wizard-group">
+            <legend class="wizard-label">Extras <span data-extras-context></span></legend>
+            <div class="wizard-extras" data-extras></div>
+          </fieldset>
+          <div class="wizard-nav">
+            <button type="button" class="btn-ghost" data-back="1">← Back</button>
+            <button type="button" class="btn-primary" data-calculate>Get My Estimate</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: ESTIMATE + CONTACT -->
+        <div class="wizard-panel" data-step="3" hidden>
+          <p class="wizard-hint">Step 3 of 3 · Your estimate &amp; contact info</p>
+          <div class="wizard-estimate" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; background:rgba(255,255,255,0.04); border:1px solid rgba(245,240,232,0.12); border-radius:12px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+            <div>
+              <span style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--clay); font-weight:600;">Estimated Price Range</span>
+              <div style="font-size:1.8rem; color:var(--straw); font-family:'Playfair Display',serif;" data-estimate-price>—</div>
+            </div>
+            <small style="color:rgba(245,240,232,0.5); max-width:220px; line-height:1.5;">Final price depends on site conditions. We'll confirm after a free visit.</small>
+          </div>
+          <form class="wizard-form" id="quote-form" data-submit-form novalidate>
+            <div class="wizard-field">
+              <label class="wizard-label" for="wizard-name">Full name *</label>
+              <input id="wizard-name" type="text" autocomplete="name" placeholder="Jane Smith" data-field="customer_name">
+            </div>
+            <div class="wizard-row">
+              <div class="wizard-field">
+                <label class="wizard-label" for="wizard-email">Email</label>
+                <input id="wizard-email" type="email" autocomplete="email" inputmode="email" placeholder="jane@example.com" data-field="customer_email">
+              </div>
+              <div class="wizard-field">
+                <label class="wizard-label" for="wizard-phone">Phone *</label>
+                <input id="wizard-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(720) 707-5411" data-field="customer_phone">
+              </div>
+            </div>
+            <div class="wizard-field">
+              <label class="wizard-label" for="wizard-address">Property address *</label>
+              <textarea id="wizard-address" rows="2" placeholder="123 Maple Ave, Longmont, CO" data-field="address"></textarea>
+            </div>
+            <div class="wizard-field">
+              <label class="wizard-label" for="wizard-notes">Additional Notes</label>
+              <textarea id="wizard-notes" rows="3" placeholder="Anything else we should know?" data-field="notes"></textarea>
+            </div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAETW15T6VEdnpxQx" data-action="quote" data-theme="dark" style="margin-bottom:0.5rem;"></div>
+            <div class="wizard-nav">
+              <button type="button" class="btn-ghost" data-back="2">← Back</button>
+              <button type="submit" class="btn-primary" data-submit>Submit Quote Request</button>
+            </div>
+            <p class="form-note">We reply within one business day.</p>
+          </form>
+        </div>
+
+        <div class="wizard-banner" data-banner="success" role="status" hidden style="padding:2rem; text-align:center;">
+          <div style="width:52px; height:52px; margin:0 auto 1rem; border-radius:50%; background:var(--clay); color:var(--cream); font-size:1.5rem; display:flex; align-items:center; justify-content:center;">✓</div>
+          <strong style="font-size:1.2rem; color:var(--straw); font-family:'Playfair Display',serif;">Thank you! We'll contact you within 24 hours.</strong>
+          <br><button type="button" class="btn-ghost" style="margin-top:1rem;" data-restart>Start New Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section id="services" style="background:var(--straw);">
     <div class="section">
@@ -168,37 +315,37 @@ active: "home"
       <div class="portfolio-slideshow">
         <div class="slideshow-container">
           <div class="slide active">
-            <img src="images/walkwayafter.webp" alt="Stone Walkway" loading="lazy">
+            <img src="images/walkwayafter.webp" alt="Stone Walkway" loading="lazy" width="790" height="1600" srcset="images/responsive/walkwayafter-480.webp 480w, images/walkwayafter.webp 790w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
               <a href="portfolio.html" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
-            <img src="images/wallafter.webp" alt="Retaining Wall" loading="lazy">
+            <img src="images/wallafter.webp" alt="Retaining Wall" loading="lazy" width="1600" height="784" srcset="images/responsive/wallafter-480.webp 480w, images/responsive/wallafter-800.webp 800w, images/responsive/wallafter-1200.webp 1200w, images/wallafter.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
               <a href="portfolio.html" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
-            <img src="images/stairsafter.webp" alt="Custom Staircase" loading="lazy">
+            <img src="images/stairsafter.webp" alt="Custom Staircase" loading="lazy" width="1600" height="786" srcset="images/responsive/stairsafter-480.webp 480w, images/responsive/stairsafter-800.webp 800w, images/responsive/stairsafter-1200.webp 1200w, images/stairsafter.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
               <a href="portfolio.html" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
-            <img src="images/after/green-house-after.webp" alt="Green House" loading="lazy">
+            <img src="images/after/green-house-after.webp" alt="Green House" loading="lazy" width="1600" height="534" srcset="images/responsive/after_green-house-after-480.webp 480w, images/responsive/after_green-house-after-800.webp 800w, images/responsive/after_green-house-after-1200.webp 1200w, images/after/green-house-after.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
               <a href="portfolio.html" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
-            <img src="images/after/lawn-after.webp" alt="Lawn" loading="lazy">
+            <img src="images/after/lawn-after.webp" alt="Lawn" loading="lazy" width="1600" height="782" srcset="images/responsive/after_lawn-after-480.webp 480w, images/responsive/after_lawn-after-800.webp 800w, images/responsive/after_lawn-after-1200.webp 1200w, images/after/lawn-after.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
               <a href="portfolio.html" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
-            <img src="images/after/yellow-house-after.webp" alt="Yellow House" loading="lazy">
+            <img src="images/after/yellow-house-after.webp" alt="Yellow House" loading="lazy" width="1600" height="784" srcset="images/responsive/after_yellow-house-after-480.webp 480w, images/responsive/after_yellow-house-after-800.webp 800w, images/responsive/after_yellow-house-after-1200.webp 1200w, images/after/yellow-house-after.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
               <a href="portfolio.html" class="btn-primary">View Portfolio</a>
             </div>
@@ -223,7 +370,10 @@ active: "home"
         <div class="about-visual">
           <img class="about-img"
             src="images/about-garden.webp"
-            alt="Garden maintenance work" loading="lazy">
+            alt="Garden maintenance work" loading="lazy"
+            width="800" height="533"
+            srcset="images/responsive/about-garden-480.webp 480w, images/about-garden.webp 800w"
+            sizes="(max-width: 768px) 100vw, 45vw">
         </div>
       </div>
     </div>
@@ -248,6 +398,15 @@ active: "home"
           <p>Based in Longmont, licensed &amp; insured, and we respond within 24 hours — every time.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS -->
+  <section id="reviews" style="display:none; background:var(--cream);">
+    <div class="section">
+      <p class="section-label">Testimonials</p>
+      <h2 class="section-title">What homeowners are <em>saying</em></h2>
+      <div class="testimonials-grid" id="customer-reviews"></div>
     </div>
   </section>
 
@@ -362,39 +521,68 @@ active: "home"
           </div>
 
         </div>
-        <!-- Netlify form integration -->
-        <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form class="contact-form" name="contact" method="POST" action="{{ root }}submit-form" data-contact-form>
           <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          <h3 style="font-family:'Playfair Display',serif; color:var(--straw); font-size:1.3rem; margin:0 0 0.25rem;">Request a Free Quote</h3>
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" required>
+              <label for="name">Full name *</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name">
             </div>
             <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="{{ site.phoneDisplay }}">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" placeholder="(720) 000-0000" required autocomplete="tel">
             </div>
+          </div>
+          <div class="form-group">
+            <label for="address">Property address *</label>
+            <input type="text" id="address" name="address" placeholder="123 Maple Ave, Longmont, CO" required autocomplete="street-address">
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
           </div>
           <div class="form-group">
-            <label for="service-type">Service Needed</label>
-            <select id="service-type" name="service-type">
+            <label for="service-type">Service needed *</label>
+            <select id="service-type" name="service-type" required data-service-select>
               <option value="">Select a service…</option>
               {% for s in services %}
-              <option value="{{ s.title }}">{{ s.title }}</option>
+              <option value="{{ s.title }}" data-slug="{{ s.slug }}">{{ s.title }}</option>
               {% endfor %}
               <option value="Not sure / Other">Not sure / Other</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="message">Project Details</label>
-            <textarea id="message" name="message" placeholder="Tell us about your project — scope, timing, any photos to share?"></textarea>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="preferred-date">Preferred date</label>
+              <input type="date" id="preferred-date" name="preferred-date">
+            </div>
+            <div class="form-group">
+              <label for="when">When?</label>
+              <select id="when" name="when">
+                <option>As soon as possible</option>
+                <option>This week</option>
+                <option>Next 2 weeks</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
           </div>
-          <button type="submit" class="btn-primary">Send Request</button>
+          <div class="form-group" data-estimate-field hidden>
+            <label for="estimate">Estimated range from calculator</label>
+            <input type="text" id="estimate" name="estimate" readonly data-estimate-input>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about the job *</label>
+            <textarea id="message" name="message" rows="4" placeholder="e.g. Rotting fence posts near the back gate, need about 60 ft replaced…" required></textarea>
+          </div>
+          <label class="consent">
+            <input type="checkbox" name="consent" value="yes" required>
+            <span>I agree to be contacted about my request. No spam, ever.</span>
+          </label>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAETW15T6VEdnpxQx" data-action="contact" data-theme="dark"></div>
+          <button type="submit" class="btn-primary">Send My Request — Free Quote →</button>
+          <p class="form-note" data-form-note>We reply within one business day.</p>
         </form>
       </div>
     </div>
@@ -405,10 +593,11 @@ active: "home"
       <p class="section-label">Stay Updated</p>
       <h2 class="section-title" style="color:var(--bark);">Get tips &amp; <em style="color:var(--clay-deep);">updates</em></h2>
       <p style="color:var(--bark); font-size:1rem; max-width:500px; margin:1.5rem auto; opacity:0.7;">Join our mailing list for seasonal tips, discounts, and updates on new services.</p>
-      <form class="newsletter-form" id="newsletterForm" name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" data-aos="fade-up">
+      <form class="newsletter-form" id="newsletterForm" name="newsletter" method="POST" action="{{ root }}submit-form" data-aos="fade-up">
   <input type="hidden" name="form-name" value="newsletter" />
   <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
   <input type="email" name="email" placeholder="your@email.com" required>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAETW15T6VEdnpxQx" data-action="newsletter" style="margin:0.75rem auto;"></div>
   <button type="submit" class="btn-primary">Subscribe</button>
   <label class="newsletter-consent">
     <input type="checkbox" name="consent" value="yes" required>

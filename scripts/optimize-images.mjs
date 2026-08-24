@@ -4,7 +4,7 @@ import sharp from "sharp";
 
 const ROOT = "src/images";
 const MAX_WIDTH = 1600;
-const QUALITY = 75;
+const QUALITY = 70;
 
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -29,7 +29,7 @@ for (const file of await walk(ROOT)) {
   if (meta.width > MAX_WIDTH) {
     pipeline = pipeline.resize({ width: MAX_WIDTH });
   }
-  await pipeline.webp({ quality: QUALITY }).sharpen().toBuffer().then((buf) => writeFile(file, buf));
+  await pipeline.webp({ quality: QUALITY, effort: 6 }).toBuffer().then((buf) => writeFile(file, buf));
   const after = (await stat(file)).size;
   const saved = before - after;
   totalSaved += saved;

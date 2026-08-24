@@ -8,11 +8,11 @@
     <div class="footer-section">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="{{ root }}index.html">Home</a></li>
-        <li><a href="{{ root }}services.html">Services</a></li>
-        <li><a href="{{ root }}portfolio.html">Portfolio</a></li>
-        <li><a href="{{ root }}about.html">About</a></li>
-        <li><a href="{{ root }}privacy.html">Privacy Policy</a></li>
+        <li><a href="{{ root }}index">Home</a></li>
+        <li><a href="{{ root }}services">Services</a></li>
+        <li><a href="{{ root }}portfolio">Portfolio</a></li>
+        <li><a href="{{ root }}about">About</a></li>
+        <li><a href="{{ root }}privacy">Privacy Policy</a></li>
       </ul>
     </div>
 
@@ -20,7 +20,7 @@
       <h3>Service Areas</h3>
       <ul>
         {% for area in areas %}
-        <li><a href="{{ root }}service-areas/{{ area.slug }}.html"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>{{ area.name }}</a></li>
+        <li><a href="{{ root }}service-areas/{{ area.slug }}"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>{{ area.name }}</a></li>
         {% endfor %}
       </ul>
     </div>

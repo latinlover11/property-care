@@ -1,6 +1,6 @@
 <header class="nav">
   <div class="nav-inner">
-    <a href="{{ root }}index.html" class="nav-logo">Property<span>Care</span></a>
+    <a href="{{ root }}index" class="nav-logo">Property<span>Care</span></a>
     
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
       <span></span>
@@ -10,20 +10,20 @@
 
     <nav class="nav-links" id="navMenu">
       <ul class="nav-links-group">
-        <li><a href="{{ root }}index.html" class="nav-link{% if active == 'home' %} active{% endif %}"{% if active == 'home' %} aria-current="page"{% endif %}>Home</a></li>
-        <li><a href="{{ root }}portfolio.html" class="nav-link{% if active == 'portfolio' %} active{% endif %}"{% if active == 'portfolio' %} aria-current="page"{% endif %}>Portfolio</a></li>
+        <li><a href="{{ root }}index" class="nav-link{% if active == 'home' %} active{% endif %}"{% if active == 'home' %} aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="{{ root }}portfolio" class="nav-link{% if active == 'portfolio' %} active{% endif %}"{% if active == 'portfolio' %} aria-current="page"{% endif %}>Portfolio</a></li>
         <li class="dropdown">
           <button class="dropdown-trigger{% if active == 'services' %} is-current{% endif %}" aria-haspopup="true" aria-expanded="false">
             Services <span class="arrow">▼</span>
           </button>
           <ul class="dropdown-menu">
             {% for service in services %}
-            <li><a href="{{ root }}services/{{ service.slug }}.html">{{ service.title }}</a></li>
+            <li><a href="{{ root }}services/{{ service.slug }}">{{ service.title }}</a></li>
             {% endfor %}
-            <li><a href="{{ root }}services.html" style="color:var(--clay); border-top:1px solid rgba(245,240,232,0.1); margin-top:0.25rem; padding-top:0.75rem;">View All Services →</a></li>
+            <li><a href="{{ root }}services" style="color:var(--clay); border-top:1px solid rgba(245,240,232,0.1); margin-top:0.25rem; padding-top:0.75rem;">View All Services →</a></li>
           </ul>
         </li>
-        <li><a href="{{ root }}about.html" class="nav-link{% if active == 'about' %} active{% endif %}"{% if active == 'about' %} aria-current="page"{% endif %}>About</a></li>
+        <li><a href="{{ root }}about" class="nav-link{% if active == 'about' %} active{% endif %}"{% if active == 'about' %} aria-current="page"{% endif %}>About</a></li>
       </ul>
       <a href="tel:{{ site.phone }}" class="nav-call" aria-label="Call us">
         <svg viewBox="0 0 24 24" fill="none" width="14" height="14" aria-hidden="true">
@@ -36,7 +36,7 @@
           <path d="M3 6L12 13L21 6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
         </svg>
       </a>
-      <a href="{{ root }}contact.html" class="nav-cta">
+      <a href="{{ root }}contact" class="nav-cta">
         <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use href="#icon-clipboard-check"/></svg>
         Get Estimate
       </a>
