@@ -1,5 +1,6 @@
 import { sendMail } from "../../_lib/smtp.js";
 import { verifyTurnstile } from "../../_lib/turnstile.js";
+import { isValidEmail, captureSubscriber } from "../../_lib/subscribers.js";
 
 function sanitize(value, maxLen = 1000) {
   return String(value || "").trim().slice(0, maxLen);
@@ -35,6 +36,10 @@ export async function onRequestPost(context) {
 
   if (!name || (!email && !phone)) {
     return Response.json({ ok: false, error: "Name and phone or email are required" }, { status: 400 });
+  }
+
+  if (body.subscribe === "yes" && isValidEmail(email)) {
+    await captureSubscriber(env, { email, source: "quote" });
   }
 
   const user = env.FORM_SMTP_USER;

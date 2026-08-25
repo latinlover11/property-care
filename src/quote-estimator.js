@@ -252,6 +252,7 @@ function getTurnstileToken() {
       customer_phone: field('customer_phone'),
       address: field('address'),
       notes: field('notes'),
+      subscribe: (wizard.querySelector('[data-field="subscribe"]') || {}).checked ? 'yes' : '',
     };
 
     try {

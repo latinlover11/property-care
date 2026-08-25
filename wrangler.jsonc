@@ -1,12 +1,17 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "property-care",
-  "compatibility_date": "2026-01-01",
-  "pages_build_output_dir": "./dist",
-  "kv_namespaces": [
-    {
-      "binding": "REVIEWS",
-      "id": "fa41adc3bd254eb88a436951d6a7cfed"
-    }
-  ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "property-care",
+	"compatibility_date": "2026-01-01",
+	"pages_build_output_dir": "./dist",
+	"kv_namespaces": [
+		{
+			"binding": "REVIEWS",
+			"id": "fa41adc3bd254eb88a436951d6a7cfed"
+		},
+		{
+			"binding": "SUBSCRIBERS",
+			"id": "a71211ac60bd436aa7a53fb030b8483f",
+			"remote": true
+		}
+	]
 }

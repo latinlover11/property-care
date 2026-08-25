@@ -1,3 +1,5 @@
+import { listSubscribers } from "./_lib/subscribers.js";
+
 const SESSION_COOKIE = "pc_admin";
 const SESSION_TTL_MS = 8 * 60 * 60 * 1000;
 
@@ -112,6 +114,22 @@ const LOGIN_PAGE = ({ error }) => htmlPage(
   false
 );
 
+async function subscribersSection(env) {
+  if (!env.SUBSCRIBERS) {
+    return `<h1>Subscribers</h1><p class="msg err">SUBSCRIBERS KV is not configured. Add the binding in wrangler.jsonc.</p>`;
+  }
+  const subs = await listSubscribers(env);
+  const active = subs.filter((s) => s.status !== "unsubscribed");
+  const count = subs.length;
+  const activeCount = active.length;
+  const body = activeCount
+    ? `<p><a class="btn-sub" href="/admin?csv=1" style="color:#fff; text-decoration:none; display:inline-block;">Export CSV</a></p>`
+    : `<div class="empty">No active subscribers yet. They'll appear here from the newsletter signup and quote/contact forms.</div>`;
+  return `<h1>Subscribers <span class="badge">${activeCount} active</span></h1>
+      <p style="font-size:.85rem;color:var(--warm-mid);">${count} total · CSV export includes active subscribers only (excludes unsubscribed). Emails come from the newsletter signup and quote/contact forms.</p>
+      ${body}`;
+}
+
 async function managementPage(request, env, notice) {
   const reviews = [];
   const list = await env.REVIEWS.list({ prefix: "pending:" });
@@ -120,6 +138,8 @@ async function managementPage(request, env, notice) {
     if (raw) reviews.push({ key: key.name, ...JSON.parse(raw) });
   }
   reviews.sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
+
+  const subsHtml = await subscribersSection(env);
 
   const rows = reviews.length
     ? reviews.map((r) => `
@@ -139,8 +159,9 @@ async function managementPage(request, env, notice) {
     : `<div class="empty">No pending reviews right now. New reviews submitted on the success page will appear here for approval.</div>`;
 
   return htmlPage(
-    "Pending Reviews",
-    `<h1>Reviews Admin <span class="badge">pending: ${reviews.length}</span></h1>
+    "Admin",
+    `${subsHtml}
+     <h1 style="margin-top:2.5rem;">Reviews Admin <span class="badge">pending: ${reviews.length}</span></h1>
      ${notice ? `<div class="msg ok">${escapeHtml(notice)}</div>` : ""}
      <p style="font-size:.85rem;color:var(--warm-mid);">Publishing a review makes it appear in the testimonial slider on your homepage within minutes. Rejecting removes it permanently. <span class="flash"><a href="/admin?out=1">Sign out</a></span></p>
      ${rows}
@@ -221,6 +242,22 @@ export async function onRequestGet(context) {
   if (!session) {
     return new Response(LOGIN_PAGE({ error: "" }), {
       headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" },
+    });
+  }
+
+  if (url.searchParams.get("csv") === "1") {
+    const subs = await listSubscribers(env);
+    const active = subs.filter((s) => s.status !== "unsubscribed");
+    const header = "email,source,subscribed_at,status\r\n";
+    const body = active
+      .map((r) => `${r.email},${r.source},${r.subscribedAt},${r.status || "active"}`)
+      .join("\r\n");
+    return new Response(header + body + "\r\n", {
+      headers: {
+        "Content-Type": "text/csv; charset=utf-8",
+        "Content-Disposition": 'attachment; filename="subscribers.csv"',
+        "Cache-Control": "no-store",
+      },
     });
   }
 

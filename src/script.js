@@ -358,8 +358,12 @@ if (newsletterForm) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString()
     })
-    .then((res) => {
-      if (!res.ok) throw new Error(res.statusText);
+    .then(async (res) => {
+      if (!res.ok) {
+        let msg = 'Subscription failed. Please try again.';
+        try { const data = await res.json(); if (data && data.error) msg = data.error; } catch {}
+        throw new Error(msg);
+      }
       if (btn) { btn.disabled = false; btn.textContent = origText; }
       const formMessage = document.createElement('p');
       formMessage.className = 'form-status-msg';
@@ -370,14 +374,14 @@ if (newsletterForm) {
       newsletterForm.reset();
       resetTurnstile(newsletterForm);
     })
-    .catch(() => {
+    .catch((err) => {
       if (btn) { btn.disabled = false; btn.textContent = origText; }
       resetTurnstile(newsletterForm);
       const formMessage = document.createElement('p');
       formMessage.className = 'form-status-msg';
       formMessage.style.color = '#e53e3e';
       formMessage.style.marginTop = '0.75rem';
-      formMessage.textContent = 'Subscription failed. Please try again.';
+      formMessage.textContent = err.message || 'Subscription failed. Please try again.';
       newsletterForm.parentNode.insertBefore(formMessage, newsletterForm.nextSibling);
     });
   });
