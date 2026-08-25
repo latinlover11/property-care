@@ -1200,6 +1200,27 @@ a.area-card:hover {
   .portfolio-item--featured .portfolio-item-desc { font-size: 0.9rem; }
 }
 
+/* ── FEATURED PROJECT SPOTLIGHT ── */
+.featured-project {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+  align-items: center;
+}
+.featured-project-media img {
+  width: 100%; height: auto; display: block;
+  border-radius: 12px; box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+.featured-project-meta {
+  color: var(--clay); font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.06em; font-size: 0.78rem; margin: 0.5rem 0 1rem;
+}
+.featured-project-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+@media (max-width: 768px) {
+  .featured-project { grid-template-columns: 1fr; }
+  .featured-project-media { order: -1; }
+}
+
 /* ── FILTER ANIMATION ── */
 .portfolio-grid.is-filtering .portfolio-item {
   transition: opacity 0.35s ease, transform 0.35s ease;
