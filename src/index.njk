@@ -385,25 +385,28 @@ active: "home"
   </section>
 
   <!-- FEATURED PROJECT -->
+  {% set fp = caseStudies | featuredCaseStudy %}
+  {% if fp %}
   <section style="background:var(--bark);">
     <div class="section">
       <div class="featured-project">
         <div class="featured-project-media">
-          <img src="images/after/fence-lakewood-after-151224.webp" alt="Completed cedar privacy fence in Lakewood, Colorado" loading="lazy" width="1600" height="1200">
+          <img src="{{ fp.image }}" alt="{{ fp.title }} {{ fp.location }}, CO — Property Care project" loading="lazy" width="1600" height="1200">
         </div>
         <div class="featured-project-text">
           <p class="section-label" style="color:var(--clay);">Featured Project</p>
-          <h2 class="section-title" style="color:var(--straw);">A Private, Finished Backyard in <em style="color:var(--clay);">Lakewood</em></h2>
-          <p class="featured-project-meta">60 ft Cedar Privacy Fence · Installed in 2 Days</p>
-          <p style="color:rgba(245,240,232,0.75); line-height:1.7; margin-bottom:1.75rem;">A 60-foot cedar vertical privacy fence — designed, delivered, and installed in two days for a homeowner who wanted their yard back. See the full before-and-after, the build process, and an instant estimate.</p>
+          <h2 class="section-title" style="color:var(--straw);">{{ fp.title }} <em style="color:var(--clay);">{{ fp.location }}</em></h2>
+          <p class="featured-project-meta">{{ fp.meta }}</p>
+          <p style="color:rgba(245,240,232,0.75); line-height:1.7; margin-bottom:1.75rem;">{{ fp.blurb }}</p>
           <div class="featured-project-actions">
-            <a href="/privacy-fence-case-study" class="btn-primary">View the Case Study →</a>
+            <a href="{{ fp.url }}" class="btn-primary">View the Case Study →</a>
             <a href="/portfolio" class="btn-ghost" style="color:var(--straw); border-color:rgba(245,240,232,0.3);">See All Work</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+  {% endif %}
 
   <!-- WHY HOMEOWNERS CHOOSE US -->
   <section id="why-us" style="background:var(--straw);">

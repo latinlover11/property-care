@@ -30,6 +30,11 @@ module.exports = function(eleventyConfig) {
     return "0.7";
   });
 
+  eleventyConfig.addFilter("featuredCaseStudy", (list) => {
+    if (!Array.isArray(list) || !list.length) return null;
+    return [...list].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")))[0];
+  });
+
   eleventyConfig.addGlobalData("permalink", () => {
     return (data) => `${data.page.filePathStem}.html`;
   });
