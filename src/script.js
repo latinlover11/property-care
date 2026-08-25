@@ -567,6 +567,52 @@ if (heroBg) {
   restart();
 })();
 
+// ===== Portfolio Sort by Date (newest first by default) =====
+(function () {
+  const grid = document.querySelector('.portfolio-grid');
+  if (!grid) return;
+
+  // Assigned project dates; fence is the most recent job.
+  const projectDates = {
+    'walkwaybefore': '2025-08-30',
+    'wallbefore': '2025-09-15',
+    'stairsbefore': '2025-10-08',
+    'front-circle': '2025-11-22',
+    'muddy-patio': '2026-02-18',
+    'patio-firepit': '2026-03-15',
+    'steps-before': '2026-04-20',
+    'green-house': '2026-05-12',
+    'lawn-before': '2026-06-05',
+    'yellow-house': '2026-07-10',
+    'fence-lakewood': '2026-08-19',
+  };
+
+  function dateForItem(item) {
+    const img = item.querySelector('.comparison-img-before img');
+    const src = img ? (img.getAttribute('src') || '') : '';
+    const base = src.split('/').pop().split('.')[0];
+    for (const key in projectDates) {
+      if (base.indexOf(key) !== -1) return projectDates[key];
+    }
+    return '2000-01-01';
+  }
+
+  function sortPortfolio(order) {
+    const items = Array.from(grid.querySelectorAll('.portfolio-item'));
+    items.sort((a, b) => {
+      const da = dateForItem(a), db = dateForItem(b);
+      return order === 'newest' ? db.localeCompare(da) : da.localeCompare(db);
+    });
+    items.forEach((it) => grid.appendChild(it));
+  }
+
+  const sortSelect = document.getElementById('portfolioSort');
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => sortPortfolio(sortSelect.value));
+  }
+  sortPortfolio((sortSelect && sortSelect.value) || 'newest');
+})();
+
 // ===== Portfolio Filter with Stagger =====
 const portfolioGrid = document.querySelector('.portfolio-grid');
 const filterBtns = document.querySelectorAll('.filter-btn');

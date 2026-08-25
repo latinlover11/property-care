@@ -66,6 +66,13 @@ active: "portfolio"
         <button class="filter-btn" data-filter="landscaping">Landscaping</button>
         <button class="filter-btn" data-filter="carpentry">Carpentry</button>
         <button class="filter-btn" data-filter="exterior-care">Exterior Care</button>
+        <span class="filter-sort">
+          <label for="portfolioSort">Sort</label>
+          <select id="portfolioSort" class="filter-select">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+          </select>
+        </span>
       </div>
 
       <div class="filter-info">
@@ -76,7 +83,7 @@ active: "portfolio"
 
       <div class="portfolio-grid">
         <!-- Stone Walkway — featured -->
-        <div class="portfolio-item portfolio-item--featured" data-service="hardscaping" data-aos="fade-up">
+        <div class="portfolio-item" data-service="hardscaping" data-aos="fade-up">
           <div class="portfolio-img-wrap">
             <div class="portfolio-comparison">
               <div class="comparison-slider">
