@@ -330,9 +330,8 @@ if (contactForm) {
   });
 }
 
-// ===== Newsletter Subscription =====
-const newsletterForm = document.getElementById('newsletterForm');
-if (newsletterForm) {
+// ===== Newsletter Subscription (supports multiple forms) =====
+function bindNewsletterForm(newsletterForm) {
   newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (newsletterForm.parentNode) {
@@ -386,6 +385,7 @@ if (newsletterForm) {
     });
   });
 }
+document.querySelectorAll('.newsletter-form').forEach(bindNewsletterForm);
 
 // ===== Smooth Scroll for Anchor Links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

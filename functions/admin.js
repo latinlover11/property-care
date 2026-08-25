@@ -1,4 +1,4 @@
-import { listSubscribers } from "./_lib/subscribers.js";
+import { listSubscribers, captureSubscriber, isValidEmail } from "./_lib/subscribers.js";
 
 const SESSION_COOKIE = "pc_admin";
 const SESSION_TTL_MS = 8 * 60 * 60 * 1000;
@@ -158,9 +158,25 @@ async function managementPage(request, env, notice) {
       </div>`).join("")
     : `<div class="empty">No pending reviews right now. New reviews submitted on the success page will appear here for approval.</div>`;
 
+  const addSubscriberHtml = `
+    <h1 style="margin-top:2.5rem;">Add Subscriber</h1>
+    <p style="font-size:.85rem;color:var(--warm-mid);">Manually add a past client to the mailing list (e.g., from a previous job). They'll get the same welcome email and unsubscribe link.</p>
+    <form method="POST" action="/admin" style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+      <input type="hidden" name="action" value="add-subscriber">
+      <input type="email" name="email" placeholder="client@email.com" required style="padding:.5rem .7rem; border:1px solid #d8cec0; border-radius:6px; font-size:.9rem; min-width:220px;">
+      <select name="source" style="padding:.5rem .7rem; border:1px solid #d8cec0; border-radius:6px; font-size:.9rem;">
+        <option value="manual">Manual / past client</option>
+        <option value="newsletter">Newsletter</option>
+        <option value="contact">Contact form</option>
+        <option value="quote">Quote form</option>
+      </select>
+      <button class="btn-sub" type="submit">Add to List</button>
+    </form>`;
+
   return htmlPage(
     "Admin",
     `${subsHtml}
+     ${addSubscriberHtml}
      <h1 style="margin-top:2.5rem;">Reviews Admin <span class="badge">pending: ${reviews.length}</span></h1>
      ${notice ? `<div class="msg ok">${escapeHtml(notice)}</div>` : ""}
      <p style="font-size:.85rem;color:var(--warm-mid);">Publishing a review makes it appear in the testimonial slider on your homepage within minutes. Rejecting removes it permanently. <span class="flash"><a href="/admin?out=1">Sign out</a></span></p>
@@ -220,6 +236,16 @@ export async function onRequestPost(context) {
       status: 303,
       headers: { Location: "/admin", "Set-Cookie": `${SESSION_COOKIE}=; Path=/; HttpOnly; Max-Age=0` },
     });
+  } else if (action === "add-subscriber") {
+    const email = String(formData.get("email") || "").trim();
+    const source = String(formData.get("source") || "manual");
+    if (isValidEmail(email)) {
+      await captureSubscriber(env, { email, source });
+      notice.text = `Added ${email} to the mailing list (source: ${source}).`;
+    } else {
+      notice.ok = false;
+      notice.text = "Please enter a valid email address.";
+    }
   }
 
   return new Response(await managementPage(request, env, notice.text || ""), {
