@@ -1,6 +1,6 @@
 <header class="nav">
   <div class="nav-inner">
-    <a href="{{ root }}index" class="nav-logo">Property<span>Care</span></a>
+    <a href="/" class="nav-logo">Property<span>Care</span></a>
     
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
       <span></span>
@@ -10,7 +10,7 @@
 
     <nav class="nav-links" id="navMenu">
       <ul class="nav-links-group">
-        <li><a href="{{ root }}index" class="nav-link{% if active == 'home' %} active{% endif %}"{% if active == 'home' %} aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="/" class="nav-link{% if active == 'home' %} active{% endif %}"{% if active == 'home' %} aria-current="page"{% endif %}>Home</a></li>
         <li><a href="{{ root }}portfolio" class="nav-link{% if active == 'portfolio' %} active{% endif %}"{% if active == 'portfolio' %} aria-current="page"{% endif %}>Portfolio</a></li>
         <li class="dropdown">
           <button class="dropdown-trigger{% if active == 'services' %} is-current{% endif %}" aria-haspopup="true" aria-expanded="false">

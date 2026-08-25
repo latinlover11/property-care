@@ -2,6 +2,7 @@
 title: "Home"
 description: "Property Care provides honest, reliable lawn mowing, fence installation, hardscaping, exterior care, and handyman services across Longmont and the Boulder County Front Range — free estimates, lasting results."
 ogUrl: ""
+ogImage: "images/after/lawn-after.webp"
 root: ""
 active: "home"
 ---
@@ -67,7 +68,7 @@ active: "home"
       </div>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Get a Free Estimate</a>
-        <a href="services.html" class="btn-ghost">See Our Services</a>
+        <a href="/services" class="btn-ghost">See Our Services</a>
         <a href="privacy-fence-case-study" class="btn-ghost">View Case Study</a>
       </div>
     </div>
@@ -299,7 +300,7 @@ active: "home"
           <div class="card-icon"><svg class="icon"><use href="#{{ service.icon }}"/></svg></div>
           <h3>{{ service.title }}</h3>
           <p>{{ service.short }}</p>
-          <a href="services/{{ service.slug }}.html" class="service-card-link">Learn more →</a>
+          <a href="/services/{{ service.slug }}" class="service-card-link">Learn more →</a>
         </div>
         {% endfor %}
       </div>
@@ -317,37 +318,37 @@ active: "home"
           <div class="slide active">
             <img src="images/walkwayafter.webp" alt="Stone Walkway" loading="lazy" width="790" height="1600" srcset="images/responsive/walkwayafter-480.webp 480w, images/walkwayafter.webp 790w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+              <a href="/portfolio" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/wallafter.webp" alt="Retaining Wall" loading="lazy" width="1600" height="784" srcset="images/responsive/wallafter-480.webp 480w, images/responsive/wallafter-800.webp 800w, images/responsive/wallafter-1200.webp 1200w, images/wallafter.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+              <a href="/portfolio" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/stairsafter.webp" alt="Custom Staircase" loading="lazy" width="1600" height="786" srcset="images/responsive/stairsafter-480.webp 480w, images/responsive/stairsafter-800.webp 800w, images/responsive/stairsafter-1200.webp 1200w, images/stairsafter.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+              <a href="/portfolio" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/after/green-house-after.webp" alt="Green House" loading="lazy" width="1600" height="534" srcset="images/responsive/after_green-house-after-480.webp 480w, images/responsive/after_green-house-after-800.webp 800w, images/responsive/after_green-house-after-1200.webp 1200w, images/after/green-house-after.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+              <a href="/portfolio" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/after/lawn-after.webp" alt="Lawn" loading="lazy" width="1600" height="782" srcset="images/responsive/after_lawn-after-480.webp 480w, images/responsive/after_lawn-after-800.webp 800w, images/responsive/after_lawn-after-1200.webp 1200w, images/after/lawn-after.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+              <a href="/portfolio" class="btn-primary">View Portfolio</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/after/yellow-house-after.webp" alt="Yellow House" loading="lazy" width="1600" height="784" srcset="images/responsive/after_yellow-house-after-480.webp 480w, images/responsive/after_yellow-house-after-800.webp 800w, images/responsive/after_yellow-house-after-1200.webp 1200w, images/after/yellow-house-after.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+              <a href="/portfolio" class="btn-primary">View Portfolio</a>
             </div>
           </div>
         </div>
@@ -365,7 +366,7 @@ active: "home"
           <p class="section-label">Who We Are</p>
           <h2 class="section-title">Reliable &amp; <em>Honest</em> Property Care</h2>
           <p>With over a decade of hands-on building, landscaping, and residential maintenance experience, we treat every property like our own. From crisp lawn edges to durable outdoor repairs, we focus on sharp attention to detail, reliable communication, and honest work.</p>
-          <a href="about.html" class="btn-primary">Learn More About Us</a>
+          <a href="/about" class="btn-primary">Learn More About Us</a>
         </div>
         <div class="about-visual">
           <img class="about-img"
@@ -420,7 +421,7 @@ active: "home"
       </p>
       <div class="area-grid">
         {% for area in areas %}{% if area.featured %}
-        <a class="area-card" href="service-areas/{{ area.slug }}.html" style="text-decoration:none; display:block;">
+        <a class="area-card" href="/service-areas/{{ area.slug }}" style="text-decoration:none; display:block;">
           <svg class="icon" style="width:1.5rem;height:1.5rem;color:var(--clay);"><use href="#icon-pin"/></svg>
           <h3>{{ area.name }}</h3>
           <p>{{ area.blurb }}</p>
@@ -525,6 +526,7 @@ active: "home"
           <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="bot-field" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
           <h3 style="font-family:'Playfair Display',serif; color:var(--straw); font-size:1.3rem; margin:0 0 0.25rem;">Request a Free Quote</h3>
+          <p style="color:rgba(245,240,232,0.65); font-size:0.95rem; margin:0 0 1.25rem;">Used the calculator above? Send your details here and we'll follow up with a firm, itemized quote — or just reach out to talk through your project.</p>
           <div class="form-row">
             <div class="form-group">
               <label for="name">Full name *</label>
@@ -601,7 +603,7 @@ active: "home"
   <button type="submit" class="btn-primary">Subscribe</button>
   <label class="newsletter-consent">
     <input type="checkbox" name="consent" value="yes" required>
-    <span>I agree to receive occasional updates from Property Care per our <a href="{{ root }}privacy.html">privacy policy</a>.</span>
+    <span>I agree to receive occasional updates from Property Care per our <a href="/privacy">privacy policy</a>.</span>
   </label>
 </form>
   </section>

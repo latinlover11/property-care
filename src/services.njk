@@ -2,6 +2,7 @@
 title: "Our Services"
 description: "Explore all of Property Care's services: lawn care, fence installation, hardscaping, exterior care, carpentry, and handyman repairs — honest work across Boulder County and beyond."
 ogUrl: "services.html"
+ogImage: "images/after/walkwayafter.webp"
 root: ""
 active: "services"
 ---
@@ -20,7 +21,7 @@ active: "services"
   <section class="page-hero">
     <div class="section" style="padding-top:0; padding-bottom:0;">
       <div class="breadcrumb">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <span class="sep">/</span>
         <span class="current">Services</span>
       </div>
@@ -28,8 +29,8 @@ active: "services"
       <h1 class="section-title">Every corner of your property, <em>cared for</em></h1>
       <p class="page-hero-sub">Over a decade of hands-on experience across landscaping, outdoor structures, and residential maintenance — all under one reliable crew. Explore each service below for details, FAQs, and related project examples.</p>
       <div class="page-hero-actions">
-        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
-        <a href="portfolio.html" class="btn-ghost">See Our Work</a>
+        <a href="/contact" class="btn-primary">Get a Free Estimate</a>
+        <a href="/portfolio" class="btn-ghost">See Our Work</a>
       </div>
     </div>
   </section>
@@ -38,10 +39,10 @@ active: "services"
   <section style="background:var(--cream);">
     <div class="section">
       <p class="section-label">Full Service Offerings</p>
-      <p style="color:var(--warm-mid); max-width:600px; margin-bottom:2.5rem; line-height:1.7;">From weekly lawn upkeep to custom carpentry, each service is backed by real experience and a commitment to quality. Browse what I offer below.</p>
+      <p style="color:var(--warm-mid); max-width:600px; margin-bottom:2.5rem; line-height:1.7;">From weekly lawn upkeep to custom carpentry, each service is backed by real experience and a commitment to quality. Browse what we offer below.</p>
       <div class="hub-grid">
         {% for service in services %}
-        <a href="services/{{ service.slug }}.html" class="hub-card" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+        <a href="/services/{{ service.slug }}" class="hub-card" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
           <div class="card-icon"><svg class="icon"><use href="#{{ service.icon }}"/></svg></div>
           <h3>{{ service.title }}</h3>
           <p>{{ service.short }}</p>
@@ -57,9 +58,9 @@ active: "services"
       <div class="portfolio-cta" style="margin-top:0;">
         <div class="portfolio-cta-inner">
           <h2>Not sure which service you need?</h2>
-          <p style="margin-bottom: 1.5rem;">I'll help you figure it out — no pressure, just honest advice. Free estimates, always.</p>
+          <p style="margin-bottom: 1.5rem;">We'll help you figure it out — no pressure, just honest advice. Free estimates, always.</p>
           <a href="tel:{{ site.phone }}" class="btn-primary" style="margin-right: 1rem;">Call {{ site.phoneDisplay }}</a>
-          <a href="contact.html" class="btn-ghost">Send a Message</a>
+          <a href="/contact" class="btn-ghost">Send a Message</a>
         </div>
       </div>
     </div>

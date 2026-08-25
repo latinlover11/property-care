@@ -6,8 +6,22 @@
     "blurb": "Our home base — weekly lawn care, hardscaping, and property maintenance throughout the city.",
     "intro": "As our home base, Longmont is where Property Care put down roots and built its reputation. From Old Town's classic bungalows to the newer communities along Nelson Road and the McIntosh Lake corridor, we know these soils, these grasses, and these water rules. Whether you need weekly mowing, a paver patio, seasonal cleanups, or reliable handyman work, you'll get a neighbor who shows up on time and leaves the yard better than he found it.",
     "meta": "Reliable lawn care, hardscaping, fence installation, and handyman services in Longmont, CO. Local property maintenance trusted since 2014 — free estimates.",
-    "neighborhoods": ["Old Town", "Prospect", "The Greens at Twin Peaks", "Longmont Estates", "Sandstone Ranch", "Fox Hill", "Bella Rosa", "Timberwood"],
-    "services": ["lawn-mowing-care", "hardscaping", "property-cleanups"]
+    "neighborhoods": [
+      "Old Town",
+      "Prospect",
+      "The Greens at Twin Peaks",
+      "Longmont Estates",
+      "Sandstone Ranch",
+      "Fox Hill",
+      "Bella Rosa",
+      "Timberwood"
+    ],
+    "services": [
+      "lawn-mowing-care",
+      "hardscaping",
+      "property-cleanups"
+    ],
+    "ogImage": "images/after/lawn-after.webp"
   },
   {
     "slug": "boulder",
@@ -16,8 +30,22 @@
     "blurb": "Full-service exterior care, fence installation, and handyman work for Boulder homeowners.",
     "intro": "Boulder homeowners juggle mountain views, wildlife, and a short but intense growing season — and their properties need care that respects all three. Property Care handles full-service exterior maintenance across Boulder, from the older neighborhoods near Chautauqua and Mapleton Hill to north Boulder's newer builds. We're careful with native plantings, diligent about wildlife-friendly cleanup, and experienced with the irrigation quirks every Boulder yard seems to have.",
     "meta": "Exterior care, fence installation, and handyman services in Boulder, CO. Trust local property maintenance serving all Boulder neighborhoods since 2014.",
-    "neighborhoods": ["Mapleton Hill", "North Boulder", "Martin Acres", "Table Mesa", "Newlands", "Whittier", "Goss Grove", "Melody Heights"],
-    "services": ["exterior-care", "fence-installation", "custom-carpentry"]
+    "neighborhoods": [
+      "Mapleton Hill",
+      "North Boulder",
+      "Martin Acres",
+      "Table Mesa",
+      "Newlands",
+      "Whittier",
+      "Goss Grove",
+      "Melody Heights"
+    ],
+    "services": [
+      "exterior-care",
+      "fence-installation",
+      "custom-carpentry"
+    ],
+    "ogImage": "images/after/yellow-house-after.webp"
   },
   {
     "slug": "lafayette",
@@ -26,8 +54,20 @@
     "blurb": "Honest lawn care, cleanups, and property maintenance for Lafayette homes.",
     "intro": "Lafayette strikes that rare balance between small-town character and easy access to bigger cities, and so do its yards. We take care of lawns, beds, and outdoor structures across Lafayette — from the historic homes around Old Town to the family neighborhoods off of West South Boulder Road. Regular mowing, seasonal cleanups, hardscaping repairs, and dependable handyman work, handled by a crew that treats your property like it were theirs.",
     "meta": "Lawn care, property cleanups, hardscaping, and handyman services in Lafayette, CO. Local property maintenance you can count on since 2014.",
-    "neighborhoods": ["Old Town", "Indian Peaks", "The Meadows", "Violet Ranch", "Rolling Hills", "South Pointe"],
-    "services": ["lawn-mowing-care", "property-cleanups", "hardscaping"]
+    "neighborhoods": [
+      "Old Town",
+      "Indian Peaks",
+      "The Meadows",
+      "Violet Ranch",
+      "Rolling Hills",
+      "South Pointe"
+    ],
+    "services": [
+      "lawn-mowing-care",
+      "property-cleanups",
+      "hardscaping"
+    ],
+    "ogImage": "images/after/lawn-after.webp"
   },
   {
     "slug": "louisville",
@@ -36,8 +76,20 @@
     "blurb": "Gardens, patios, and exteriors maintained with care across Louisville.",
     "intro": "Louisville's brick streets and beloved neighborhoods deserve a property crew that matches that standard. Property Care covers regular lawn maintenance, garden and bed upkeep, patio and hardscape care, and exterior jobs throughout Louisville — from Coal Creek Ranch to Old Town. We're known for crisp edges, thorough cleanups, and repairs that outlast the season.",
     "meta": "Lawn care, patio and hardscape services, and exterior maintenance in Louisville, CO. Dependable local property care since 2014.",
-    "neighborhoods": ["Old Town", "Coal Creek Ranch", "Lakota", "Willowbrook", "Renaissance", "Parkside"],
-    "services": ["lawn-mowing-care", "hardscaping", "exterior-care"]
+    "neighborhoods": [
+      "Old Town",
+      "Coal Creek Ranch",
+      "Lakota",
+      "Willowbrook",
+      "Renaissance",
+      "Parkside"
+    ],
+    "services": [
+      "lawn-mowing-care",
+      "hardscaping",
+      "exterior-care"
+    ],
+    "ogImage": "images/after/lawn-after.webp"
   },
   {
     "slug": "loveland",
@@ -46,8 +98,20 @@
     "blurb": "Northern Front Range properties cared for from Old Town to Centerra.",
     "intro": "Loveland sits at the edge of the plains and the mountains, giving its properties a little bit of everything — and a property crew that has to be versatile. We handle weekly lawn care, spring and fall cleanups, fence work, hardscaping, and handyman repairs across Loveland, from Mariana Butte to the newer neighborhoods around Centerra. Reliable scheduling, honest pricing, and work that holds up to Northern Colorado weather.",
     "meta": "Lawn care, fencing, hardscaping, and handyman services in Loveland, CO. Trusted property maintenance for Northern Colorado since 2014.",
-    "neighborhoods": ["Old Town", "Mariana Butte", "Centerra", "Mirasol", "The Orchards", "Highland Meadows"],
-    "services": ["lawn-mowing-care", "fence-installation", "handyman-repairs"]
+    "neighborhoods": [
+      "Old Town",
+      "Mariana Butte",
+      "Centerra",
+      "Mirasol",
+      "The Orchards",
+      "Highland Meadows"
+    ],
+    "services": [
+      "lawn-mowing-care",
+      "fence-installation",
+      "handyman-repairs"
+    ],
+    "ogImage": "images/after/lawn-after.webp"
   },
   {
     "slug": "lyons",
@@ -56,8 +120,20 @@
     "blurb": "Mountain-adjacent property care for the St. Vrain Valley.",
     "intro": "Lyons properties live a little differently — mountain edges, stone-rich soil, and wildlife that shares the yard. Property Care brings careful, experienced maintenance to the St. Vrain Valley, from the river walks of downtown to the hillside homes around town. We excel at cleanups after the long off-season, drainage-friendly landscaping, stone work, and repairs that stand up to high-country weather.",
     "meta": "Property cleanups, hardscaping, and maintenance for Lyons, CO and the St. Vrain Valley. Local mountain-adjacent property care since 2014.",
-    "neighborhoods": ["Downtown Lyons", "Riverside", "Meadow Park", "Apple Valley", "Pinewood Springs", "Mill Vista"],
-    "services": ["property-cleanups", "hardscaping", "fence-installation"]
+    "neighborhoods": [
+      "Downtown Lyons",
+      "Riverside",
+      "Meadow Park",
+      "Apple Valley",
+      "Pinewood Springs",
+      "Mill Vista"
+    ],
+    "services": [
+      "property-cleanups",
+      "hardscaping",
+      "fence-installation"
+    ],
+    "ogImage": "images/after/green-house-after.webp"
   },
   {
     "slug": "niwot",
@@ -66,8 +142,20 @@
     "blurb": "Custom carpentry, property cleanups, and reliable seasonal maintenance you can count on.",
     "intro": "Niwot may be a wide spot on the map, but its century farmhouses and estate yards demand a full range of property skills. Property Care is a familiar presence around Niwot village and the surrounding acreages — handling custom carpentry, property cleanups, lawn care, and general maintenance for homeowners who appreciate quiet, dependable work. Real craftsmanship, no corner-cutting, and a crew that's happy to serve this community.",
     "meta": "Custom carpentry, property cleanups, and lawn care in Niwot, CO. Hand-picked local property maintenance for Niwot homeowners since 2014.",
-    "neighborhoods": ["Niwot Village", "Arrowhead Farms", "Cottonwood", "Meadow View", "Sombrero Ranch", "Niwot Meadows"],
-    "services": ["custom-carpentry", "property-cleanups", "lawn-mowing-care"]
+    "neighborhoods": [
+      "Niwot Village",
+      "Arrowhead Farms",
+      "Cottonwood",
+      "Meadow View",
+      "Sombrero Ranch",
+      "Niwot Meadows"
+    ],
+    "services": [
+      "custom-carpentry",
+      "property-cleanups",
+      "lawn-mowing-care"
+    ],
+    "ogImage": "images/stairsafter.webp"
   },
   {
     "slug": "berthoud",
@@ -76,8 +164,20 @@
     "blurb": "Interior handyman, gutter care, and general property upkeep for Berthoud residents.",
     "intro": "Berthoud keeps its small-town feel while growing fast, which means a little of everything for property owners here. Property Care covers the full range in Berthoud — from Old Town's historic homes to the new subdivisions along Highway 287 — including interior handyman fixes, gutter care, lawn maintenance, and winterization. Flexible, responsive, and honest about what each job takes.",
     "meta": "Interior handyman, gutter care, and property upkeep in Berthoud, CO. Reliable local maintenance for a growing town since 2014.",
-    "neighborhoods": ["Old Town", "Hidden Valley", "Sunset Ridge", "Fickel Farms", "Meadowlark", "Mountain View"],
-    "services": ["interior-handyman", "exterior-care", "lawn-mowing-care"]
+    "neighborhoods": [
+      "Old Town",
+      "Hidden Valley",
+      "Sunset Ridge",
+      "Fickel Farms",
+      "Meadowlark",
+      "Mountain View"
+    ],
+    "services": [
+      "interior-handyman",
+      "exterior-care",
+      "lawn-mowing-care"
+    ],
+    "ogImage": "images/after/front-circle-after.webp"
   },
   {
     "slug": "broomfield",
@@ -86,8 +186,20 @@
     "blurb": "Full property maintenance for Broomfield's planned communities.",
     "intro": "Broomfield's well-planned neighborhoods come with a lot of common-area charm — and yards that need steady care. Property Care provides dependable lawn maintenance, landscaping, hardscape repairs, and handyman services across Broomfield, from Arista to the communities along 144th. Consistent scheduling, thorough work, and a crew that shows up every time.",
     "meta": "Lawn maintenance, landscaping, and handyman services in Broomfield, CO. Dependable property care for planned communities since 2014.",
-    "neighborhoods": ["Arista", "Cottonwood Creek", "Willow Run", "Anthem Ranch", "Westlake Village", "Bent Trail"],
-    "services": ["lawn-mowing-care", "hardscaping", "handyman-repairs"]
+    "neighborhoods": [
+      "Arista",
+      "Cottonwood Creek",
+      "Willow Run",
+      "Anthem Ranch",
+      "Westlake Village",
+      "Bent Trail"
+    ],
+    "services": [
+      "lawn-mowing-care",
+      "hardscaping",
+      "handyman-repairs"
+    ],
+    "ogImage": "images/after/lawn-after.webp"
   },
   {
     "slug": "brighton",
@@ -96,8 +208,20 @@
     "blurb": "Property care stretched across Brighton's established and new neighborhoods.",
     "intro": "Brighton blends an old farming town heritage with fast-growing neighborhoods, and its properties reflect that mix. Property Care serves Brighton's established areas and its newer communities alike — lawn care, cleanups, fence work, and general maintenance for homes that deserve a steady hand. Honest estimates, reliable scheduling, and workmanship that lasts.",
     "meta": "Lawn care, cleanups, fencing, and maintenance for Brighton, CO. Honest local property care across every Brighton neighborhood since 2014.",
-    "neighborhoods": ["Old Town", "Blackstone", "Silver Creek", "Pradera", "Hidden Lake", "Sandstone"],
-    "services": ["lawn-mowing-care", "property-cleanups", "fence-installation"]
+    "neighborhoods": [
+      "Old Town",
+      "Blackstone",
+      "Silver Creek",
+      "Pradera",
+      "Hidden Lake",
+      "Sandstone"
+    ],
+    "services": [
+      "lawn-mowing-care",
+      "property-cleanups",
+      "fence-installation"
+    ],
+    "ogImage": "images/after/lawn-after.webp"
   },
   {
     "slug": "johnstown",
@@ -106,8 +230,20 @@
     "blurb": "Care for Johnstown's farms, acreages, and new neighborhoods.",
     "intro": "Johnstown is one of the fastest-growing towns on the Front Range, and properly caring for its mix of acreages and new developments takes flexibility. Property Care handles it all here — weekly lawn care, seasonal cleanups, hardscaping, and handyman repairs across Johnstown and the surrounding area. We're easy to schedule, fair on price, and meticulous about the work itself.",
     "meta": "Lawn care, cleanups, hardscaping, and handyman services in Johnstown, CO. Flexible property maintenance for a growing town since 2014.",
-    "neighborhoods": ["Highland Meadows", "Heron Lakes", "The Wheatlands", "Village at Peachwood", "Mariana Farms", "Old Town"],
-    "services": ["lawn-mowing-care", "hardscaping", "handyman-repairs"]
+    "neighborhoods": [
+      "Highland Meadows",
+      "Heron Lakes",
+      "The Wheatlands",
+      "Village at Peachwood",
+      "Mariana Farms",
+      "Old Town"
+    ],
+    "services": [
+      "lawn-mowing-care",
+      "hardscaping",
+      "handyman-repairs"
+    ],
+    "ogImage": "images/after/lawn-after.webp"
   },
   {
     "slug": "firestone",
@@ -116,8 +252,20 @@
     "blurb": "Property care for the Carbon Valley — lawn care, cleanups, and more for Firestone homes.",
     "intro": "Firestone is a cornerstone of the Carbon Valley, and its growing neighborhoods have plenty of yards that deserve steady care. Property Care handles lawn maintenance, seasonal cleanups, fence installation, and dependable handyman work throughout Firestone and the nearby Dacono–Frederick corridor. Whether it's a newer build or an established home, we bring the same honest, thorough service.",
     "meta": "Lawn care, cleanups, fencing, and handyman services in Firestone, CO. Property maintenance for the Carbon Valley — local and honest since 2014.",
-    "neighborhoods": ["Barefoot Lakes", "Stoneridge", "Firestone Park", "Coal Ridge", "The Reserve at Firestone", "Saddleback"],
-    "services": ["lawn-mowing-care", "property-cleanups", "fence-installation"]
+    "neighborhoods": [
+      "Barefoot Lakes",
+      "Stoneridge",
+      "Firestone Park",
+      "Coal Ridge",
+      "The Reserve at Firestone",
+      "Saddleback"
+    ],
+    "services": [
+      "lawn-mowing-care",
+      "property-cleanups",
+      "fence-installation"
+    ],
+    "ogImage": "images/after/lawn-after.webp"
   },
   {
     "slug": "frederick",
@@ -126,7 +274,19 @@
     "blurb": "Reliable maintenance for Frederick homes from Old Town to the new developments.",
     "intro": "Frederick has grown from a coal-mining town into one of the fastest-growing communities on the Front Range, and Property Care has kept pace. We provide lawn care, property cleanups, hardscaping, and dependable handyman repairs across Frederick — from the historic center to the newest subdivisions. Fair estimates, on-time service, and workmanship that lasts.",
     "meta": "Lawn care, cleanups, hardscaping, and handyman services in Frederick, CO. Dependable property maintenance for the growing Front Range since 2014.",
-    "neighborhoods": ["Old Town Frederick", "Six Mile", "Disc Colony", "Hillsborough", "Wyndham Hill", "Prairie Ridge"],
-    "services": ["lawn-mowing-care", "hardscaping", "handyman-repairs"]
+    "neighborhoods": [
+      "Old Town Frederick",
+      "Six Mile",
+      "Disc Colony",
+      "Hillsborough",
+      "Wyndham Hill",
+      "Prairie Ridge"
+    ],
+    "services": [
+      "lawn-mowing-care",
+      "hardscaping",
+      "handyman-repairs"
+    ],
+    "ogImage": "images/after/lawn-after.webp"
   }
 ]

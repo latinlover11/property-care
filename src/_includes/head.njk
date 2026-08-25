@@ -11,17 +11,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#3D2B1F">
 <title>{{ title }} — {{ site.name }} | Longmont &amp; Boulder</title>
+{% set ogImg = ogImage or site.ogImage %}
 <meta name="description" content="{{ description }}">
 <meta property="og:title" content="{{ title }} — {{ site.name }} | Longmont &amp; Boulder">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ site.domain }}/{{ ogUrl | cleanUrl }}">
-<meta property="og:image" content="{{ ogImage or site.ogImage }}">
+<meta property="og:image" content="{% if ogImg.startsWith('http') %}{{ ogImg }}{% else %}{{ site.domain }}/{{ ogImg }}{% endif %}">
 <link rel="canonical" href="{{ site.domain }}/{{ ogUrl | cleanUrl }}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ title }} — {{ site.name }} | Longmont & Boulder">
 <meta name="twitter:description" content="{{ description }}">
-<meta name="twitter:image" content="{{ ogImage or site.ogImage }}">
+<meta name="twitter:image" content="{% if ogImg.startsWith('http') %}{{ ogImg }}{% else %}{{ site.domain }}/{{ ogImg }}{% endif %}">
 
 <script type="application/ld+json">
 {
@@ -62,8 +63,8 @@
     {% for item in faq %}
     {
       "@type": "Question",
-      "name": {{ item.q | dump }},
-      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump }} }
+      "name": {{ item.q | dump | safe }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} }
     }{% if not loop.last %},{% endif %}
     {% endfor %}
   ]
@@ -81,11 +82,36 @@
     {
       "@type": "ListItem",
       "position": {{ loop.index }},
-      "name": {{ item.name | dump }},
+      "name": {{ item.name | dump | safe }},
       "item": "{{ site.domain }}{{ item.url }}"
     }{% if not loop.last %},{% endif %}
     {% endfor %}
   ]
+}
+</script>
+{% endif %}
+
+{% if page.url and page.url.startsWith('/services/') %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ title | dump | safe }},
+  "description": {{ description | dump | safe }},
+  "url": "{{ site.domain }}/{{ ogUrl | cleanUrl }}",
+  "serviceType": {{ title | dump | safe }},
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": {{ site.name | dump | safe }},
+    "url": "{{ site.domain }}",
+    "telephone": "{{ site.phone }}",
+    "address": { "@type": "PostalAddress", "addressLocality": "Longmont", "addressRegion": "CO", "addressCountry": "US" }
+  },
+  "areaServed": [
+    {% for area in areas %}{ "@type": "City", "name": {{ area.name | dump | safe }} }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ],
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "url": "{{ site.domain }}/contact" }
 }
 </script>
 {% endif %}
@@ -108,9 +134,16 @@
     });
   };
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/images/fonts/playfair-display-700-normal.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/images/fonts/dm-sans-400-normal.woff2">
+<style>
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300;font-display:swap;src:url(/images/fonts/dm-sans-300-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/images/fonts/dm-sans-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/images/fonts/dm-sans-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400;font-display:optional;src:url(/images/fonts/playfair-display-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:optional;src:url(/images/fonts/playfair-display-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:optional;src:url(/images/fonts/playfair-display-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+</style>
 <link rel="stylesheet" href="{{ root }}vendor/aos.css" media="print" onload="this.media='all'" integrity="/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9">
 <noscript><link rel="stylesheet" href="{{ root }}vendor/aos.css" integrity="/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9"></noscript>
 <link rel="stylesheet" href="{{ root }}style.css" integrity="4xhk511i+MGsLGaqQpjxF9BXg8o5nNFNxTDvvV+VcmWWe1gm/3/BafRApnh6SkpW">

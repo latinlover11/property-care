@@ -3,13 +3,14 @@ pagination:
   data: areas
   size: 1
   alias: area
-permalink: service-areas/{{ area.slug }}.html.html
+permalink: service-areas/{{ area.slug }}.html
 root: "../"
 active: "services"
 eleventyComputed:
   title: "Property Maintenance in {{ area.name }}, CO"
   description: "{{ area.meta }}"
   ogUrl: "service-areas/{{ area.slug }}"
+  ogImage: "{{ area.ogImage }}"
   breadcrumbs:
     - name: "Home"
       url: "/"
@@ -34,9 +35,9 @@ eleventyComputed:
   <section class="page-hero">
     <div class="section" style="padding-top:0; padding-bottom:0;">
       <div class="breadcrumb">
-        <a href="../index.html">Home</a>
+        <a href="/">Home</a>
         <span class="sep">/</span>
-        <a href="../service-areas.html">Service Areas</a>
+        <a href="/service-areas">Service Areas</a>
         <span class="sep">/</span>
         <span class="current">{{ area.name }}</span>
       </div>
@@ -44,8 +45,8 @@ eleventyComputed:
       <h1 class="section-title">Property Maintenance in <em>{{ area.name }}, CO</em></h1>
       <p class="page-hero-sub">{{ area.blurb }}</p>
       <div class="page-hero-actions">
-        <a href="../contact.html" class="btn-primary">Get a Free Estimate</a>
-        <a href="../portfolio.html" class="btn-ghost">See Our Work</a>
+        <a href="/contact" class="btn-primary">Get a Free Estimate</a>
+        <a href="/portfolio" class="btn-ghost">See Our Work</a>
       </div>
     </div>
   </section>
@@ -62,7 +63,7 @@ eleventyComputed:
             <p style="margin-top:1rem;">Every {{ area.name }} project — from a weekly mow to a complete hardscape build — gets the same care we'd put into our own property. Free no-obligation estimates, clear communication, and honest pricing, every time.</p>
           </div>
           <div style="margin-top:2rem;">
-            <a href="../contact.html" class="btn-primary">Request an Estimate in {{ area.name }}</a>
+            <a href="/contact" class="btn-primary">Request an Estimate in {{ area.name }}</a>
             <a href="tel:{{ site.phone }}" class="btn-ghost" style="margin-left:0.75rem;">Call {{ site.phoneDisplay }}</a>
           </div>
         </div>
@@ -74,7 +75,7 @@ eleventyComputed:
             <li><svg class="icon icon-sm"><use href="#icon-pin"/></svg>{{ hood }}</li>
             {% endfor %}
           </ul>
-          <a href="../contact.html" class="btn-primary">Get a Free Estimate</a>
+          <a href="/contact" class="btn-primary">Get a Free Estimate</a>
           <div class="service-sidebar-contact">
             Call <a href="tel:{{ site.phone }}">{{ site.phoneDisplay }}</a>
           </div>
@@ -152,7 +153,7 @@ eleventyComputed:
     <div class="section" style="text-align:center;">
       <h2 class="section-title" style="color:var(--cream);">Ready for property care in {{ area.name }}?</h2>
       <p style="color:var(--straw); max-width:500px; margin:0 auto 2rem;">Tell us about your project and we'll get back to you with a free estimate — usually within 24 hours.</p>
-      <a href="../contact.html" class="btn-primary">Get a Free Estimate</a>
+      <a href="/contact" class="btn-primary">Get a Free Estimate</a>
       <a href="tel:{{ site.phone }}" class="btn-ghost" style="margin-left:0.75rem;">Call {{ site.phoneDisplay }}</a>
     </div>
   </section>
