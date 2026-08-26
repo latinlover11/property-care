@@ -17,6 +17,9 @@ if (!KEY) {
 const season = process.argv[2] || "fall";
 const DRAFTS = {
   fall: { subject: "Fall Property-Care Tips from Property Care", file: "src/emails/fall.md" },
+  spring: { subject: "Spring Property-Care Checklist from Property Care", file: "src/emails/spring.md" },
+  summer: { subject: "Summer Property-Care Tips from Property Care", file: "src/emails/summer.md" },
+  holiday: { subject: "Holiday & Winter Prep from Property Care", file: "src/emails/holiday.md" },
 };
 const draft = DRAFTS[season];
 if (!draft) {
