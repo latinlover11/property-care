@@ -15,6 +15,7 @@ export async function subscribeToButtondown(env, { email, source }) {
         email: email.trim(),
         tags: [source || "unknown"],
         metadata: { source: source || "unknown" },
+        double_opt_in: false,
       }),
       signal: AbortSignal.timeout(10_000),
     });
