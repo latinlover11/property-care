@@ -429,8 +429,14 @@ if (lightbox) {
     if (!projects.length) return;
     currentIndex = (index + projects.length) % projects.length;
     const project = projects[currentIndex];
-    if (lightboxBefore) lightboxBefore.src = project.before;
-    if (lightboxAfter) lightboxAfter.src = project.after;
+    if (lightboxBefore) {
+      lightboxBefore.src = project.before;
+      lightboxBefore.alt = 'Before: ' + project.title;
+    }
+    if (lightboxAfter) {
+      lightboxAfter.src = project.after;
+      lightboxAfter.alt = 'After: ' + project.title;
+    }
     if (lightboxCaption) lightboxCaption.textContent = project.title;
     lightbox.classList.add('open');
   }
