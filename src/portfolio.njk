@@ -42,7 +42,7 @@ active: "portfolio"
       {% for project in projects %}
       <article class="portfolio-item" data-service="{{ project.service }}" data-id="{{ project.id }}">
         <div class="portfolio-item-header">
-          <img src="{{ project.image | absolute_url }}" alt="{{ project.title }}" class="portfolio-image">
+          <img src="{{ project.after.src }}" alt="{{ project.title }}" class="portfolio-image">
           <div class="portfolio-item-footer">
             <span class="portfolio-stars">★★★★☆</span>
             <span class="portfolio-rating">{{ project.rating }}/5</span>
