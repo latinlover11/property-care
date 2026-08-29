@@ -102,14 +102,14 @@ function htmlPage(title, body, adminOk) {
 }
 
 const LOGIN_PAGE = ({ error }) => htmlPage(
-  "Sign In",
-  `<h1>Reviews Admin</h1>
+  "Hey there",
+  `<h1>Hey, admin 👋</h1>
    ${error ? `<div class="msg err">${escapeHtml(error)}</div>` : ""}
    <form method="POST" action="/admin">
      <input type="hidden" name="action" value="login">
      <p><label for="pass">Admin token:</label><br>
        <input type="password" id="pass" name="token" autocomplete="current-password" required></p>
-     <button class="btn-sub" type="submit">Sign in</button>
+     <button class="btn-sub" type="submit">Let's go</button>
    </form>`,
   false
 );
