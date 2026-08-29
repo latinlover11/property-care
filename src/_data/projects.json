@@ -169,7 +169,7 @@
     "service": "hardscaping",
     "summary": "Cleared heavy weed growth and spread 12 tons of ¼-inch river rock to create a clean, low-maintenance parking area beside the driveway.",
     "before": { "src": "/images/before/river-rock-before.webp", "alt": "Before: Weedy packed-dirt parking area prior to river rock installation in Longmont, CO", "srcset": "/images/responsive/before_river-rock-before-480.webp 480w, images/responsive/before_river-rock-before-800.webp 800w, images/responsive/before_river-rock-before-1200.webp 1200w, images/before/river-rock-before.webp 1600w" },
-    "after": { "src": "/images/after/river-rock-after.webp", "alt": "After: Completed ¼-inch river rock parking area in Longmont, CO", "srcset": "/images/responsive/after_river-rock-after-480.webp 480w, images/responsive/after_river-rock-after-800.webp 800w, images/responsive/after_river-rock-after-1200.webp 1200w, images/after/river-rock-after.webp 1600w" },
+    "after": { "src": "/images/river-rock-115535.webp", "alt": "After: Blowing dust and debris off the finished river rock parking area in Longmont, CO", "srcset": "/images/responsive/river-rock-115535-480.webp 480w, /images/responsive/river-rock-115535-800.webp 800w, /images/responsive/river-rock-115535-1200.webp 1200w" },
     "gallery": [
       { "src": "/images/before/river-rock-before.webp", "alt": "Before: Weedy packed-dirt parking area prior to river rock installation in Longmont, CO" },
       { "src": "/images/after/river-rock-after.webp", "alt": "After: Completed ¼-inch river rock parking area in Longmont, CO" },
@@ -202,107 +202,162 @@
   },
   {
     "slug": "garden-planting",
-    "title": "Garden Planting",
+    "title": "Flagstone Stepping Path & Garden",
     "location": "Longmont, CO",
     "date": "2026-08-25",
-    "category": "Landscaping",
-    "filter": "landscaping",
-    "service": "lawn-mowing-care",
-    "summary": "Planted a mixed perennial garden bed featuring coneflower, feather reed grass, smoke bush, and Patriot hosta for season-long color and structure.",
-    "before": {
-      "src": "/images/garden-planting-0820_151523.webp",
-      "alt": "Early planting: Coneflower (Echinacea) shortly after install in Longmont, CO",
-      "srcset": "/images/responsive/garden-planting-0820_151523-480.webp 480w, /images/responsive/garden-planting-0820_151523-800.webp 800w, /images/responsive/garden-planting-0820_151523-1200.webp 1200w"
+    "category": "Hardscaping",
+    "filter": "hardscaping",
+    "service": "hardscaping",
+    "summary": "Laid natural flagstone steppers to create a clean, inviting pathway leading up to the entry steps, complemented by a refreshed perennial garden bed along the entryway.",
+    "hasBeforeAfter": false,
+    "hero": {
+      "src": "/images/garden-planting-0825_104400.webp",
+      "alt": "Flagstone stepping path leading up to the front steps in Longmont, CO",
+      "srcset": "/images/responsive/garden-planting-0825_104400-480.webp 480w, /images/responsive/garden-planting-0825_104400-800.webp 800w, /images/responsive/garden-planting-0825_104400-1200.webp 1200w"
     },
-    "after": {
-      "src": "/images/garden-planting-0825_104452.webp",
-      "alt": "Established garden: Patriot Hosta (Hosta 'Patriot') with white-margined foliage in Longmont, CO",
-      "srcset": "/images/responsive/garden-planting-0825_104452-480.webp 480w, /images/responsive/garden-planting-0825_104452-800.webp 800w, /images/responsive/garden-planting-0825_104452-1200.webp 1200w"
-    },
+    "highlights": [
+      { "icon": "🪨", "text": "Natural Flagstone Steppers" },
+      { "icon": "🏡", "text": "Entry Steps Approach" },
+      { "icon": "🌸", "text": "Yellow Coneflower & Blooming Perennials" },
+      { "icon": "🌿", "text": "Patriot Hosta Border" },
+      { "icon": "🌾", "text": "Ornamental Grasses & Smoke Bush" }
+    ],
+    "plantLegend": [
+      {
+        "id": "coneflower",
+        "letter": "A",
+        "name": "Golden Yellow Coneflower",
+        "botanical": "Echinacea",
+        "img": "/images/garden-planting-0825_104406.webp",
+        "tag": "Flowering Perennial",
+        "desc": "Golden-yellow petals with a prominent central cone; drought-tolerant & pollinator friendly."
+      },
+      {
+        "id": "hosta",
+        "letter": "B",
+        "name": "Patriot Hosta",
+        "botanical": "Hosta 'Patriot'",
+        "img": "/images/garden-planting-0825_104414.webp",
+        "tag": "Shade Accent",
+        "desc": "Dark green foliage with broad, crisp white margins along the stone pathway border."
+      },
+      {
+        "id": "grass",
+        "letter": "C",
+        "name": "Feather Reed Grass",
+        "botanical": "Calamagrostis × acutiflora",
+        "img": "/images/garden-planting-0820_151525.webp",
+        "tag": "Ornamental Grass",
+        "desc": "Upright, structural grass with feathery wheat-colored seed plumes."
+      },
+      {
+        "id": "smokebush",
+        "letter": "D",
+        "name": "Smoke Bush",
+        "botanical": "Cotinus coggygria",
+        "img": "/images/garden-planting-0825_085934.webp",
+        "tag": "Accent Shrub",
+        "desc": "Rich purple-maroon rounded foliage providing bold color contrast."
+      }
+    ],
     "gallery": [
       {
         "src": "/images/garden-planting-0820_151523.webp",
-        "alt": "Coneflower (Echinacea) — yellow-flowering coneflower with drooping petals and a prominent central cone",
+        "alt": "Golden yellow Coneflower (Echinacea) blooming along the flagstone entry path in Longmont, CO",
         "srcset": "/images/responsive/garden-planting-0820_151523-480.webp 480w, /images/responsive/garden-planting-0820_151523-800.webp 800w, /images/responsive/garden-planting-0820_151523-1200.webp 1200w",
-        "caption": "Coneflower (Echinacea) — yellow-flowering coneflower with drooping petals and a prominent central cone."
+        "caption": "Golden yellow Coneflower (Echinacea) blooming along the natural flagstone entry path.",
+        "plants": ["coneflower"]
       },
       {
         "src": "/images/garden-planting-0820_151525.webp",
-        "alt": "Feather Reed Grass (Calamagrostis acutiflora) with upright feathery wheat-colored seed plumes",
+        "alt": "Feather Reed Grass plumes and perennial flower border leading to the entry steps",
         "srcset": "/images/responsive/garden-planting-0820_151525-480.webp 480w, /images/responsive/garden-planting-0820_151525-800.webp 800w, /images/responsive/garden-planting-0820_151525-1200.webp 1200w",
-        "caption": "Feather Reed Grass (Calamagrostis acutiflora) — upright ornamental grass with feathery wheat-colored seed plumes."
+        "caption": "Feather Reed Grass plumes and perennial flower border leading directly to the entry steps.",
+        "plants": ["grass", "coneflower"]
       },
       {
         "src": "/images/garden-planting-0825_085927.webp",
-        "alt": "Smoke Bush (Cotinus coggygria) young shrub with dark purple-maroon rounded leaves",
+        "alt": "Smoke Bush (Cotinus coggygria) with deep purple foliage along flagstone pathway",
         "srcset": "/images/responsive/garden-planting-0825_085927-480.webp 480w, /images/responsive/garden-planting-0825_085927-800.webp 800w, /images/responsive/garden-planting-0825_085927-1200.webp 1200w",
-        "caption": "Smoke Bush (Cotinus coggygria) — young shrub with dark purple-maroon rounded leaves."
+        "caption": "Smoke Bush (Cotinus coggygria) with deep purple foliage established along the stone walkway.",
+        "plants": ["smokebush"]
       },
       {
         "src": "/images/garden-planting-0825_085934.webp",
-        "alt": "Smoke Bush (Cotinus coggygria) foliage detail",
+        "alt": "Smoke Bush purple foliage detail beside natural flagstone stepper",
         "srcset": "/images/responsive/garden-planting-0825_085934-480.webp 480w, /images/responsive/garden-planting-0825_085934-800.webp 800w, /images/responsive/garden-planting-0825_085934-1200.webp 1200w",
-        "caption": "Smoke Bush (Cotinus coggygria) — purple foliage detail."
+        "caption": "Smoke Bush purple foliage detail beside natural flagstone stepper.",
+        "plants": ["smokebush"]
       },
       {
         "src": "/images/garden-planting-0825_104400.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot') with dark green leaves and wide white margins",
+        "alt": "Flagstone stepping path framed by Patriot Hosta foliage and entry plantings",
         "srcset": "/images/responsive/garden-planting-0825_104400-480.webp 480w, /images/responsive/garden-planting-0825_104400-800.webp 800w, /images/responsive/garden-planting-0825_104400-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — dark green leaves with wide bright white margins."
+        "caption": "Flagstone stepping path framed by Patriot Hosta foliage and entry plantings.",
+        "plants": ["hosta"]
       },
       {
         "src": "/images/garden-planting-0825_104406.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot') clump",
+        "alt": "Patriot Hosta (Hosta 'Patriot') clump establishing beside the flagstone approach",
         "srcset": "/images/responsive/garden-planting-0825_104406-480.webp 480w, /images/responsive/garden-planting-0825_104406-800.webp 800w, /images/responsive/garden-planting-0825_104406-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — clump establishing in the bed."
+        "caption": "Patriot Hosta (Hosta 'Patriot') clump establishing beside the flagstone approach.",
+        "plants": ["hosta"]
       },
       {
         "src": "/images/garden-planting-0825_104414.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot') leaves",
+        "alt": "Broad white-margined Patriot Hosta leaves along the stone path border",
         "srcset": "/images/responsive/garden-planting-0825_104414-480.webp 480w, /images/responsive/garden-planting-0825_104414-800.webp 800w, /images/responsive/garden-planting-0825_104414-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — characteristic white-margined foliage."
+        "caption": "Broad white-margined Patriot Hosta leaves along the stone path border.",
+        "plants": ["hosta"]
       },
       {
         "src": "/images/garden-planting-0825_104424.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "alt": "Shade-tolerant Patriot Hosta accent planting along the flagstone walkway",
         "srcset": "/images/responsive/garden-planting-0825_104424-480.webp 480w, /images/responsive/garden-planting-0825_104424-800.webp 800w, /images/responsive/garden-planting-0825_104424-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — shade-tolerant accent planting."
+        "caption": "Shade-tolerant Patriot Hosta accent planting along the flagstone walkway.",
+        "plants": ["hosta"]
       },
       {
         "src": "/images/garden-planting-0825_104426.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "alt": "Close-up of Patriot Hosta foliage and natural flagstone texture",
         "srcset": "/images/responsive/garden-planting-0825_104426-480.webp 480w, /images/responsive/garden-planting-0825_104426-800.webp 800w, /images/responsive/garden-planting-0825_104426-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — foliage close-up."
+        "caption": "Close-up of Patriot Hosta foliage and natural flagstone texture.",
+        "plants": ["hosta"]
       },
       {
         "src": "/images/garden-planting-0825_104433.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "alt": "Perennial plant bed filling in alongside the flagstone stepping path",
         "srcset": "/images/responsive/garden-planting-0825_104433-480.webp 480w, /images/responsive/garden-planting-0825_104433-800.webp 800w, /images/responsive/garden-planting-0825_104433-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — garden bed filling in."
+        "caption": "Perennial plant bed filling in alongside the flagstone stepping path.",
+        "plants": ["hosta", "coneflower"]
       },
       {
         "src": "/images/garden-planting-0825_104436.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "alt": "Patriot Hosta leaf margin detail along the entry steps border",
         "srcset": "/images/responsive/garden-planting-0825_104436-480.webp 480w, /images/responsive/garden-planting-0825_104436-800.webp 800w, /images/responsive/garden-planting-0825_104436-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — leaf margin detail."
+        "caption": "Patriot Hosta leaf margin detail along the entry steps border.",
+        "plants": ["hosta"]
       },
       {
         "src": "/images/garden-planting-0825_104441.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "alt": "Established Patriot Hosta plant set in the entry landscape bed",
         "srcset": "/images/responsive/garden-planting-0825_104441-480.webp 480w, /images/responsive/garden-planting-0825_104441-800.webp 800w, /images/responsive/garden-planting-0825_104441-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — established clump."
+        "caption": "Established Patriot Hosta plant set in the entry landscape bed.",
+        "plants": ["hosta"]
       },
       {
         "src": "/images/garden-planting-0825_104449.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot') with plant tag",
+        "alt": "Fresh planting installation and nursery tag along the flagstone entry path",
         "srcset": "/images/responsive/garden-planting-0825_104449-480.webp 480w, /images/responsive/garden-planting-0825_104449-800.webp 800w, /images/responsive/garden-planting-0825_104449-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — Bailey Nurseries tag confirming the variety."
+        "caption": "Fresh planting installation and nursery tag along the flagstone entry path.",
+        "plants": ["hosta"]
       },
       {
         "src": "/images/garden-planting-0825_104452.webp",
-        "alt": "Patriot Hosta (Hosta 'Patriot') finished planting",
+        "alt": "Completed natural flagstone stepping path surrounded by refreshed perennial plant beds",
         "srcset": "/images/responsive/garden-planting-0825_104452-480.webp 480w, /images/responsive/garden-planting-0825_104452-800.webp 800w, /images/responsive/garden-planting-0825_104452-1200.webp 1200w",
-        "caption": "Patriot Hosta (Hosta 'Patriot') — the completed garden bed."
+        "caption": "Completed natural flagstone stepping path surrounded by refreshed perennial plant beds.",
+        "plants": ["hosta", "grass", "smokebush", "coneflower"]
       }
     ]
   },
@@ -385,14 +440,10 @@
     "filter": "exterior-care",
     "service": "exterior-care",
     "summary": "Troubleshot and repaired pop-up sprinkler heads across several yard zones — excavating to expose poly lateral lines, replacing heads on swing joints, and pressure-testing spray patterns along walkways, rock beds, and turf borders.",
-    "before": {
-      "src": "/images/irrigation-repair-0827_101231.webp",
-      "alt": "Before: Opened trench exposing the sprinkler body and black poly lateral line at a turf edge in Longmont, CO",
-      "srcset": "/images/responsive/irrigation-repair-0827_101231-480.webp 480w, /images/responsive/irrigation-repair-0827_101231-800.webp 800w, /images/responsive/irrigation-repair-0827_101231-1200.webp 1200w"
-    },
-    "after": {
+    "hasBeforeAfter": false,
+    "hero": {
       "src": "/images/irrigation-repair-0827_104504.webp",
-      "alt": "After: Repaired head actively spraying the lawn during system testing in Longmont, CO",
+      "alt": "Repaired sprinkler head actively spraying the lawn during system testing in Longmont, CO",
       "srcset": "/images/responsive/irrigation-repair-0827_104504-480.webp 480w, /images/responsive/irrigation-repair-0827_104504-800.webp 800w, /images/responsive/irrigation-repair-0827_104504-1200.webp 1200w"
     },
     "gallery": [
