@@ -1,8 +1,7 @@
 ---
-title: "Portfolio"
-description: "Browse before-and-after photos of Property Care projects across Boulder County — patios, retaining walls, fences, lawn renovations, and exterior repairs."
-ogUrl: portfolio.html
-ogImage: "images/after/wallafter.webp"
+title: "Our Work"
+description: "Browse before-and-after photos of Property Care projects across Boulder County and beyond."
+ogUrl: "portfolio.html"
 root: ""
 active: "portfolio"
 ---
@@ -14,139 +13,74 @@ active: "portfolio"
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
 
-  {% include "icons.njk" %}
-  {% include "nav.njk" %}
-<main id="main">
+{% include "icons.njk" %}
+{% include "nav.njk" %}
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="section" style="padding-top:0; padding-bottom:0;">
-      <div class="breadcrumb">
-        <a href="/">Home</a>
-        <span class="sep">/</span>
-        <span class="current">Portfolio</span>
-      </div>
-      <p class="section-label">Our Work</p>
-      <h1 class="section-title">Projects that speak for <em>themselves</em></h1>
-      <p class="page-hero-sub">Proudly serving Boulder, Longmont, Niwot, and Berthoud — reliable, honest property care for over a decade.</p>
-    </div>
-  </section>
+  <main id="main">
 
-  <section class="stats-strip">
-    <div class="stats-strip-inner">
-      <div class="stat-item">
-        <span class="stat-icon"><svg class="icon"><use href="#icon-pin"/></svg></span>
-        <span class="stat-num">13+</span>
-        <span class="stat-label">Cities Served</span>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="section" style="padding-top:0; padding-bottom:0;">
+        <div class="breadcrumb">
+          <a href="/">Home</a>
+          <span class="sep">/</span>
+          <a href="/portfolio">Portfolio</a>
+          <span class="sep">/</span>
+          <a href="/service-areas">Service Areas</a>
+          <span class="sep">/</span>
+          <a href="/">Home</a>
+        </div>
       </div>
-      <div class="stat-item">
-        <span class="stat-icon"><svg class="icon"><use href="#icon-star"/></svg></span>
-        <span class="stat-num">12</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-icon"><svg class="icon"><use href="#icon-people"/></svg></span>
-        <span class="stat-num">8+</span>
-        <span class="stat-label">Services Offered</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-icon"><svg class="icon"><use href="#icon-clipboard"/></svg></span>
-        <span class="stat-num">5</span>
-        <span class="stat-label">Star Rated</span>
-      </div>
-    </div>
-  </section>
+      <h1 class="section-title">Our Work</h1>
+      <p class="section-subtitle">Browse before-and-after photos of Property Care projects across Boulder County and beyond.</p>
+      <a href="/contact" class="btn-primary">View Projects</a>
+      <a href="/portfolio" class="btn-ghost">Back to Home</a>
+    </section>
 
-  <section id="portfolio" style="background:var(--cream); padding: 4rem 2.5rem; scroll-margin-top: 80px;">
-    <div class="section" style="max-width: 1160px; margin: 0 auto;">
-
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="hardscaping">Hardscaping</button>
-        <button class="filter-btn" data-filter="landscaping">Landscaping</button>
-        <button class="filter-btn" data-filter="carpentry">Carpentry</button>
-        <button class="filter-btn" data-filter="exterior-care">Exterior Care</button>
-        <span class="filter-sort">
-          <label for="portfolioSort">Sort</label>
-          <select id="portfolioSort" class="filter-select">
-            <option value="newest">Newest</option>
-            <option value="oldest">Oldest</option>
-          </select>
-        </span>
-      </div>
-
-      <div class="filter-info">
-        <span class="filter-count"></span>
-      </div>
-
-      <div class="filter-empty">No projects match this category.</div>
-
-      <div class="portfolio-grid">
-        {% for project in projects %}
-        <div class="portfolio-item" id="{{ project.slug }}" data-service="{{ project.filter }}" data-date="{{ project.date }}" data-aos="fade-up">
-          <div class="portfolio-img-wrap">
-            {% if project.hasBeforeAfter === false or not (project.before and project.after) %}
-            {% set heroImg = project.hero or project.after or project.before %}
-            <a href="/projects/{{ project.slug }}">
-              <img src="{{ heroImg.src }}" alt="{{ heroImg.alt or project.title }}" loading="lazy" {% if heroImg.srcset %}srcset="{{ heroImg.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw">
-            </a>
-            {% else %}
-            <div class="portfolio-comparison">
-              <div class="comparison-slider">
-                <div class="comparison-img comparison-img-before"><img src="{{ project.before.src }}" alt="{{ project.before.alt }}" loading="lazy" {% if project.before.srcset %}srcset="{{ project.before.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw"></div>
-                <div class="comparison-img comparison-img-after"><img src="{{ project.after.src }}" alt="{{ project.after.alt }}" loading="lazy" {% if project.after.srcset %}srcset="{{ project.after.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw"></div>
-                <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
-              </div>
-            </div>
-            <button class="expand-btn" aria-label="Toggle before and after photo" data-before="{{ project.before.src }}" data-after="{{ project.after.src }}"><svg class="icon"><use href="#icon-expand"/></svg></button>
-            {% endif %}
-          </div>
-          <h3><a href="/projects/{{ project.slug }}">{{ project.title }}</a></h3>
-          <p class="portfolio-item-desc">{{ project.summary }}</p>
-          <div class="project-meta">
-            {% set icon = project.category == 'Hardscaping' and 'bricks' or project.category == 'Landscaping' and 'leaf' or project.category == 'Carpentry' and 'square' or project.category == 'Exterior Care' and 'window' or 'fence' %}
-            <span class="project-tag"><svg class="icon icon-sm"><use href="#icon-{{ icon }}"/></svg>{{ project.category }}</span>
-            <span class="project-tag"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>{{ project.location }}</span>
-            <a href="/projects/{{ project.slug }}" class="project-meta-link">View Project →</a>
+    <!-- PROJECTS GRID -->
+    <section class="portfolio-grid">
+      {% for project in projects %}
+      <article class="portfolio-item" data-service="{{ project.service }}" data-id="{{ project.id }}">
+        <div class="portfolio-item-header">
+          <img src="{{ project.image | absolute_url }}" alt="{{ project.title }}" class="portfolio-image">
+          <div class="portfolio-item-footer">
+            <span class="portfolio-stars">★★★★☆</span>
+            <span class="portfolio-rating">{{ project.rating }}/5</span>
+            <a href="/contact" class="btn-primary">View Project</a>
           </div>
         </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
+      </article>
+      {% endfor %}
+    </section>
 
-  <section style="background:var(--straw); padding: 4rem 2.5rem;">
-    <div class="section">
-      <div class="portfolio-cta" style="margin-top:0;">
-        <div class="portfolio-cta-inner">
-          <h2>Ready to transform your property?</h2>
-          <p style="margin-bottom: 1.5rem;">We're available for a free, no-obligation estimate for your next project.</p>
-          <a href="tel:{{ site.phone }}" class="btn-primary" style="margin-right: 1rem;">Call {{ site.phoneDisplay }}</a>
-          <a href="/contact" class="btn-ghost">Send a Message</a>
+    <!-- STATS SECTION -->
+    <section class="stats-strip">
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">8</span>
+          <span class="stat-label">Years</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Happy Clients</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div id="lightbox" class="lightbox">
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <button class="lightbox-arrow lightbox-arrow--prev" aria-label="Previous project">‹</button>
-    <button class="lightbox-arrow lightbox-arrow--next" aria-label="Next project">›</button>
-    <div class="lightbox-body">
-      <div class="portfolio-comparison">
-        <div class="comparison-slider">
-          <div class="comparison-img comparison-img-before"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Before"></div>
-          <div class="comparison-img comparison-img-after"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="After"></div>
-          <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
-        </div>
-      </div>
-      <div class="lightbox-caption"></div>
-    </div>
-  </div>
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+      <h2 class="section-title">Ready to Transform Your Space?</h2>
+      <p class="section-subtitle">Browse our portfolio and find the perfect fit for your property. Each project tells a story of transformation.</p>
+      <a href="/contact" class="btn-primary">Get Inspired</a>
+      <a href="/portfolio" class="btn-ghost">View All Projects</a>
+    </section>
 
-  {% include "newsletter-signup.njk" %}
+  </main>
 
-</main>
   {% include "footer.njk" %}
   {% include "scripts.njk" %}
 
