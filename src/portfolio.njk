@@ -85,6 +85,12 @@ active: "portfolio"
         {% for project in projects %}
         <div class="portfolio-item" id="{{ project.slug }}" data-service="{{ project.filter }}" data-date="{{ project.date }}" data-aos="fade-up">
           <div class="portfolio-img-wrap">
+            {% if project.hasBeforeAfter === false or not (project.before and project.after) %}
+            {% set heroImg = project.hero or project.after or project.before %}
+            <a href="/projects/{{ project.slug }}">
+              <img src="{{ heroImg.src }}" alt="{{ heroImg.alt or project.title }}" loading="lazy" {% if heroImg.srcset %}srcset="{{ heroImg.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw">
+            </a>
+            {% else %}
             <div class="portfolio-comparison">
               <div class="comparison-slider">
                 <div class="comparison-img comparison-img-before"><img src="{{ project.before.src }}" alt="{{ project.before.alt }}" loading="lazy" {% if project.before.srcset %}srcset="{{ project.before.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw"></div>
@@ -93,6 +99,7 @@ active: "portfolio"
               </div>
             </div>
             <button class="expand-btn" aria-label="Toggle before and after photo" data-before="{{ project.before.src }}" data-after="{{ project.after.src }}"><svg class="icon"><use href="#icon-expand"/></svg></button>
+            {% endif %}
           </div>
           <h3><a href="/projects/{{ project.slug }}">{{ project.title }}</a></h3>
           <p class="portfolio-item-desc">{{ project.summary }}</p>
