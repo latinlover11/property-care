@@ -377,6 +377,94 @@
     ]
   },
   {
+    "slug": "irrigation-repair",
+    "title": "Irrigation Repair",
+    "location": "Longmont, CO",
+    "date": "2026-08-27",
+    "category": "Exterior Care",
+    "filter": "exterior-care",
+    "service": "exterior-care",
+    "summary": "Troubleshot and repaired pop-up sprinkler heads across several yard zones — excavating to expose poly lateral lines, replacing heads on swing joints, and pressure-testing spray patterns along walkways, rock beds, and turf borders.",
+    "before": {
+      "src": "/images/irrigation-repair-0827_101231.webp",
+      "alt": "Before: Opened trench exposing the sprinkler body and black poly lateral line at a turf edge in Longmont, CO",
+      "srcset": "/images/responsive/irrigation-repair-0827_101231-480.webp 480w, /images/responsive/irrigation-repair-0827_101231-800.webp 800w, /images/responsive/irrigation-repair-0827_101231-1200.webp 1200w"
+    },
+    "after": {
+      "src": "/images/irrigation-repair-0827_104504.webp",
+      "alt": "After: Repaired head actively spraying the lawn during system testing in Longmont, CO",
+      "srcset": "/images/responsive/irrigation-repair-0827_104504-480.webp 480w, /images/responsive/irrigation-repair-0827_104504-800.webp 800w, /images/responsive/irrigation-repair-0827_104504-1200.webp 1200w"
+    },
+    "gallery": [
+      {
+        "src": "/images/irrigation-repair-0827_101231.webp",
+        "alt": "Excavation: opened trench exposing the sprinkler body and black poly lateral line",
+        "srcset": "/images/responsive/irrigation-repair-0827_101231-480.webp 480w, /images/responsive/irrigation-repair-0827_101231-800.webp 800w, /images/responsive/irrigation-repair-0827_101231-1200.webp 1200w",
+        "caption": "Excavation — an opened trench exposing the sprinkler body and black poly lateral line at a turf edge."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_102005.webp",
+        "alt": "Exposed sprinkler body connected via swing joint and barbed fitting with hose clamp",
+        "srcset": "/images/responsive/irrigation-repair-0827_102005-480.webp 480w, /images/responsive/irrigation-repair-0827_102005-800.webp 800w, /images/responsive/irrigation-repair-0827_102005-1200.webp 1200w",
+        "caption": "Exposed sprinkler body connected to the lateral line with a swing joint and barbed fitting secured by a metal hose clamp."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_104228.webp",
+        "alt": "Pop-up head replacement in progress with nozzle adjustment",
+        "srcset": "/images/responsive/irrigation-repair-0827_104228-480.webp 480w, /images/responsive/irrigation-repair-0827_104228-800.webp 800w, /images/responsive/irrigation-repair-0827_104228-1200.webp 1200w",
+        "caption": "Pop-up head replacement in progress with nozzle adjustment."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_104247.webp",
+        "alt": "System testing: a head actively spraying the front lawn",
+        "srcset": "/images/responsive/irrigation-repair-0827_104247-480.webp 480w, /images/responsive/irrigation-repair-0827_104247-800.webp 800w, /images/responsive/irrigation-repair-0827_104247-1200.webp 1200w",
+        "caption": "System testing — a head actively spraying the front lawn."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_104257.webp",
+        "alt": "Active spray pattern during testing from the replaced head",
+        "srcset": "/images/responsive/irrigation-repair-0827_104257-480.webp 480w, /images/responsive/irrigation-repair-0827_104257-800.webp 800w, /images/responsive/irrigation-repair-0827_104257-1200.webp 1200w",
+        "caption": "Active spray pattern during testing from the replaced head."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_104504.webp",
+        "alt": "Working setup with the head spraying while tools are laid out nearby",
+        "srcset": "/images/responsive/irrigation-repair-0827_104504-480.webp 480w, /images/responsive/irrigation-repair-0827_104504-800.webp 800w, /images/responsive/irrigation-repair-0827_104504-1200.webp 1200w",
+        "caption": "Working setup — the head spraying while tools are laid out nearby."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_105042.webp",
+        "alt": "Tool layout: trenching shovel, screwdrivers, and a spare nozzle spray-pattern tree",
+        "srcset": "/images/responsive/irrigation-repair-0827_105042-480.webp 480w, /images/responsive/irrigation-repair-0827_105042-800.webp 800w, /images/responsive/irrigation-repair-0827_105042-1200.webp 1200w",
+        "caption": "Tool layout — trenching shovel, screwdrivers, and a spare nozzle spray-pattern tree."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_105045.webp",
+        "alt": "Spare nozzles and spray-pattern tree for fine-tuning head coverage",
+        "srcset": "/images/responsive/irrigation-repair-0827_105045-480.webp 480w, /images/responsive/irrigation-repair-0827_105045-800.webp 800w, /images/responsive/irrigation-repair-0827_105045-1200.webp 1200w",
+        "caption": "Spare nozzles and spray-pattern tree for fine-tuning head coverage."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_110934.webp",
+        "alt": "Repair at a concrete walkway and turf border along the front of the home",
+        "srcset": "/images/responsive/irrigation-repair-0827_110934-480.webp 480w, /images/responsive/irrigation-repair-0827_110934-800.webp 800w, /images/responsive/irrigation-repair-0827_110934-1200.webp 1200w",
+        "caption": "Repair at a concrete walkway and turf border along the front of the home."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_143338.webp",
+        "alt": "Work around a perennial garden bed near the light-brick home",
+        "srcset": "/images/responsive/irrigation-repair-0827_143338-480.webp 480w, /images/responsive/irrigation-repair-0827_143338-800.webp 800w, /images/responsive/irrigation-repair-0827_143338-1200.webp 1200w",
+        "caption": "Work around a perennial garden bed near the light-brick home."
+      },
+      {
+        "src": "/images/irrigation-repair-0827_143846.webp",
+        "alt": "Completed head set in a rock- and pine-needle-mulched tree ring",
+        "srcset": "/images/responsive/irrigation-repair-0827_143846-480.webp 480w, /images/responsive/irrigation-repair-0827_143846-800.webp 800w, /images/responsive/irrigation-repair-0827_143846-1200.webp 1200w",
+        "caption": "Completed head set in a rock- and pine-needle-mulched tree ring."
+      }
+    ]
+  },
+  {
     "slug": "lakewood-privacy-fence",
     "title": "Lakewood Privacy Fence",
     "location": "Lakewood, CO",
