@@ -590,6 +590,7 @@ if (heroBg) {
     'green-house': '2026-05-12',
     'lawn-before': '2026-06-05',
     'yellow-house': '2026-07-10',
+    'river-rock': '2026-08-21',
     'fence-lakewood': '2026-08-19',
   };
 
