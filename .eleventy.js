@@ -7,9 +7,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.on("eleventy.after", ({ results, dir }) => {
     const lines = results
       .filter((p) => p.outputPath.endsWith(".html") && p.url !== "/404.html" && p.url !== "/")
-      .map((p) => `${p.url}  ${p.url.replace(/\.html$/, "")}  301!`);
-    lines.unshift("/index.html  /  301!");
-    lines.push("/privacy-fence-case-study  /projects/lakewood-privacy-fence  301!");
+      .map((p) => `${p.url}  ${p.url.replace(/\.html$/, "")}  301`);
+    lines.unshift("/index.html  /  301");
+    lines.push("/privacy-fence-case-study  /projects/lakewood-privacy-fence  301");
     require("fs").writeFileSync(require("path").join(dir.output, "_redirects"), lines.join("\n") + "\n");
   });
   eleventyConfig.addPassthroughCopy("src/vendor");

@@ -201,6 +201,112 @@
     ]
   },
   {
+    "slug": "garden-planting",
+    "title": "Garden Planting",
+    "location": "Longmont, CO",
+    "date": "2026-08-25",
+    "category": "Landscaping",
+    "filter": "landscaping",
+    "service": "lawn-mowing-care",
+    "summary": "Planted a mixed perennial garden bed featuring coneflower, feather reed grass, smoke bush, and Patriot hosta for season-long color and structure.",
+    "before": {
+      "src": "/images/garden-planting-0820_151523.webp",
+      "alt": "Early planting: Coneflower (Echinacea) shortly after install in Longmont, CO",
+      "srcset": "/images/responsive/garden-planting-0820_151523-480.webp 480w, /images/responsive/garden-planting-0820_151523-800.webp 800w, /images/responsive/garden-planting-0820_151523-1200.webp 1200w"
+    },
+    "after": {
+      "src": "/images/garden-planting-0825_104452.webp",
+      "alt": "Established garden: Patriot Hosta (Hosta 'Patriot') with white-margined foliage in Longmont, CO",
+      "srcset": "/images/responsive/garden-planting-0825_104452-480.webp 480w, /images/responsive/garden-planting-0825_104452-800.webp 800w, /images/responsive/garden-planting-0825_104452-1200.webp 1200w"
+    },
+    "gallery": [
+      {
+        "src": "/images/garden-planting-0820_151523.webp",
+        "alt": "Coneflower (Echinacea) — yellow-flowering coneflower with drooping petals and a prominent central cone",
+        "srcset": "/images/responsive/garden-planting-0820_151523-480.webp 480w, /images/responsive/garden-planting-0820_151523-800.webp 800w, /images/responsive/garden-planting-0820_151523-1200.webp 1200w",
+        "caption": "Coneflower (Echinacea) — yellow-flowering coneflower with drooping petals and a prominent central cone."
+      },
+      {
+        "src": "/images/garden-planting-0820_151525.webp",
+        "alt": "Feather Reed Grass (Calamagrostis acutiflora) with upright feathery wheat-colored seed plumes",
+        "srcset": "/images/responsive/garden-planting-0820_151525-480.webp 480w, /images/responsive/garden-planting-0820_151525-800.webp 800w, /images/responsive/garden-planting-0820_151525-1200.webp 1200w",
+        "caption": "Feather Reed Grass (Calamagrostis acutiflora) — upright ornamental grass with feathery wheat-colored seed plumes."
+      },
+      {
+        "src": "/images/garden-planting-0825_085927.webp",
+        "alt": "Smoke Bush (Cotinus coggygria) young shrub with dark purple-maroon rounded leaves",
+        "srcset": "/images/responsive/garden-planting-0825_085927-480.webp 480w, /images/responsive/garden-planting-0825_085927-800.webp 800w, /images/responsive/garden-planting-0825_085927-1200.webp 1200w",
+        "caption": "Smoke Bush (Cotinus coggygria) — young shrub with dark purple-maroon rounded leaves."
+      },
+      {
+        "src": "/images/garden-planting-0825_085934.webp",
+        "alt": "Smoke Bush (Cotinus coggygria) foliage detail",
+        "srcset": "/images/responsive/garden-planting-0825_085934-480.webp 480w, /images/responsive/garden-planting-0825_085934-800.webp 800w, /images/responsive/garden-planting-0825_085934-1200.webp 1200w",
+        "caption": "Smoke Bush (Cotinus coggygria) — purple foliage detail."
+      },
+      {
+        "src": "/images/garden-planting-0825_104400.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot') with dark green leaves and wide white margins",
+        "srcset": "/images/responsive/garden-planting-0825_104400-480.webp 480w, /images/responsive/garden-planting-0825_104400-800.webp 800w, /images/responsive/garden-planting-0825_104400-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — dark green leaves with wide bright white margins."
+      },
+      {
+        "src": "/images/garden-planting-0825_104406.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot') clump",
+        "srcset": "/images/responsive/garden-planting-0825_104406-480.webp 480w, /images/responsive/garden-planting-0825_104406-800.webp 800w, /images/responsive/garden-planting-0825_104406-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — clump establishing in the bed."
+      },
+      {
+        "src": "/images/garden-planting-0825_104414.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot') leaves",
+        "srcset": "/images/responsive/garden-planting-0825_104414-480.webp 480w, /images/responsive/garden-planting-0825_104414-800.webp 800w, /images/responsive/garden-planting-0825_104414-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — characteristic white-margined foliage."
+      },
+      {
+        "src": "/images/garden-planting-0825_104424.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "srcset": "/images/responsive/garden-planting-0825_104424-480.webp 480w, /images/responsive/garden-planting-0825_104424-800.webp 800w, /images/responsive/garden-planting-0825_104424-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — shade-tolerant accent planting."
+      },
+      {
+        "src": "/images/garden-planting-0825_104426.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "srcset": "/images/responsive/garden-planting-0825_104426-480.webp 480w, /images/responsive/garden-planting-0825_104426-800.webp 800w, /images/responsive/garden-planting-0825_104426-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — foliage close-up."
+      },
+      {
+        "src": "/images/garden-planting-0825_104433.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "srcset": "/images/responsive/garden-planting-0825_104433-480.webp 480w, /images/responsive/garden-planting-0825_104433-800.webp 800w, /images/responsive/garden-planting-0825_104433-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — garden bed filling in."
+      },
+      {
+        "src": "/images/garden-planting-0825_104436.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "srcset": "/images/responsive/garden-planting-0825_104436-480.webp 480w, /images/responsive/garden-planting-0825_104436-800.webp 800w, /images/responsive/garden-planting-0825_104436-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — leaf margin detail."
+      },
+      {
+        "src": "/images/garden-planting-0825_104441.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot')",
+        "srcset": "/images/responsive/garden-planting-0825_104441-480.webp 480w, /images/responsive/garden-planting-0825_104441-800.webp 800w, /images/responsive/garden-planting-0825_104441-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — established clump."
+      },
+      {
+        "src": "/images/garden-planting-0825_104449.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot') with plant tag",
+        "srcset": "/images/responsive/garden-planting-0825_104449-480.webp 480w, /images/responsive/garden-planting-0825_104449-800.webp 800w, /images/responsive/garden-planting-0825_104449-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — Bailey Nurseries tag confirming the variety."
+      },
+      {
+        "src": "/images/garden-planting-0825_104452.webp",
+        "alt": "Patriot Hosta (Hosta 'Patriot') finished planting",
+        "srcset": "/images/responsive/garden-planting-0825_104452-480.webp 480w, /images/responsive/garden-planting-0825_104452-800.webp 800w, /images/responsive/garden-planting-0825_104452-1200.webp 1200w",
+        "caption": "Patriot Hosta (Hosta 'Patriot') — the completed garden bed."
+      }
+    ]
+  },
+  {
     "slug": "lakewood-privacy-fence",
     "title": "Lakewood Privacy Fence",
     "location": "Lakewood, CO",

@@ -75,7 +75,8 @@ active: "portfolio"
       <div class="project-gallery">
         {% for photo in project.gallery %}
         <figure class="gallery-item">
-          <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy" width="1600" height="1067">
+          <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy" {% if photo.srcset %}srcset="{{ photo.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 45vw">
+          {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
         </figure>
         {% endfor %}
       </div>
