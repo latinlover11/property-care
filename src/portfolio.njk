@@ -40,15 +40,25 @@ active: "portfolio"
     <!-- PROJECTS GRID -->
     <section class="portfolio-grid">
       {% for project in projects %}
-      <article class="portfolio-item" data-service="{{ project.service }}" data-id="{{ project.id }}">
-        <div class="portfolio-item-header">
-          <img src="{{ project.after.src }}" alt="{{ project.title }}" class="portfolio-image">
-          <div class="portfolio-item-footer">
-            <span class="portfolio-stars">★★★★☆</span>
-            <span class="portfolio-rating">{{ project.rating }}/5</span>
-            <a href="/contact" class="btn-primary">View Project</a>
+      <article class="portfolio-item" data-service="{{ project.service }}" data-id="{{ project.slug }}">
+        <div class="portfolio-img-wrap">
+          <div class="portfolio-comparison">
+            <div class="comparison-slider">
+              <div class="comparison-img comparison-img-before"><img src="{{ project.before.src }}" alt="{{ project.before.alt }}" loading="lazy" {% if project.before.srcset %}srcset="{{ project.before.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw"></div>
+              <div class="comparison-img comparison-img-after"><img src="{{ project.after.src }}" alt="{{ project.after.alt }}" loading="lazy" {% if project.after.srcset %}srcset="{{ project.after.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw"></div>
+              <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
+            </div>
           </div>
+          <button class="expand-btn" aria-label="Toggle before and after photo" data-before="{{ project.before.src }}" data-after="{{ project.after.src }}"><svg class="icon"><use href="#icon-expand"/></svg></button>
         </div>
+        {% set icon = project.category == 'Hardscaping' and 'bricks' or project.category == 'Landscaping' and 'leaf' or project.category == 'Carpentry' and 'square' or project.category == 'Exterior Care' and 'window' or 'fence' %}
+        <h3><a href="/projects/{{ project.slug }}">{{ project.title }}</a></h3>
+        <div class="project-meta">
+          <span class="project-tag"><svg class="icon icon-sm"><use href="#icon-{{ icon }}"/></svg>{{ project.category }}</span>
+          <span class="project-tag"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>{{ project.location }}</span>
+          <a href="/services/{{ project.service }}" class="project-meta-link">View Service →</a>
+        </div>
+        <a href="/projects/{{ project.slug }}" class="btn-primary">View Project</a>
       </article>
       {% endfor %}
     </section>
