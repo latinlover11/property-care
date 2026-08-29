@@ -307,6 +307,76 @@
     ]
   },
   {
+    "slug": "front-yard-river-rock",
+    "title": "Front Yard River Rock",
+    "location": "Longmont, CO",
+    "date": "2026-08-27",
+    "category": "Hardscaping",
+    "filter": "hardscaping",
+    "service": "hardscaping",
+    "summary": "Transformed a weedy front lawn into a clean, low-maintenance landscape by clearing the area to bare soil and spreading 12 tons of natural tan-to-brown river rock across the bed between the driveway, walkway, and side of the house.",
+    "before": {
+      "src": "/images/front-yard-rock-0825_140012.webp",
+      "alt": "Before: Front yard cleared to bare worked dirt with bed edges staked and strung in Longmont, CO",
+      "srcset": "/images/responsive/front-yard-rock-0825_140012-480.webp 480w, /images/responsive/front-yard-rock-0825_140012-800.webp 800w, /images/responsive/front-yard-rock-0825_140012-1200.webp 1200w"
+    },
+    "after": {
+      "src": "/images/front-yard-rock-0827_093344.webp",
+      "alt": "After: Finished front yard covered in an even layer of natural river rock under a clear blue sky in Longmont, CO",
+      "srcset": "/images/responsive/front-yard-rock-0827_093344-480.webp 480w, /images/responsive/front-yard-rock-0827_093344-800.webp 800w, /images/responsive/front-yard-rock-0827_093344-1200.webp 1200w"
+    },
+    "gallery": [
+      {
+        "src": "/images/front-yard-rock-0825_140012.webp",
+        "alt": "Initial prep: front yard cleared to bare worked dirt, bed edges staked and strung",
+        "srcset": "/images/responsive/front-yard-rock-0825_140012-480.webp 480w, /images/responsive/front-yard-rock-0825_140012-800.webp 800w, /images/responsive/front-yard-rock-0825_140012-1200.webp 1200w",
+        "caption": "Initial prep — the front yard cleared down to bare, worked dirt with the bed edges staked and strung."
+      },
+      {
+        "src": "/images/front-yard-rock-0825_140019.webp",
+        "alt": "Prep detail: tools, blue wheelbarrow and cooler on the driveway; soil exposed",
+        "srcset": "/images/responsive/front-yard-rock-0825_140019-480.webp 480w, /images/responsive/front-yard-rock-0825_140019-800.webp 800w, /images/responsive/front-yard-rock-0825_140019-1200.webp 1200w",
+        "caption": "Prep detail — tools, a blue wheelbarrow and a cooler staged on the driveway as the soil is exposed."
+      },
+      {
+        "src": "/images/front-yard-rock-0825_140741.webp",
+        "alt": "Worker clearing debris with a backpack leaf blower",
+        "srcset": "/images/responsive/front-yard-rock-0825_140741-480.webp 480w, /images/responsive/front-yard-rock-0825_140741-800.webp 800w, /images/responsive/front-yard-rock-0825_140741-1200.webp 1200w",
+        "caption": "A crew member clears remaining debris with a backpack leaf blower."
+      },
+      {
+        "src": "/images/front-yard-rock-0827_085504.webp",
+        "alt": "Rock delivery: utility trailer loaded with 12 tons of tan-to-brown river rock",
+        "srcset": "/images/responsive/front-yard-rock-0827_085504-480.webp 480w, /images/responsive/front-yard-rock-0827_085504-800.webp 800w, /images/responsive/front-yard-rock-0827_085504-1200.webp 1200w",
+        "caption": "Rock delivery — a utility trailer loaded with 12 tons of tan-to-brown river rock."
+      },
+      {
+        "src": "/images/front-yard-rock-0827_085509.webp",
+        "alt": "Hauling stone: worker shoveling river rock from the trailer into the blue wheelbarrow",
+        "srcset": "/images/responsive/front-yard-rock-0827_085509-480.webp 480w, /images/responsive/front-yard-rock-0827_085509-800.webp 800w, /images/responsive/front-yard-rock-0827_085509-1200.webp 1200w",
+        "caption": "Hauling stone — shoveling river rock from the trailer into the blue wheelbarrow for transport."
+      },
+      {
+        "src": "/images/front-yard-rock-0827_093313.webp",
+        "alt": "Spreading river rock across the front bed",
+        "srcset": "/images/responsive/front-yard-rock-0827_093313-480.webp 480w, /images/responsive/front-yard-rock-0827_093313-800.webp 800w, /images/responsive/front-yard-rock-0827_093313-1200.webp 1200w",
+        "caption": "Spreading the stone across the front bed."
+      },
+      {
+        "src": "/images/front-yard-rock-0827_093335.webp",
+        "alt": "River rock bed taking shape between the driveway and walkway",
+        "srcset": "/images/responsive/front-yard-rock-0827_093335-480.webp 480w, /images/responsive/front-yard-rock-0827_093335-800.webp 800w, /images/responsive/front-yard-rock-0827_093335-1200.webp 1200w",
+        "caption": "The river rock bed taking shape between the driveway and walkway."
+      },
+      {
+        "src": "/images/front-yard-rock-0827_093344.webp",
+        "alt": "Finished front yard: dense, even layer of natural river rock under a clear blue sky",
+        "srcset": "/images/responsive/front-yard-rock-0827_093344-480.webp 480w, /images/responsive/front-yard-rock-0827_093344-800.webp 800w, /images/responsive/front-yard-rock-0827_093344-1200.webp 1200w",
+        "caption": "Finished front yard — a dense, even layer of natural river rock under a clear blue sky."
+      }
+    ]
+  },
+  {
     "slug": "lakewood-privacy-fence",
     "title": "Lakewood Privacy Fence",
     "location": "Lakewood, CO",
