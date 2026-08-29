@@ -4,12 +4,18 @@ permalink: /sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for item in collections.all %}
-{%- if item.outputPath | isSitemapPage and item.url != '/404.html' and item.url != '/success.html' %}
+{%- if item.outputPath | isSitemapPage and item.url != '/404.html' and item.url != '/success.html' and not item.url.startsWith('/projects/') %}
   <url>
     <loc>{{ site.domain }}{{ item.url | cleanUrl }}</loc>
     <priority>{{ item.url | sitemapPriority }}</priority>
   </url>
 {%- endif %}
+{%- endfor %}
+{%- for project in projects %}
+  <url>
+    <loc>{{ site.domain }}/projects/{{ project.slug }}</loc>
+    <priority>0.7</priority>
+  </url>
 {%- endfor %}
 {%- for area in areas %}
   <url>

@@ -16,13 +16,14 @@
 <meta property="og:title" content="{{ title }} — {{ site.name }} | Longmont &amp; Boulder">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ site.domain }}/{{ ogUrl | cleanUrl }}">
-<meta property="og:image" content="{% if ogImg.startsWith('http') %}{{ ogImg }}{% else %}{{ site.domain }}/{{ ogImg }}{% endif %}">
+{% set _og = ogImg %}{% if _og.startsWith('/') %}{% set _og = _og.slice(1) %}{% endif %}
+<meta property="og:image" content="{% if _og.startsWith('http') %}{{ _og }}{% else %}{{ site.domain }}/{{ _og }}{% endif %}">
 <link rel="canonical" href="{{ site.domain }}/{{ ogUrl | cleanUrl }}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ title }} — {{ site.name }} | Longmont & Boulder">
 <meta name="twitter:description" content="{{ description }}">
-<meta name="twitter:image" content="{% if ogImg.startsWith('http') %}{{ ogImg }}{% else %}{{ site.domain }}/{{ ogImg }}{% endif %}">
+<meta name="twitter:image" content="{% if _og.startsWith('http') %}{{ _og }}{% else %}{{ site.domain }}/{{ _og }}{% endif %}">
 
 <script type="application/ld+json">
 {

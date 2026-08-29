@@ -1190,6 +1190,29 @@ a.area-card:hover {
   transition: color 0.2s;
 }
 .project-meta-link:hover { color: var(--bark); }
+.project-meta--center { justify-content: center; border-top: none; padding-top: 1.25rem; }
+.portfolio-item h3 a { color: inherit; text-decoration: none; }
+.portfolio-item h3 a:hover { color: var(--clay); }
+
+/* ── PROJECT DETAIL GALLERY ── */
+.portfolio-comparison--hero { max-width: 100%; }
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.gallery-item {
+  margin: 0; overflow: hidden; border-radius: 8px;
+  border: 1px solid rgba(196,151,122,0.2);
+  background: var(--cream);
+}
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  aspect-ratio: 3 / 2;
+  transition: transform 0.5s cubic-bezier(0.165,0.84,0.44,1);
+}
+.gallery-item:hover img { transform: scale(1.04); }
 
 /* ── FEATURED PROJECT ── */
 @media (min-width: 700px) {

@@ -69,7 +69,7 @@ active: "home"
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Get a Free Estimate</a>
         <a href="/services" class="btn-ghost">See Our Services</a>
-        <a href="privacy-fence-case-study" class="btn-ghost">View Case Study</a>
+        <a href="/projects/lakewood-privacy-fence" class="btn-ghost">View Project</a>
       </div>
     </div>
   </section>
@@ -322,37 +322,37 @@ active: "home"
           <div class="slide active">
             <img src="images/walkwayafter.webp" alt="Stone Walkway" loading="lazy" width="790" height="1600" srcset="images/responsive/walkwayafter-480.webp 480w, images/walkwayafter.webp 790w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="/portfolio#stone-walkway" class="btn-primary">View Project</a>
+              <a href="/projects/stone-walkway" class="btn-primary">View Project</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/wallafter.webp" alt="Retaining Wall" loading="lazy" width="1600" height="784" srcset="images/responsive/wallafter-480.webp 480w, images/responsive/wallafter-800.webp 800w, images/responsive/wallafter-1200.webp 1200w, images/wallafter.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="/portfolio#retaining-wall" class="btn-primary">View Project</a>
+              <a href="/projects/retaining-wall" class="btn-primary">View Project</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/stairsafter.webp" alt="Custom Staircase" loading="lazy" width="1600" height="786" srcset="images/responsive/stairsafter-480.webp 480w, images/responsive/stairsafter-800.webp 800w, images/responsive/stairsafter-1200.webp 1200w, images/stairsafter.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="/portfolio#custom-staircase" class="btn-primary">View Project</a>
+              <a href="/projects/custom-staircase" class="btn-primary">View Project</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/after/green-house-after.webp" alt="Green House" loading="lazy" width="1600" height="534" srcset="images/responsive/after_green-house-after-480.webp 480w, images/responsive/after_green-house-after-800.webp 800w, images/responsive/after_green-house-after-1200.webp 1200w, images/after/green-house-after.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="/portfolio#green-house" class="btn-primary">View Project</a>
+              <a href="/projects/green-house" class="btn-primary">View Project</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/after/lawn-after.webp" alt="Lawn" loading="lazy" width="1600" height="782" srcset="images/responsive/after_lawn-after-480.webp 480w, images/responsive/after_lawn-after-800.webp 800w, images/responsive/after_lawn-after-1200.webp 1200w, images/after/lawn-after.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="/portfolio#lawn" class="btn-primary">View Project</a>
+              <a href="/projects/lawn" class="btn-primary">View Project</a>
             </div>
           </div>
           <div class="slide">
             <img src="images/after/yellow-house-after.webp" alt="Yellow House" loading="lazy" width="1600" height="784" srcset="images/responsive/after_yellow-house-after-480.webp 480w, images/responsive/after_yellow-house-after-800.webp 800w, images/responsive/after_yellow-house-after-1200.webp 1200w, images/after/yellow-house-after.webp 1600w" sizes="(max-width: 768px) 100vw, 60vw">
             <div class="slide-caption">
-              <a href="/portfolio#yellow-house" class="btn-primary">View Project</a>
+              <a href="/projects/yellow-house" class="btn-primary">View Project</a>
             </div>
           </div>
         </div>
@@ -385,21 +385,21 @@ active: "home"
   </section>
 
   <!-- FEATURED PROJECT -->
-  {% set fp = caseStudies | featuredCaseStudy %}
+  {% set fp = projects | featuredProject %}
   {% if fp %}
   <section style="background:var(--bark);">
     <div class="section">
       <div class="featured-project">
         <div class="featured-project-media">
-          <img src="{{ fp.image }}" alt="{{ fp.title }} {{ fp.location }}, CO — Property Care project" loading="lazy" width="1600" height="1200">
+          <img src="{{ fp.after.src }}" alt="{{ fp.title }} — Property Care project in {{ fp.location }}" loading="lazy" width="1600" height="1200">
         </div>
         <div class="featured-project-text">
           <p class="section-label" style="color:var(--clay);">Featured Project</p>
           <h2 class="section-title" style="color:var(--straw);">{{ fp.title }} <em style="color:var(--clay);">{{ fp.location }}</em></h2>
-          <p class="featured-project-meta">{{ fp.meta }}</p>
-          <p style="color:rgba(245,240,232,0.75); line-height:1.7; margin-bottom:1.75rem;">{{ fp.blurb }}</p>
+          <p class="featured-project-meta">{{ fp.category }} · {{ fp.date }}</p>
+          <p style="color:rgba(245,240,232,0.75); line-height:1.7; margin-bottom:1.75rem;">{{ fp.summary }}</p>
           <div class="featured-project-actions">
-            <a href="{{ fp.url }}" class="btn-primary">View the Case Study →</a>
+            <a href="/projects/{{ fp.slug }}" class="btn-primary">View the Project →</a>
             <a href="/portfolio" class="btn-ghost" style="color:var(--straw); border-color:rgba(245,240,232,0.3);">See All Work</a>
           </div>
         </div>

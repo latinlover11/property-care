@@ -9,6 +9,7 @@ module.exports = function(eleventyConfig) {
       .filter((p) => p.outputPath.endsWith(".html") && p.url !== "/404.html" && p.url !== "/")
       .map((p) => `${p.url}  ${p.url.replace(/\.html$/, "")}  301!`);
     lines.unshift("/index.html  /  301!");
+    lines.push("/privacy-fence-case-study  /projects/lakewood-privacy-fence  301!");
     require("fs").writeFileSync(require("path").join(dir.output, "_redirects"), lines.join("\n") + "\n");
   });
   eleventyConfig.addPassthroughCopy("src/vendor");
@@ -32,6 +33,13 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("featuredCaseStudy", (list) => {
     if (!Array.isArray(list) || !list.length) return null;
+    return [...list].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")))[0];
+  });
+
+  eleventyConfig.addFilter("featuredProject", (list) => {
+    if (!Array.isArray(list) || !list.length) return null;
+    const featured = list.find((p) => p.featured);
+    if (featured) return featured;
     return [...list].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")))[0];
   });
 

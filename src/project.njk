@@ -1,0 +1,124 @@
+---
+pagination:
+  data: projects
+  size: 1
+  alias: project
+permalink: projects/{{ project.slug }}.html
+eleventyComputed:
+  title: "{{ project.title }} — Property Care"
+  description: "{{ project.summary }}"
+  ogUrl: "projects/{{ project.slug }}"
+  ogImage: "{{ project.after.src }}"
+  breadcrumbs:
+    - name: "Home"
+      url: "/"
+    - name: "Portfolio"
+      url: "/portfolio"
+    - name: "{{ project.title }}"
+      url: "/projects/{{ project.slug }}"
+root: "../"
+active: "portfolio"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+  {% include "icons.njk" %}
+  {% include "nav.njk" %}
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="section" style="padding-top:0; padding-bottom:0;">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ root }}">Home</a>
+        <span class="sep">/</span>
+        <a href="/portfolio">Portfolio</a>
+        <span class="sep">/</span>
+        <span class="current">{{ project.title }}</span>
+      </nav>
+      <p class="section-label">Project</p>
+      <h1 class="section-title">{{ project.title }}</h1>
+      <p class="page-hero-sub">{{ project.summary }}</p>
+    </div>
+  </section>
+
+  <!-- HERO BEFORE/AFTER -->
+  <section style="background:var(--cream); padding: 3rem 2.5rem;">
+    <div class="section" style="max-width: 1100px; margin: 0 auto;">
+      <div class="portfolio-comparison portfolio-comparison--hero">
+        <div class="comparison-slider">
+          <div class="comparison-img comparison-img-before"><img src="{{ project.before.src }}" alt="{{ project.before.alt }}" loading="lazy" {% if project.before.srcset %}srcset="{{ project.before.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 80vw"></div>
+          <div class="comparison-img comparison-img-after"><img src="{{ project.after.src }}" alt="{{ project.after.alt }}" loading="lazy" {% if project.after.srcset %}srcset="{{ project.after.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 80vw"></div>
+          <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
+        </div>
+      </div>
+      <div class="project-meta project-meta--center">
+        {% set icon = project.category == 'Hardscaping' and 'bricks' or project.category == 'Landscaping' and 'leaf' or project.category == 'Carpentry' and 'square' or project.category == 'Exterior Care' and 'window' or 'fence' %}
+        <span class="project-tag"><svg class="icon icon-sm"><use href="#icon-{{ icon }}"/></svg>{{ project.category }}</span>
+        <span class="project-tag"><svg class="icon icon-sm"><use href="#icon-pin"/></svg>{{ project.location }}</span>
+        <span class="project-tag"><svg class="icon icon-sm"><use href="#icon-calendar"/></svg>{{ project.date }}</span>
+        <a href="/services/{{ project.service }}" class="project-meta-link">View Service →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section style="background:var(--straw); padding: 3.5rem 2.5rem;">
+    <div class="section" style="max-width: 1100px; margin: 0 auto;">
+      <p class="section-label">More Photos</p>
+      <h2 class="section-title">Project <em>Gallery</em></h2>
+      <div class="project-gallery">
+        {% for photo in project.gallery %}
+        <figure class="gallery-item">
+          <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy" width="1600" height="1067">
+        </figure>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  {% if project.faq %}
+  <section style="background:var(--cream); padding: 3.5rem 2.5rem;">
+    <div class="section" style="max-width: 820px; margin: 0 auto;">
+      <p class="section-label">Good to Know</p>
+      <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+      <div class="faq-list">
+        {% for item in project.faq %}
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">{{ item.q }}<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>{{ item.a }}</p></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- CTA -->
+  <section style="background:var(--bark); padding: 3.5rem 2.5rem;">
+    <div class="section">
+      <div class="portfolio-cta" style="margin-top:0;">
+        <div class="portfolio-cta-inner">
+          <h2>Ready to transform your property?</h2>
+          <p style="margin-bottom: 1.5rem;">We're available for a free, no-obligation estimate for your next project.</p>
+          <a href="tel:{{ site.phone }}" class="btn-primary" style="margin-right: 1rem;">Call {{ site.phoneDisplay }}</a>
+          <a href="/contact" class="btn-ghost">Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "newsletter-signup.njk" %}
+
+</main>
+  {% include "footer.njk" %}
+  {% include "scripts.njk" %}
+
+</body>
+</html>
