@@ -4,13 +4,10 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "optimize:images": "node scripts/optimize-images.mjs",
-    "deploy": "npm run build && netlify deploy --prod",
-    "deploy:preview": "npm run build && netlify deploy"
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "netlify-cli": "^27.1.1",
     "sharp": "^0.35.3",
     "wrangler": "^4.127.1"
   }
