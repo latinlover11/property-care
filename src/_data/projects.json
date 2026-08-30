@@ -8,11 +8,25 @@
     "filter": "hardscaping",
     "service": "hardscaping",
     "summary": "Built to resolve drainage issues on a sloped property using natural flagstone and a high-drainage gravel base.",
-    "before": { "src": "/images/walkwaybefore.webp", "alt": "Before: Sloped lawn area prior to stone walkway installation in Longmont, CO", "srcset": "/images/responsive/walkwaybefore-480.webp 480w, images/walkwaybefore.webp 790w" },
-    "after": { "src": "/images/walkwayafter.webp", "alt": "After: New custom flagstone walkway with high-drainage gravel base", "srcset": "/images/responsive/walkwayafter-480.webp 480w, images/walkwayafter.webp 790w" },
+    "before": {
+      "src": "/images/walkwaybefore.webp",
+      "alt": "Before: Sloped lawn area prior to stone walkway installation in Longmont, CO",
+      "srcset": "/images/responsive/walkwaybefore-480.webp 480w, /images/walkwaybefore.webp 790w"
+    },
+    "after": {
+      "src": "/images/walkwayafter.webp",
+      "alt": "After: New custom flagstone walkway with high-drainage gravel base",
+      "srcset": "/images/responsive/walkwayafter-480.webp 480w, /images/walkwayafter.webp 790w"
+    },
     "gallery": [
-      { "src": "/images/walkwaybefore.webp", "alt": "Before: Sloped lawn area prior to stone walkway installation in Longmont, CO" },
-      { "src": "/images/walkwayafter.webp", "alt": "After: New custom flagstone walkway with high-drainage gravel base" }
+      {
+        "src": "/images/walkwaybefore.webp",
+        "alt": "Before: Sloped lawn area prior to stone walkway installation in Longmont, CO"
+      },
+      {
+        "src": "/images/walkwayafter.webp",
+        "alt": "After: New custom flagstone walkway with high-drainage gravel base"
+      }
     ]
   },
   {
@@ -24,11 +38,25 @@
     "filter": "hardscaping",
     "service": "hardscaping",
     "summary": "Constructed to provide structural integrity to a steep backyard garden area using stacked stone.",
-    "before": { "src": "/images/wallbefore.webp", "alt": "Before: Unfinished hillside slope prior to retaining wall in Boulder", "srcset": "/images/responsive/wallbefore-480.webp 480w, images/responsive/wallbefore-800.webp 800w, images/responsive/wallbefore-1200.webp 1200w, images/wallbefore.webp 1600w" },
-    "after": { "src": "/images/wallafter.webp", "alt": "After: Completed structural stacked stone retaining wall", "srcset": "/images/responsive/wallafter-480.webp 480w, images/responsive/wallafter-800.webp 800w, images/responsive/wallafter-1200.webp 1200w, images/wallafter.webp 1600w" },
+    "before": {
+      "src": "/images/wallbefore.webp",
+      "alt": "Before: Unfinished hillside slope prior to retaining wall in Boulder",
+      "srcset": "/images/responsive/wallbefore-480.webp 480w, /images/responsive/wallbefore-800.webp 800w, /images/responsive/wallbefore-1200.webp 1200w, /images/wallbefore.webp 1600w"
+    },
+    "after": {
+      "src": "/images/wallafter.webp",
+      "alt": "After: Completed structural stacked stone retaining wall",
+      "srcset": "/images/responsive/wallafter-480.webp 480w, /images/responsive/wallafter-800.webp 800w, /images/responsive/wallafter-1200.webp 1200w, /images/wallafter.webp 1600w"
+    },
     "gallery": [
-      { "src": "/images/wallbefore.webp", "alt": "Before: Unfinished hillside slope prior to retaining wall in Boulder" },
-      { "src": "/images/wallafter.webp", "alt": "After: Completed structural stacked stone retaining wall" }
+      {
+        "src": "/images/wallbefore.webp",
+        "alt": "Before: Unfinished hillside slope prior to retaining wall in Boulder"
+      },
+      {
+        "src": "/images/wallafter.webp",
+        "alt": "After: Completed structural stacked stone retaining wall"
+      }
     ]
   },
   {
@@ -40,11 +68,25 @@
     "filter": "carpentry",
     "service": "custom-carpentry",
     "summary": "Replaced aging deck stairs with custom-built carpentry work for better safety and aesthetic appeal.",
-    "before": { "src": "/images/stairsbefore.webp", "alt": "Before: Worn out wooden staircase in Niwot", "srcset": "/images/responsive/stairsbefore-480.webp 480w, images/responsive/stairsbefore-800.webp 800w, images/responsive/stairsbefore-1200.webp 1200w, images/stairsbefore.webp 1600w" },
-    "after": { "src": "/images/stairsafter.webp", "alt": "After: Custom rebuilt wooden staircase", "srcset": "/images/responsive/stairsafter-480.webp 480w, images/responsive/stairsafter-800.webp 800w, images/responsive/stairsafter-1200.webp 1200w, images/stairsafter.webp 1600w" },
+    "before": {
+      "src": "/images/stairsbefore.webp",
+      "alt": "Before: Worn out wooden staircase in Niwot",
+      "srcset": "/images/responsive/stairsbefore-480.webp 480w, /images/responsive/stairsbefore-800.webp 800w, /images/responsive/stairsbefore-1200.webp 1200w, /images/stairsbefore.webp 1600w"
+    },
+    "after": {
+      "src": "/images/stairsafter.webp",
+      "alt": "After: Custom rebuilt wooden staircase",
+      "srcset": "/images/responsive/stairsafter-480.webp 480w, /images/responsive/stairsafter-800.webp 800w, /images/responsive/stairsafter-1200.webp 1200w, /images/stairsafter.webp 1600w"
+    },
     "gallery": [
-      { "src": "/images/stairsbefore.webp", "alt": "Before: Worn out wooden staircase in Niwot" },
-      { "src": "/images/stairsafter.webp", "alt": "After: Custom rebuilt wooden staircase" }
+      {
+        "src": "/images/stairsbefore.webp",
+        "alt": "Before: Worn out wooden staircase in Niwot"
+      },
+      {
+        "src": "/images/stairsafter.webp",
+        "alt": "After: Custom rebuilt wooden staircase"
+      }
     ]
   },
   {
@@ -56,11 +98,25 @@
     "filter": "landscaping",
     "service": "hardscaping",
     "summary": "Transformed a dirt front circle into a welcoming landscaped entry with fresh plantings, edging, and clean hardscape borders.",
-    "before": { "src": "/images/before/front-circle-before.webp", "alt": "Before: Unfinished dirt front entry circle in Boulder", "srcset": "/images/responsive/before_front-circle-before-480.webp 480w, images/responsive/before_front-circle-before-800.webp 800w, images/responsive/before_front-circle-before-1200.webp 1200w, images/before/front-circle-before.webp 1600w" },
-    "after": { "src": "/images/after/front-circle-after.webp", "alt": "After: Transformed front circle with plantings and hardscape borders", "srcset": "/images/responsive/after_front-circle-after-480.webp 480w, images/responsive/after_front-circle-after-800.webp 800w, images/responsive/after_front-circle-after-1200.webp 1200w, images/after/front-circle-after.webp 1600w" },
+    "before": {
+      "src": "/images/before/front-circle-before.webp",
+      "alt": "Before: Unfinished dirt front entry circle in Boulder",
+      "srcset": "/images/responsive/before_front-circle-before-480.webp 480w, /images/responsive/before_front-circle-before-800.webp 800w, /images/responsive/before_front-circle-before-1200.webp 1200w, /images/before/front-circle-before.webp 1600w"
+    },
+    "after": {
+      "src": "/images/after/front-circle-after.webp",
+      "alt": "After: Transformed front circle with plantings and hardscape borders",
+      "srcset": "/images/responsive/after_front-circle-after-480.webp 480w, /images/responsive/after_front-circle-after-800.webp 800w, /images/responsive/after_front-circle-after-1200.webp 1200w, /images/after/front-circle-after.webp 1600w"
+    },
     "gallery": [
-      { "src": "/images/before/front-circle-before.webp", "alt": "Before: Unfinished dirt front entry circle in Boulder" },
-      { "src": "/images/after/front-circle-after.webp", "alt": "After: Transformed front circle with plantings and hardscape borders" }
+      {
+        "src": "/images/before/front-circle-before.webp",
+        "alt": "Before: Unfinished dirt front entry circle in Boulder"
+      },
+      {
+        "src": "/images/after/front-circle-after.webp",
+        "alt": "After: Transformed front circle with plantings and hardscape borders"
+      }
     ]
   },
   {
@@ -72,11 +128,25 @@
     "filter": "hardscaping",
     "service": "hardscaping",
     "summary": "Resolved persistent drainage issues by regrading and installing a permeable paver surface that eliminated standing water.",
-    "before": { "src": "/images/before/muddy-patio-before.webp", "alt": "Before: Muddy backyard patio with drainage problems in Longmont", "srcset": "/images/responsive/before_muddy-patio-before-480.webp 480w, images/responsive/before_muddy-patio-before-800.webp 800w, images/responsive/before_muddy-patio-before-1200.webp 1200w, images/before/muddy-patio-before.webp 1600w" },
-    "after": { "src": "/images/after/muddy-patio-after.webp", "alt": "After: New paver patio with proper drainage base", "srcset": "/images/responsive/after_muddy-patio-after-480.webp 480w, images/responsive/after_muddy-patio-after-800.webp 800w, images/responsive/after_muddy-patio-after-1200.webp 1200w, images/after/muddy-patio-after.webp 1600w" },
+    "before": {
+      "src": "/images/before/muddy-patio-before.webp",
+      "alt": "Before: Muddy backyard patio with drainage problems in Longmont",
+      "srcset": "/images/responsive/before_muddy-patio-before-480.webp 480w, /images/responsive/before_muddy-patio-before-800.webp 800w, /images/responsive/before_muddy-patio-before-1200.webp 1200w, /images/before/muddy-patio-before.webp 1600w"
+    },
+    "after": {
+      "src": "/images/after/muddy-patio-after.webp",
+      "alt": "After: New paver patio with proper drainage base",
+      "srcset": "/images/responsive/after_muddy-patio-after-480.webp 480w, /images/responsive/after_muddy-patio-after-800.webp 800w, /images/responsive/after_muddy-patio-after-1200.webp 1200w, /images/after/muddy-patio-after.webp 1600w"
+    },
     "gallery": [
-      { "src": "/images/before/muddy-patio-before.webp", "alt": "Before: Muddy backyard patio with drainage problems in Longmont" },
-      { "src": "/images/after/muddy-patio-after.webp", "alt": "After: New paver patio with proper drainage base" }
+      {
+        "src": "/images/before/muddy-patio-before.webp",
+        "alt": "Before: Muddy backyard patio with drainage problems in Longmont"
+      },
+      {
+        "src": "/images/after/muddy-patio-after.webp",
+        "alt": "After: New paver patio with proper drainage base"
+      }
     ]
   },
   {
@@ -88,11 +158,25 @@
     "filter": "hardscaping",
     "service": "hardscaping",
     "summary": "Built a custom stone firepit and seating area to turn an unused backyard corner into a cozy gathering space.",
-    "before": { "src": "/images/before/patio-firepit-before.webp", "alt": "Before: Unused backyard corner in Niwot", "srcset": "/images/responsive/before_patio-firepit-before-480.webp 480w, images/responsive/before_patio-firepit-before-800.webp 800w, images/responsive/before_patio-firepit-before-1200.webp 1200w, images/before/patio-firepit-before.webp 1600w" },
-    "after": { "src": "/images/after/patio-firepit-after.webp", "alt": "After: Custom stone firepit and patio seating area", "srcset": "/images/responsive/after_patio-firepit-after-480.webp 480w, images/responsive/after_patio-firepit-after-800.webp 800w, images/responsive/after_patio-firepit-after-1200.webp 1200w, images/after/patio-firepit-after.webp 1600w" },
+    "before": {
+      "src": "/images/before/patio-firepit-before.webp",
+      "alt": "Before: Unused backyard corner in Niwot",
+      "srcset": "/images/responsive/before_patio-firepit-before-480.webp 480w, /images/responsive/before_patio-firepit-before-800.webp 800w, /images/responsive/before_patio-firepit-before-1200.webp 1200w, /images/before/patio-firepit-before.webp 1600w"
+    },
+    "after": {
+      "src": "/images/after/patio-firepit-after.webp",
+      "alt": "After: Custom stone firepit and patio seating area",
+      "srcset": "/images/responsive/after_patio-firepit-after-480.webp 480w, /images/responsive/after_patio-firepit-after-800.webp 800w, /images/responsive/after_patio-firepit-after-1200.webp 1200w, /images/after/patio-firepit-after.webp 1600w"
+    },
     "gallery": [
-      { "src": "/images/before/patio-firepit-before.webp", "alt": "Before: Unused backyard corner in Niwot" },
-      { "src": "/images/after/patio-firepit-after.webp", "alt": "After: Custom stone firepit and patio seating area" }
+      {
+        "src": "/images/before/patio-firepit-before.webp",
+        "alt": "Before: Unused backyard corner in Niwot"
+      },
+      {
+        "src": "/images/after/patio-firepit-after.webp",
+        "alt": "After: Custom stone firepit and patio seating area"
+      }
     ]
   },
   {
@@ -104,11 +188,25 @@
     "filter": "hardscaping",
     "service": "hardscaping",
     "summary": "Rebuilt a hazardous, uneven stone staircase into safe, level steps with proper base compaction and durable stone treads.",
-    "before": { "src": "/images/before/steps-before.webp", "alt": "Before: Uneven stone steps in Boulder", "srcset": "/images/responsive/before_steps-before-480.webp 480w, images/responsive/before_steps-before-800.webp 800w, images/before/steps-before.webp 951w" },
-    "after": { "src": "/images/after/steps-after.webp", "alt": "After: Rebuilt level stone steps with sturdy foundation", "srcset": "/images/responsive/after_steps-after-480.webp 480w, images/responsive/after_steps-after-800.webp 800w, images/after/steps-after.webp 951w" },
+    "before": {
+      "src": "/images/before/steps-before.webp",
+      "alt": "Before: Uneven stone steps in Boulder",
+      "srcset": "/images/responsive/before_steps-before-480.webp 480w, /images/responsive/before_steps-before-800.webp 800w, /images/before/steps-before.webp 951w"
+    },
+    "after": {
+      "src": "/images/after/steps-after.webp",
+      "alt": "After: Rebuilt level stone steps with sturdy foundation",
+      "srcset": "/images/responsive/after_steps-after-480.webp 480w, /images/responsive/after_steps-after-800.webp 800w, /images/after/steps-after.webp 951w"
+    },
     "gallery": [
-      { "src": "/images/before/steps-before.webp", "alt": "Before: Uneven stone steps in Boulder" },
-      { "src": "/images/after/steps-after.webp", "alt": "After: Rebuilt level stone steps with sturdy foundation" }
+      {
+        "src": "/images/before/steps-before.webp",
+        "alt": "Before: Uneven stone steps in Boulder"
+      },
+      {
+        "src": "/images/after/steps-after.webp",
+        "alt": "After: Rebuilt level stone steps with sturdy foundation"
+      }
     ]
   },
   {
@@ -120,11 +218,25 @@
     "filter": "carpentry",
     "service": "custom-carpentry",
     "summary": "Assembled and anchored a custom greenhouse kit with proper ventilation and shelving for year-round growing.",
-    "before": { "src": "/images/before/green-house-before.webp", "alt": "Before: Open yard space prior to greenhouse assembly", "srcset": "/images/responsive/before_green-house-before-480.webp 480w, images/responsive/before_green-house-before-800.webp 800w, images/responsive/before_green-house-before-1200.webp 1200w, images/before/green-house-before.webp 1600w" },
-    "after": { "src": "/images/after/green-house-after.webp", "alt": "After: Fully assembled greenhouse with interior shelving", "srcset": "/images/responsive/after_green-house-after-480.webp 480w, images/responsive/after_green-house-after-800.webp 800w, images/responsive/after_green-house-after-1200.webp 1200w, images/after/green-house-after.webp 1600w" },
+    "before": {
+      "src": "/images/before/green-house-before.webp",
+      "alt": "Before: Open yard space prior to greenhouse assembly",
+      "srcset": "/images/responsive/before_green-house-before-480.webp 480w, /images/responsive/before_green-house-before-800.webp 800w, /images/responsive/before_green-house-before-1200.webp 1200w, /images/before/green-house-before.webp 1600w"
+    },
+    "after": {
+      "src": "/images/after/green-house-after.webp",
+      "alt": "After: Fully assembled greenhouse with interior shelving",
+      "srcset": "/images/responsive/after_green-house-after-480.webp 480w, /images/responsive/after_green-house-after-800.webp 800w, /images/responsive/after_green-house-after-1200.webp 1200w, /images/after/green-house-after.webp 1600w"
+    },
     "gallery": [
-      { "src": "/images/before/green-house-before.webp", "alt": "Before: Open yard space prior to greenhouse assembly" },
-      { "src": "/images/after/green-house-after.webp", "alt": "After: Fully assembled greenhouse with interior shelving" }
+      {
+        "src": "/images/before/green-house-before.webp",
+        "alt": "Before: Open yard space prior to greenhouse assembly"
+      },
+      {
+        "src": "/images/after/green-house-after.webp",
+        "alt": "After: Fully assembled greenhouse with interior shelving"
+      }
     ]
   },
   {
@@ -136,11 +248,25 @@
     "filter": "landscaping",
     "service": "lawn-mowing-care",
     "summary": "Restored a neglected, weed-filled lawn with aeration, overseeding, and consistent mowing to bring back thick green turf.",
-    "before": { "src": "/images/before/lawn-before.webp", "alt": "Before: Weedy, neglected lawn in Longmont", "srcset": "/images/responsive/before_lawn-before-480.webp 480w, images/responsive/before_lawn-before-800.webp 800w, images/responsive/before_lawn-before-1200.webp 1200w, images/before/lawn-before.webp 1600w" },
-    "after": { "src": "/images/after/lawn-after.webp", "alt": "After: Restored thick green turf lawn", "srcset": "/images/responsive/after_lawn-after-480.webp 480w, images/responsive/after_lawn-after-800.webp 800w, images/responsive/after_lawn-after-1200.webp 1200w, images/after/lawn-after.webp 1600w" },
+    "before": {
+      "src": "/images/before/lawn-before.webp",
+      "alt": "Before: Weedy, neglected lawn in Longmont",
+      "srcset": "/images/responsive/before_lawn-before-480.webp 480w, /images/responsive/before_lawn-before-800.webp 800w, /images/responsive/before_lawn-before-1200.webp 1200w, /images/before/lawn-before.webp 1600w"
+    },
+    "after": {
+      "src": "/images/after/lawn-after.webp",
+      "alt": "After: Restored thick green turf lawn",
+      "srcset": "/images/responsive/after_lawn-after-480.webp 480w, /images/responsive/after_lawn-after-800.webp 800w, /images/responsive/after_lawn-after-1200.webp 1200w, /images/after/lawn-after.webp 1600w"
+    },
     "gallery": [
-      { "src": "/images/before/lawn-before.webp", "alt": "Before: Weedy, neglected lawn in Longmont" },
-      { "src": "/images/after/lawn-after.webp", "alt": "After: Restored thick green turf lawn" }
+      {
+        "src": "/images/before/lawn-before.webp",
+        "alt": "Before: Weedy, neglected lawn in Longmont"
+      },
+      {
+        "src": "/images/after/lawn-after.webp",
+        "alt": "After: Restored thick green turf lawn"
+      }
     ]
   },
   {
@@ -152,11 +278,25 @@
     "filter": "exterior-care",
     "service": "exterior-care",
     "summary": "Full exterior refresh including power washing siding, window cleaning, gutter maintenance, and wood rot repair on trim.",
-    "before": { "src": "/images/before/yellow-house-before.webp", "alt": "Before: Weathered house exterior and siding", "srcset": "/images/responsive/before_yellow-house-before-480.webp 480w, images/responsive/before_yellow-house-before-800.webp 800w, images/responsive/before_yellow-house-before-1200.webp 1200w, images/before/yellow-house-before.webp 1600w" },
-    "after": { "src": "/images/after/yellow-house-after.webp", "alt": "After: Power washed and repaired house exterior", "srcset": "/images/responsive/after_yellow-house-after-480.webp 480w, images/responsive/after_yellow-house-after-800.webp 800w, images/responsive/after_yellow-house-after-1200.webp 1200w, images/after/yellow-house-after.webp 1600w" },
+    "before": {
+      "src": "/images/before/yellow-house-before.webp",
+      "alt": "Before: Weathered house exterior and siding",
+      "srcset": "/images/responsive/before_yellow-house-before-480.webp 480w, /images/responsive/before_yellow-house-before-800.webp 800w, /images/responsive/before_yellow-house-before-1200.webp 1200w, /images/before/yellow-house-before.webp 1600w"
+    },
+    "after": {
+      "src": "/images/after/yellow-house-after.webp",
+      "alt": "After: Power washed and repaired house exterior",
+      "srcset": "/images/responsive/after_yellow-house-after-480.webp 480w, /images/responsive/after_yellow-house-after-800.webp 800w, /images/responsive/after_yellow-house-after-1200.webp 1200w, /images/after/yellow-house-after.webp 1600w"
+    },
     "gallery": [
-      { "src": "/images/before/yellow-house-before.webp", "alt": "Before: Weathered house exterior and siding" },
-      { "src": "/images/after/yellow-house-after.webp", "alt": "After: Power washed and repaired house exterior" }
+      {
+        "src": "/images/before/yellow-house-before.webp",
+        "alt": "Before: Weathered house exterior and siding"
+      },
+      {
+        "src": "/images/after/yellow-house-after.webp",
+        "alt": "After: Power washed and repaired house exterior"
+      }
     ]
   },
   {
@@ -167,16 +307,42 @@
     "category": "Hardscaping",
     "filter": "hardscaping",
     "service": "hardscaping",
-    "summary": "Cleared heavy weed growth and spread 12 tons of ¼-inch river rock to create a clean, low-maintenance parking area beside the driveway.",
-    "before": { "src": "/images/before/river-rock-before.webp", "alt": "Before: Weedy packed-dirt parking area prior to river rock installation in Longmont, CO", "srcset": "/images/responsive/before_river-rock-before-480.webp 480w, images/responsive/before_river-rock-before-800.webp 800w, images/responsive/before_river-rock-before-1200.webp 1200w, images/before/river-rock-before.webp 1600w" },
-    "after": { "src": "/images/river-rock-115535.webp", "alt": "After: Blowing dust and debris off the finished river rock parking area in Longmont, CO", "srcset": "/images/responsive/river-rock-115535-480.webp 480w, /images/responsive/river-rock-115535-800.webp 800w, /images/responsive/river-rock-115535-1200.webp 1200w" },
+    "summary": "Cleared heavy weed growth and spread 12 tons of \u00bc-inch river rock to create a clean, low-maintenance parking area beside the driveway.",
+    "before": {
+      "src": "/images/before/river-rock-before.webp",
+      "alt": "Before: Weedy packed-dirt parking area prior to river rock installation in Longmont, CO",
+      "srcset": "/images/responsive/before_river-rock-before-480.webp 480w, /images/responsive/before_river-rock-before-800.webp 800w, /images/responsive/before_river-rock-before-1200.webp 1200w, /images/before/river-rock-before.webp 1600w"
+    },
+    "after": {
+      "src": "/images/river-rock-115535.webp",
+      "alt": "After: Blowing dust and debris off the finished river rock parking area in Longmont, CO",
+      "srcset": "/images/responsive/river-rock-115535-480.webp 480w, /images/responsive/river-rock-115535-800.webp 800w, /images/responsive/river-rock-115535-1200.webp 1200w"
+    },
     "gallery": [
-      { "src": "/images/before/river-rock-before.webp", "alt": "Before: Weedy packed-dirt parking area prior to river rock installation in Longmont, CO" },
-      { "src": "/images/after/river-rock-after.webp", "alt": "After: Completed ¼-inch river rock parking area in Longmont, CO" },
-      { "src": "/images/river-rock-085913.webp", "alt": "Clearing surface debris and raking the ground before the rock install" },
-      { "src": "/images/river-rock-115528.webp", "alt": "Spreading river rock across the parking area" },
-      { "src": "/images/river-rock-115530.webp", "alt": "Leveling the river rock surface" },
-      { "src": "/images/river-rock-115535.webp", "alt": "Blowing dust and debris off the finished gravel and roadway" }
+      {
+        "src": "/images/before/river-rock-before.webp",
+        "alt": "Before: Weedy packed-dirt parking area prior to river rock installation in Longmont, CO"
+      },
+      {
+        "src": "/images/after/river-rock-after.webp",
+        "alt": "After: Completed \u00bc-inch river rock parking area in Longmont, CO"
+      },
+      {
+        "src": "/images/river-rock-085913.webp",
+        "alt": "Clearing surface debris and raking the ground before the rock install"
+      },
+      {
+        "src": "/images/river-rock-115528.webp",
+        "alt": "Spreading river rock across the parking area"
+      },
+      {
+        "src": "/images/river-rock-115530.webp",
+        "alt": "Leveling the river rock surface"
+      },
+      {
+        "src": "/images/river-rock-115535.webp",
+        "alt": "Blowing dust and debris off the finished gravel and roadway"
+      }
     ]
   },
   {
@@ -188,16 +354,45 @@
     "filter": "exterior-care",
     "service": "exterior-care",
     "summary": "Pulled extensive weed and ground-cover growth from the stone beds along the fence line and cleared accumulated leaves, restoring clean, low-maintenance garden beds around the turf and deck.",
-    "before": { "src": "/images/before/backyard-cleanup-before.webp", "alt": "Before: Weeds and ground cover overtaking the stone garden beds along the fence in Longmont, CO", "srcset": "/images/responsive/before_backyard-cleanup-before-480.webp 480w, images/responsive/before_backyard-cleanup-before-800.webp 800w, images/responsive/before_backyard-cleanup-before-1200.webp 1200w, images/before/backyard-cleanup-before.webp 1600w" },
-    "after": { "src": "/images/after/backyard-cleanup-after.webp", "alt": "After: Cleared stone beds and tidy backyard with artificial turf and deck in Longmont, CO", "srcset": "/images/responsive/after_backyard-cleanup-after-480.webp 480w, images/responsive/after_backyard-cleanup-after-800.webp 800w, images/responsive/after_backyard-cleanup-after-1200.webp 1200w, images/after/backyard-cleanup-after.webp 1600w" },
+    "before": {
+      "src": "/images/before/backyard-cleanup-before.webp",
+      "alt": "Before: Weeds and ground cover overtaking the stone garden beds along the fence in Longmont, CO",
+      "srcset": "/images/responsive/before_backyard-cleanup-before-480.webp 480w, /images/responsive/before_backyard-cleanup-before-800.webp 800w, /images/responsive/before_backyard-cleanup-before-1200.webp 1200w, /images/before/backyard-cleanup-before.webp 1600w"
+    },
+    "after": {
+      "src": "/images/after/backyard-cleanup-after.webp",
+      "alt": "After: Cleared stone beds and tidy backyard with artificial turf and deck in Longmont, CO",
+      "srcset": "/images/responsive/after_backyard-cleanup-after-480.webp 480w, /images/responsive/after_backyard-cleanup-after-800.webp 800w, /images/responsive/after_backyard-cleanup-after-1200.webp 1200w, /images/after/backyard-cleanup-after.webp 1600w"
+    },
     "gallery": [
-      { "src": "/images/before/backyard-cleanup-before.webp", "alt": "Before: Weeds and ground cover overtaking the stone garden beds along the fence in Longmont, CO" },
-      { "src": "/images/after/backyard-cleanup-after.webp", "alt": "After: Cleared stone beds and tidy backyard with artificial turf and deck in Longmont, CO" },
-      { "src": "/images/backyard-cleanup-125728.webp", "alt": "Backyard overview with artificial turf, stone beds, and deck" },
-      { "src": "/images/backyard-cleanup-134826.webp", "alt": "Weed growth along the fence line stone beds" },
-      { "src": "/images/backyard-cleanup-134832.webp", "alt": "Ground cover encroaching the gravel beds" },
-      { "src": "/images/backyard-cleanup-134839.webp", "alt": "Bagging cleared leaves during cleanup" },
-      { "src": "/images/backyard-cleanup-134854.webp", "alt": "Worker clearing debris onto a tarp in the alleyway" }
+      {
+        "src": "/images/before/backyard-cleanup-before.webp",
+        "alt": "Before: Weeds and ground cover overtaking the stone garden beds along the fence in Longmont, CO"
+      },
+      {
+        "src": "/images/after/backyard-cleanup-after.webp",
+        "alt": "After: Cleared stone beds and tidy backyard with artificial turf and deck in Longmont, CO"
+      },
+      {
+        "src": "/images/backyard-cleanup-125728.webp",
+        "alt": "Backyard overview with artificial turf, stone beds, and deck"
+      },
+      {
+        "src": "/images/backyard-cleanup-134826.webp",
+        "alt": "Weed growth along the fence line stone beds"
+      },
+      {
+        "src": "/images/backyard-cleanup-134832.webp",
+        "alt": "Ground cover encroaching the gravel beds"
+      },
+      {
+        "src": "/images/backyard-cleanup-134839.webp",
+        "alt": "Bagging cleared leaves during cleanup"
+      },
+      {
+        "src": "/images/backyard-cleanup-134854.webp",
+        "alt": "Worker clearing debris onto a tarp in the alleyway"
+      }
     ]
   },
   {
@@ -216,11 +411,26 @@
       "srcset": "/images/responsive/garden-planting-0825_104400-480.webp 480w, /images/responsive/garden-planting-0825_104400-800.webp 800w, /images/responsive/garden-planting-0825_104400-1200.webp 1200w"
     },
     "highlights": [
-      { "icon": "🪨", "text": "Natural Flagstone Steppers" },
-      { "icon": "🏡", "text": "Entry Steps Approach" },
-      { "icon": "🌸", "text": "Yellow Coneflower & Blooming Perennials" },
-      { "icon": "🌿", "text": "Patriot Hosta Border" },
-      { "icon": "🌾", "text": "Ornamental Grasses & Smoke Bush" }
+      {
+        "icon": "\ud83e\udea8",
+        "text": "Natural Flagstone Steppers"
+      },
+      {
+        "icon": "\ud83c\udfe1",
+        "text": "Entry Steps Approach"
+      },
+      {
+        "icon": "\ud83c\udf38",
+        "text": "Yellow Coneflower & Blooming Perennials"
+      },
+      {
+        "icon": "\ud83c\udf3f",
+        "text": "Patriot Hosta Border"
+      },
+      {
+        "icon": "\ud83c\udf3e",
+        "text": "Ornamental Grasses & Smoke Bush"
+      }
     ],
     "plantLegend": [
       {
@@ -245,7 +455,7 @@
         "id": "grass",
         "letter": "C",
         "name": "Feather Reed Grass",
-        "botanical": "Calamagrostis × acutiflora",
+        "botanical": "Calamagrostis \u00d7 acutiflora",
         "img": "/images/garden-planting-0820_151525.webp",
         "tag": "Ornamental Grass",
         "desc": "Upright, structural grass with feathery wheat-colored seed plumes."
@@ -266,98 +476,131 @@
         "alt": "Golden yellow Coneflower (Echinacea) blooming along the flagstone entry path in Longmont, CO",
         "srcset": "/images/responsive/garden-planting-0820_151523-480.webp 480w, /images/responsive/garden-planting-0820_151523-800.webp 800w, /images/responsive/garden-planting-0820_151523-1200.webp 1200w",
         "caption": "Golden yellow Coneflower (Echinacea) blooming along the natural flagstone entry path.",
-        "plants": ["coneflower"]
+        "plants": [
+          "coneflower"
+        ]
       },
       {
         "src": "/images/garden-planting-0820_151525.webp",
         "alt": "Feather Reed Grass plumes and perennial flower border leading to the entry steps",
         "srcset": "/images/responsive/garden-planting-0820_151525-480.webp 480w, /images/responsive/garden-planting-0820_151525-800.webp 800w, /images/responsive/garden-planting-0820_151525-1200.webp 1200w",
         "caption": "Feather Reed Grass plumes and perennial flower border leading directly to the entry steps.",
-        "plants": ["grass", "coneflower"]
+        "plants": [
+          "grass",
+          "coneflower"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_085927.webp",
         "alt": "Smoke Bush (Cotinus coggygria) with deep purple foliage along flagstone pathway",
         "srcset": "/images/responsive/garden-planting-0825_085927-480.webp 480w, /images/responsive/garden-planting-0825_085927-800.webp 800w, /images/responsive/garden-planting-0825_085927-1200.webp 1200w",
         "caption": "Smoke Bush (Cotinus coggygria) with deep purple foliage established along the stone walkway.",
-        "plants": ["smokebush"]
+        "plants": [
+          "smokebush"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_085934.webp",
         "alt": "Smoke Bush purple foliage detail beside natural flagstone stepper",
         "srcset": "/images/responsive/garden-planting-0825_085934-480.webp 480w, /images/responsive/garden-planting-0825_085934-800.webp 800w, /images/responsive/garden-planting-0825_085934-1200.webp 1200w",
         "caption": "Smoke Bush purple foliage detail beside natural flagstone stepper.",
-        "plants": ["smokebush"]
+        "plants": [
+          "smokebush"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104400.webp",
         "alt": "Flagstone stepping path framed by Patriot Hosta foliage and entry plantings",
         "srcset": "/images/responsive/garden-planting-0825_104400-480.webp 480w, /images/responsive/garden-planting-0825_104400-800.webp 800w, /images/responsive/garden-planting-0825_104400-1200.webp 1200w",
         "caption": "Flagstone stepping path framed by Patriot Hosta foliage and entry plantings.",
-        "plants": ["hosta"]
+        "plants": [
+          "hosta"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104406.webp",
         "alt": "Patriot Hosta (Hosta 'Patriot') clump establishing beside the flagstone approach",
         "srcset": "/images/responsive/garden-planting-0825_104406-480.webp 480w, /images/responsive/garden-planting-0825_104406-800.webp 800w, /images/responsive/garden-planting-0825_104406-1200.webp 1200w",
         "caption": "Patriot Hosta (Hosta 'Patriot') clump establishing beside the flagstone approach.",
-        "plants": ["hosta"]
+        "plants": [
+          "hosta"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104414.webp",
         "alt": "Broad white-margined Patriot Hosta leaves along the stone path border",
         "srcset": "/images/responsive/garden-planting-0825_104414-480.webp 480w, /images/responsive/garden-planting-0825_104414-800.webp 800w, /images/responsive/garden-planting-0825_104414-1200.webp 1200w",
         "caption": "Broad white-margined Patriot Hosta leaves along the stone path border.",
-        "plants": ["hosta"]
+        "plants": [
+          "hosta"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104424.webp",
         "alt": "Shade-tolerant Patriot Hosta accent planting along the flagstone walkway",
         "srcset": "/images/responsive/garden-planting-0825_104424-480.webp 480w, /images/responsive/garden-planting-0825_104424-800.webp 800w, /images/responsive/garden-planting-0825_104424-1200.webp 1200w",
         "caption": "Shade-tolerant Patriot Hosta accent planting along the flagstone walkway.",
-        "plants": ["hosta"]
+        "plants": [
+          "hosta"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104426.webp",
         "alt": "Close-up of Patriot Hosta foliage and natural flagstone texture",
         "srcset": "/images/responsive/garden-planting-0825_104426-480.webp 480w, /images/responsive/garden-planting-0825_104426-800.webp 800w, /images/responsive/garden-planting-0825_104426-1200.webp 1200w",
         "caption": "Close-up of Patriot Hosta foliage and natural flagstone texture.",
-        "plants": ["hosta"]
+        "plants": [
+          "hosta"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104433.webp",
         "alt": "Perennial plant bed filling in alongside the flagstone stepping path",
         "srcset": "/images/responsive/garden-planting-0825_104433-480.webp 480w, /images/responsive/garden-planting-0825_104433-800.webp 800w, /images/responsive/garden-planting-0825_104433-1200.webp 1200w",
         "caption": "Perennial plant bed filling in alongside the flagstone stepping path.",
-        "plants": ["hosta", "coneflower"]
+        "plants": [
+          "hosta",
+          "coneflower"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104436.webp",
         "alt": "Patriot Hosta leaf margin detail along the entry steps border",
         "srcset": "/images/responsive/garden-planting-0825_104436-480.webp 480w, /images/responsive/garden-planting-0825_104436-800.webp 800w, /images/responsive/garden-planting-0825_104436-1200.webp 1200w",
         "caption": "Patriot Hosta leaf margin detail along the entry steps border.",
-        "plants": ["hosta"]
+        "plants": [
+          "hosta"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104441.webp",
         "alt": "Established Patriot Hosta plant set in the entry landscape bed",
         "srcset": "/images/responsive/garden-planting-0825_104441-480.webp 480w, /images/responsive/garden-planting-0825_104441-800.webp 800w, /images/responsive/garden-planting-0825_104441-1200.webp 1200w",
         "caption": "Established Patriot Hosta plant set in the entry landscape bed.",
-        "plants": ["hosta"]
+        "plants": [
+          "hosta"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104449.webp",
         "alt": "Fresh planting installation and nursery tag along the flagstone entry path",
         "srcset": "/images/responsive/garden-planting-0825_104449-480.webp 480w, /images/responsive/garden-planting-0825_104449-800.webp 800w, /images/responsive/garden-planting-0825_104449-1200.webp 1200w",
         "caption": "Fresh planting installation and nursery tag along the flagstone entry path.",
-        "plants": ["hosta"]
+        "plants": [
+          "hosta"
+        ]
       },
       {
         "src": "/images/garden-planting-0825_104452.webp",
         "alt": "Completed natural flagstone stepping path surrounded by refreshed perennial plant beds",
         "srcset": "/images/responsive/garden-planting-0825_104452-480.webp 480w, /images/responsive/garden-planting-0825_104452-800.webp 800w, /images/responsive/garden-planting-0825_104452-1200.webp 1200w",
         "caption": "Completed natural flagstone stepping path surrounded by refreshed perennial plant beds.",
-        "plants": ["hosta", "grass", "smokebush", "coneflower"]
+        "plants": [
+          "hosta",
+          "grass",
+          "smokebush",
+          "coneflower"
+        ]
       }
     ]
   },
@@ -385,13 +628,13 @@
         "src": "/images/front-yard-rock-0825_140012.webp",
         "alt": "Initial prep: front yard cleared to bare worked dirt, bed edges staked and strung",
         "srcset": "/images/responsive/front-yard-rock-0825_140012-480.webp 480w, /images/responsive/front-yard-rock-0825_140012-800.webp 800w, /images/responsive/front-yard-rock-0825_140012-1200.webp 1200w",
-        "caption": "Initial prep — the front yard cleared down to bare, worked dirt with the bed edges staked and strung."
+        "caption": "Initial prep \u2014 the front yard cleared down to bare, worked dirt with the bed edges staked and strung."
       },
       {
         "src": "/images/front-yard-rock-0825_140019.webp",
         "alt": "Prep detail: tools, blue wheelbarrow and cooler on the driveway; soil exposed",
         "srcset": "/images/responsive/front-yard-rock-0825_140019-480.webp 480w, /images/responsive/front-yard-rock-0825_140019-800.webp 800w, /images/responsive/front-yard-rock-0825_140019-1200.webp 1200w",
-        "caption": "Prep detail — tools, a blue wheelbarrow and a cooler staged on the driveway as the soil is exposed."
+        "caption": "Prep detail \u2014 tools, a blue wheelbarrow and a cooler staged on the driveway as the soil is exposed."
       },
       {
         "src": "/images/front-yard-rock-0825_140741.webp",
@@ -403,13 +646,13 @@
         "src": "/images/front-yard-rock-0827_085504.webp",
         "alt": "Rock delivery: utility trailer loaded with 12 tons of tan-to-brown river rock",
         "srcset": "/images/responsive/front-yard-rock-0827_085504-480.webp 480w, /images/responsive/front-yard-rock-0827_085504-800.webp 800w, /images/responsive/front-yard-rock-0827_085504-1200.webp 1200w",
-        "caption": "Rock delivery — a utility trailer loaded with 12 tons of tan-to-brown river rock."
+        "caption": "Rock delivery \u2014 a utility trailer loaded with 12 tons of tan-to-brown river rock."
       },
       {
         "src": "/images/front-yard-rock-0827_085509.webp",
         "alt": "Hauling stone: worker shoveling river rock from the trailer into the blue wheelbarrow",
         "srcset": "/images/responsive/front-yard-rock-0827_085509-480.webp 480w, /images/responsive/front-yard-rock-0827_085509-800.webp 800w, /images/responsive/front-yard-rock-0827_085509-1200.webp 1200w",
-        "caption": "Hauling stone — shoveling river rock from the trailer into the blue wheelbarrow for transport."
+        "caption": "Hauling stone \u2014 shoveling river rock from the trailer into the blue wheelbarrow for transport."
       },
       {
         "src": "/images/front-yard-rock-0827_093313.webp",
@@ -427,7 +670,7 @@
         "src": "/images/front-yard-rock-0827_093344.webp",
         "alt": "Finished front yard: dense, even layer of natural river rock under a clear blue sky",
         "srcset": "/images/responsive/front-yard-rock-0827_093344-480.webp 480w, /images/responsive/front-yard-rock-0827_093344-800.webp 800w, /images/responsive/front-yard-rock-0827_093344-1200.webp 1200w",
-        "caption": "Finished front yard — a dense, even layer of natural river rock under a clear blue sky."
+        "caption": "Finished front yard \u2014 a dense, even layer of natural river rock under a clear blue sky."
       }
     ]
   },
@@ -439,7 +682,7 @@
     "category": "Exterior Care",
     "filter": "exterior-care",
     "service": "exterior-care",
-    "summary": "Troubleshot and repaired pop-up sprinkler heads across several yard zones — excavating to expose poly lateral lines, replacing heads on swing joints, and pressure-testing spray patterns along walkways, rock beds, and turf borders.",
+    "summary": "Troubleshot and repaired pop-up sprinkler heads across several yard zones \u2014 excavating to expose poly lateral lines, replacing heads on swing joints, and pressure-testing spray patterns along walkways, rock beds, and turf borders.",
     "hasBeforeAfter": false,
     "hero": {
       "src": "/images/irrigation-repair-0827_104504.webp",
@@ -451,7 +694,7 @@
         "src": "/images/irrigation-repair-0827_101231.webp",
         "alt": "Excavation: opened trench exposing the sprinkler body and black poly lateral line",
         "srcset": "/images/responsive/irrigation-repair-0827_101231-480.webp 480w, /images/responsive/irrigation-repair-0827_101231-800.webp 800w, /images/responsive/irrigation-repair-0827_101231-1200.webp 1200w",
-        "caption": "Excavation — an opened trench exposing the sprinkler body and black poly lateral line at a turf edge."
+        "caption": "Excavation \u2014 an opened trench exposing the sprinkler body and black poly lateral line at a turf edge."
       },
       {
         "src": "/images/irrigation-repair-0827_102005.webp",
@@ -469,7 +712,7 @@
         "src": "/images/irrigation-repair-0827_104247.webp",
         "alt": "System testing: a head actively spraying the front lawn",
         "srcset": "/images/responsive/irrigation-repair-0827_104247-480.webp 480w, /images/responsive/irrigation-repair-0827_104247-800.webp 800w, /images/responsive/irrigation-repair-0827_104247-1200.webp 1200w",
-        "caption": "System testing — a head actively spraying the front lawn."
+        "caption": "System testing \u2014 a head actively spraying the front lawn."
       },
       {
         "src": "/images/irrigation-repair-0827_104257.webp",
@@ -481,13 +724,13 @@
         "src": "/images/irrigation-repair-0827_104504.webp",
         "alt": "Working setup with the head spraying while tools are laid out nearby",
         "srcset": "/images/responsive/irrigation-repair-0827_104504-480.webp 480w, /images/responsive/irrigation-repair-0827_104504-800.webp 800w, /images/responsive/irrigation-repair-0827_104504-1200.webp 1200w",
-        "caption": "Working setup — the head spraying while tools are laid out nearby."
+        "caption": "Working setup \u2014 the head spraying while tools are laid out nearby."
       },
       {
         "src": "/images/irrigation-repair-0827_105042.webp",
         "alt": "Tool layout: trenching shovel, screwdrivers, and a spare nozzle spray-pattern tree",
         "srcset": "/images/responsive/irrigation-repair-0827_105042-480.webp 480w, /images/responsive/irrigation-repair-0827_105042-800.webp 800w, /images/responsive/irrigation-repair-0827_105042-1200.webp 1200w",
-        "caption": "Tool layout — trenching shovel, screwdrivers, and a spare nozzle spray-pattern tree."
+        "caption": "Tool layout \u2014 trenching shovel, screwdrivers, and a spare nozzle spray-pattern tree."
       },
       {
         "src": "/images/irrigation-repair-0827_105045.webp",
@@ -525,25 +768,70 @@
     "service": "fence-installation",
     "featured": true,
     "estimate": true,
-    "summary": "A 60-foot cedar vertical privacy fence — designed, delivered, and installed in two days for a homeowner who wanted their yard back.",
-    "before": { "src": "/images/before/fence-lakewood-before-095750.webp", "alt": "Before: Open Lakewood backyard before the privacy fence installation" },
-    "after": { "src": "/images/after/fence-lakewood-after-151224.webp", "alt": "After: Completed cedar vertical privacy fence in Lakewood, CO" },
+    "summary": "A 60-foot cedar vertical privacy fence \u2014 designed, delivered, and installed in two days for a homeowner who wanted their yard back.",
+    "before": {
+      "src": "/images/before/fence-lakewood-before-095750.webp",
+      "alt": "Before: Open Lakewood backyard before the privacy fence installation"
+    },
+    "after": {
+      "src": "/images/after/fence-lakewood-after-151224.webp",
+      "alt": "After: Completed cedar vertical privacy fence in Lakewood, CO"
+    },
     "gallery": [
-      { "src": "/images/before/fence-lakewood-before-095750.webp", "alt": "Before: Open Lakewood backyard before the privacy fence installation" },
-      { "src": "/images/before/fence-lakewood-before-095823.webp", "alt": "Before: Measuring and laying out the fence line" },
-      { "src": "/images/before/fence-lakewood-before-095844.webp", "alt": "Before: Preparing post locations" },
-      { "src": "/images/before/fence-lakewood-before-095809.webp", "alt": "Before: Yard layout prior to build" },
-      { "src": "/images/after/fence-lakewood-after-151224.webp", "alt": "After: Completed cedar vertical privacy fence" },
-      { "src": "/images/after/fence-lakewood-after-151227.webp", "alt": "After: Fence detail along the property line" },
-      { "src": "/images/after/fence-lakewood-after-155031.webp", "alt": "After: Finished fence section" },
-      { "src": "/images/after/fence-lakewood-after-155045.webp", "alt": "After: Corner post and rail detail" },
-      { "src": "/images/after/fence-lakewood-after-155100.webp", "alt": "After: Full run of the privacy fence" },
-      { "src": "/images/after/fence-lakewood-after-155124.webp", "alt": "After: Completed backyard enclosure" }
+      {
+        "src": "/images/before/fence-lakewood-before-095750.webp",
+        "alt": "Before: Open Lakewood backyard before the privacy fence installation"
+      },
+      {
+        "src": "/images/before/fence-lakewood-before-095823.webp",
+        "alt": "Before: Measuring and laying out the fence line"
+      },
+      {
+        "src": "/images/before/fence-lakewood-before-095844.webp",
+        "alt": "Before: Preparing post locations"
+      },
+      {
+        "src": "/images/before/fence-lakewood-before-095809.webp",
+        "alt": "Before: Yard layout prior to build"
+      },
+      {
+        "src": "/images/after/fence-lakewood-after-151224.webp",
+        "alt": "After: Completed cedar vertical privacy fence"
+      },
+      {
+        "src": "/images/after/fence-lakewood-after-151227.webp",
+        "alt": "After: Fence detail along the property line"
+      },
+      {
+        "src": "/images/after/fence-lakewood-after-155031.webp",
+        "alt": "After: Finished fence section"
+      },
+      {
+        "src": "/images/after/fence-lakewood-after-155045.webp",
+        "alt": "After: Corner post and rail detail"
+      },
+      {
+        "src": "/images/after/fence-lakewood-after-155100.webp",
+        "alt": "After: Full run of the privacy fence"
+      },
+      {
+        "src": "/images/after/fence-lakewood-after-155124.webp",
+        "alt": "After: Completed backyard enclosure"
+      }
     ],
     "faq": [
-      { "q": "How long does a fence installation take?", "a": "A typical residential fence (150–250 linear feet) takes 2–4 days depending on material and ground conditions. This 60-foot cedar fence was completed in two days." },
-      { "q": "Do I need a permit for a new fence?", "a": "Permit requirements vary by city and HOA. We'll help you check local requirements before work begins." },
-      { "q": "Can you repair just one section instead of replacing the whole fence?", "a": "Yes — we regularly handle spot repairs for storm damage, rot, or impact rather than a full replacement when the rest of the fence is sound." }
+      {
+        "q": "How long does a fence installation take?",
+        "a": "A typical residential fence (150\u2013250 linear feet) takes 2\u20134 days depending on material and ground conditions. This 60-foot cedar fence was completed in two days."
+      },
+      {
+        "q": "Do I need a permit for a new fence?",
+        "a": "Permit requirements vary by city and HOA. We'll help you check local requirements before work begins."
+      },
+      {
+        "q": "Can you repair just one section instead of replacing the whole fence?",
+        "a": "Yes \u2014 we regularly handle spot repairs for storm damage, rot, or impact rather than a full replacement when the rest of the fence is sound."
+      }
     ]
   }
 ]

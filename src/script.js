@@ -159,6 +159,65 @@ if (portfolioComparisons.length > 0) {
   });
 }
 
+// ===== Hotspot Click Toggle Logic =====
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.hotspot-btn');
+  if (btn) {
+    e.stopPropagation();
+    const item = btn.closest('.hotspot-item');
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.hotspot-item').forEach(i => {
+      i.classList.remove('active');
+      const b = i.querySelector('.hotspot-btn');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+    if (!isExpanded && item) {
+      item.classList.add('active');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  } else if (!e.target.closest('.hotspot-card')) {
+    document.querySelectorAll('.hotspot-item').forEach(i => {
+      i.classList.remove('active');
+    });
+  }
+});
+
+// ===== Plant Key Gallery Filter Logic =====
+document.addEventListener('click', (e) => {
+  const filterBtn = e.target.closest('.plant-key-filter');
+  if (!filterBtn) return;
+  
+  const filterId = filterBtn.dataset.plantFilter;
+  const filterBtns = document.querySelectorAll('.plant-key-filter');
+  const galleryItems = document.querySelectorAll('.project-gallery .gallery-item');
+
+  filterBtns.forEach(btn => {
+    if (btn === filterBtn) {
+      btn.classList.add('active');
+      if (btn.dataset.plantFilter !== 'all') {
+        btn.style.borderColor = 'var(--forest, #2d5a3f)';
+        btn.style.background = '#ffffff';
+        btn.style.boxShadow = '0 4px 14px rgba(45,90,63,0.18)';
+      }
+    } else {
+      btn.classList.remove('active');
+      btn.style.borderColor = 'rgba(0,0,0,0.1)';
+      btn.style.background = btn.dataset.plantFilter === 'all' ? 'var(--bark)' : 'var(--cream, #fcf9f2)';
+      btn.style.boxShadow = 'none';
+    }
+  });
+
+  galleryItems.forEach(item => {
+    const itemPlants = (item.dataset.plants || '').split(',');
+    if (filterId === 'all' || itemPlants.includes(filterId)) {
+      item.style.display = '';
+      item.style.opacity = '1';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});
+
 // ===== Hamburger Menu Toggle =====
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');

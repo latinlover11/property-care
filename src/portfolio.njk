@@ -19,8 +19,10 @@ active: "portfolio"
   <main id="main">
 
     <!-- PAGE HERO -->
-    <section class="page-hero">
-      <div class="section" style="padding-top:0; padding-bottom:0;">
+    <section class="page-hero" style="position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(61,43,31,0.45) 0%, transparent 100%); pointer-events:none;"></div>
+      <div style="position:absolute; inset:0; opacity:0.04; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:256px; pointer-events:none;"></div>
+      <div class="section" style="padding-top:0; padding-bottom:0; position:relative; z-index:1;">
         <div class="breadcrumb">
           <a href="/">Home</a>
           <span class="sep">/</span>
@@ -30,11 +32,10 @@ active: "portfolio"
           <span class="sep">/</span>
           <a href="/">Home</a>
         </div>
+        <p class="section-label" style="font-size:0.82rem; letter-spacing:0.1em;">Our Work</p>
+        <h1 class="section-title">Browse before-and-after photos of Property Care projects across Boulder County and beyond.</h1>
+        <div style="width:40px; height:3px; background:var(--clay); border-radius:2px; margin-top:1.5rem;"></div>
       </div>
-      <h1 class="section-title">Our Work</h1>
-      <p class="section-subtitle">Browse before-and-after photos of Property Care projects across Boulder County and beyond.</p>
-      <a href="/contact" class="btn-primary">View Projects</a>
-      <a href="/portfolio" class="btn-ghost">Back to Home</a>
     </section>
 
     <!-- PROJECTS GRID -->
@@ -44,8 +45,8 @@ active: "portfolio"
         <div class="portfolio-img-wrap">
           <div class="portfolio-comparison">
             <div class="comparison-slider">
-              <div class="comparison-img comparison-img-before"><img src="{{ project.before.src }}" alt="{{ project.before.alt }}" loading="lazy" {% if project.before.srcset %}srcset="{{ project.before.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw"></div>
-              <div class="comparison-img comparison-img-after"><img src="{{ project.after.src }}" alt="{{ project.after.alt }}" loading="lazy" {% if project.after.srcset %}srcset="{{ project.after.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw"></div>
+              <div class="comparison-img comparison-img-before"><img src="{{ project.before.src }}" alt="{{ project.before.alt }}" loading="lazy" {% if project.before.srcset %}srcset="{{ project.before.srcset | replace(', images/', ', /images/') | replace('//', '/') }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw"></div>
+              <div class="comparison-img comparison-img-after"><img src="{{ project.after.src }}" alt="{{ project.after.alt }}" loading="lazy" {% if project.after.srcset %}srcset="{{ project.after.srcset | replace(', images/', ', /images/') | replace('//', '/') }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw"></div>
               <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
             </div>
           </div>

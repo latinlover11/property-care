@@ -8,7 +8,7 @@ eleventyComputed:
   title: "{{ project.title }} — Property Care"
   description: "{{ project.summary }}"
   ogUrl: "projects/{{ project.slug }}"
-  ogImage: "{{ project.after.src }}"
+  ogImage: "{{ project.hero.src or project.after.src or project.before.src }}"
   breadcrumbs:
     - name: "Home"
       url: "/"
@@ -47,9 +47,15 @@ active: "portfolio"
     </div>
   </section>
 
-  <!-- HERO BEFORE/AFTER -->
+  <!-- HERO BEFORE/AFTER OR FEATURED PHOTO -->
   <section style="background:var(--cream); padding: 3rem 2.5rem;">
     <div class="section" style="max-width: 1100px; margin: 0 auto;">
+      {% if project.hasBeforeAfter === false or not (project.before and project.after) %}
+      <div class="project-hero-image" style="border-radius: var(--radius-lg, 12px); overflow: hidden; max-height: 550px; box-shadow: var(--shadow-md, 0 4px 12px rgba(0,0,0,0.08));">
+        {% set heroImg = project.hero or project.after or project.before %}
+        <img src="{{ heroImg.src }}" alt="{{ heroImg.alt or project.title }}" loading="lazy" {% if heroImg.srcset %}srcset="{{ heroImg.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 80vw" style="width: 100%; height: auto; max-height: 550px; object-fit: cover; display: block;">
+      </div>
+      {% else %}
       <div class="portfolio-comparison portfolio-comparison--hero">
         <div class="comparison-slider">
           <div class="comparison-img comparison-img-before"><img src="{{ project.before.src }}" alt="{{ project.before.alt }}" loading="lazy" {% if project.before.srcset %}srcset="{{ project.before.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 80vw"></div>
@@ -57,6 +63,18 @@ active: "portfolio"
           <div class="comparison-slider-handle"><div class="comparison-divider"><div class="comparison-knob">‹ ›</div></div></div>
         </div>
       </div>
+      {% endif %}
+
+      {% if project.highlights %}
+      <div class="project-highlights-strip" style="margin-top: 1.75rem; margin-bottom: 0.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;">
+        {% for item in project.highlights %}
+        <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 30px; padding: 0.5rem 1.1rem; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 0.9rem; font-weight: 600; color: var(--bark);">
+          <span style="font-size: 1.1rem; line-height: 1;">{{ item.icon or '✨' }}</span>
+          <span>{{ item.text }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
       <div class="project-meta project-meta--center">
         {% set icon = project.category == 'Hardscaping' and 'bricks' or project.category == 'Landscaping' and 'leaf' or project.category == 'Carpentry' and 'square' or project.category == 'Exterior Care' and 'window' or 'fence' %}
         <span class="project-tag"><svg class="icon icon-sm"><use href="#icon-{{ icon }}"/></svg>{{ project.category }}</span>
@@ -72,9 +90,41 @@ active: "portfolio"
     <div class="section" style="max-width: 1100px; margin: 0 auto;">
       <p class="section-label">More Photos</p>
       <h2 class="section-title">Project <em>Gallery</em></h2>
+
+      {% if project.plantLegend %}
+      <div class="plant-legend-container" style="margin-top: 1.5rem; margin-bottom: 2rem; background: #ffffff; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+          <div>
+            <h3 style="margin: 0; font-size: 1.15rem; color: var(--bark); font-weight: 700;">Plant Key & Identification</h3>
+            <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #666;">Click any plant below to filter and highlight matching gallery photos.</p>
+          </div>
+          <button class="plant-key-filter active" data-plant-filter="all" style="background: var(--bark); color: #fff; border: none; padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">Show All (14 Photos)</button>
+        </div>
+        <div class="plant-legend-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+          {% for plant in project.plantLegend %}
+          <button class="plant-key-filter" data-plant-filter="{{ plant.id }}" style="background: var(--cream, #fcf9f2); border: 1.5px solid rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden; padding: 0; text-align: left; cursor: pointer; transition: all 0.25s ease; display: flex; flex-direction: column;">
+            {% if plant.img %}
+            <div style="position: relative; width: 100%; height: 135px; overflow: hidden; background: var(--bark);">
+              <img src="{{ plant.img }}" alt="{{ plant.name }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <span class="plant-key-badge" style="position: absolute; top: 0.65rem; left: 0.65rem; background: var(--forest, #2d5a3f); color: #ffffff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.88rem; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">{{ plant.letter }}</span>
+            </div>
+            {% endif %}
+            <div style="padding: 0.85rem 1rem 1rem 1rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="font-weight: 700; font-size: 0.95rem; color: var(--bark); margin-bottom: 0.15rem;">{{ plant.name }}</div>
+                <div style="font-style: italic; font-size: 0.78rem; color: #666; margin-bottom: 0.35rem;">{{ plant.botanical }}</div>
+                <div style="font-size: 0.78rem; color: #444; line-height: 1.35;">{{ plant.desc }}</div>
+              </div>
+            </div>
+          </button>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
       <div class="project-gallery">
         {% for photo in project.gallery %}
-        <figure class="gallery-item">
+        <figure class="gallery-item" {% if photo.plants %}data-plants="{{ photo.plants | join(',') }}"{% endif %}>
           <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy" {% if photo.srcset %}srcset="{{ photo.srcset }}"{% endif %} sizes="(max-width: 768px) 100vw, 45vw">
           {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
         </figure>
@@ -82,6 +132,41 @@ active: "portfolio"
       </div>
     </div>
   </section>
+
+  <!-- PLANT LIST / SPECS SECTION -->
+  {% if project.plants %}
+  <section style="background:var(--cream); padding: 3.5rem 2.5rem; border-top: 1px solid rgba(0,0,0,0.06);">
+    <div class="section" style="max-width: 1100px; margin: 0 auto;">
+      <p class="section-label">Plant Selection</p>
+      <h2 class="section-title">Featured <em>Planting Palette</em></h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+        {% for plant in project.plants %}
+        <div style="background:#fff; border-radius: var(--radius-md, 10px); overflow: hidden; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
+          {% if plant.img %}
+          <div style="height: 180px; width: 100%; overflow: hidden; position: relative;">
+            <img src="{{ plant.img }}" alt="{{ plant.name }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </div>
+          {% endif %}
+          <div style="padding: 1.25rem 1.25rem 0.75rem 1.25rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.35rem;">
+                <h3 style="margin: 0; font-size: 1.1rem; color: var(--bark); font-weight: 700;">{{ plant.name }}</h3>
+                <span style="font-size: 0.72rem; background: var(--straw, #f3ede2); color: var(--bark); padding: 0.2rem 0.5rem; border-radius: 20px; white-space: nowrap; font-weight: 600;">{{ plant.type }}</span>
+              </div>
+              <p style="margin: 0 0 0.65rem 0; font-style: italic; font-size: 0.83rem; color: #666;">{{ plant.botanical }}</p>
+              <p style="margin: 0 0 1rem 0; font-size: 0.88rem; line-height: 1.5; color: #444;">{{ plant.notes }}</p>
+            </div>
+            <div style="padding-top: 0.65rem; border-top: 1px solid #f0f0f0; display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--forest, #2d5a3f); font-weight: 600;">
+              <svg class="icon icon-sm" style="width: 16px; height: 16px; fill: currentColor;"><use href="#icon-leaf"/></svg>
+              <span>{{ plant.sun }}</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
 
   <!-- FAQ -->
   {% if project.faq %}
