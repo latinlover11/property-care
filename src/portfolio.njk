@@ -42,6 +42,7 @@ active: "portfolio"
     <section class="portfolio-grid">
       {% for project in projects %}
       <article class="portfolio-item" data-service="{{ project.service }}" data-id="{{ project.slug }}">
+        {% if project.hasBeforeAfter != false %}
         <div class="portfolio-img-wrap">
           <div class="portfolio-comparison">
             <div class="comparison-slider">
@@ -52,6 +53,11 @@ active: "portfolio"
           </div>
           <button class="expand-btn" aria-label="Toggle before and after photo" data-before="{{ project.before.src }}" data-after="{{ project.after.src }}"><svg class="icon"><use href="#icon-expand"/></svg></button>
         </div>
+        {% else %}
+        <div class="portfolio-img-wrap">
+          <img src="{{ project.hero.src }}" alt="{{ project.hero.alt }}" loading="lazy" {% if project.hero.srcset %}srcset="{{ project.hero.srcset | replace(', images/', ', /images/') | replace('//', '/') }}"{% endif %} sizes="(max-width: 768px) 100vw, 33vw">
+        </div>
+        {% endif %}
         {% set icon = project.category == 'Hardscaping' and 'bricks' or project.category == 'Landscaping' and 'leaf' or project.category == 'Carpentry' and 'square' or project.category == 'Exterior Care' and 'window' or 'fence' %}
         <h3><a href="/projects/{{ project.slug }}">{{ project.title }}</a></h3>
         <div class="project-meta">
